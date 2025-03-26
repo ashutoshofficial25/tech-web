@@ -2,6 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import Button from "../common/Button";
 import ClientsSlider from "./ClientsSlider";
+import GalleryContainer from "./GalleryContainer";
 
 const Hero = () => {
   return (
@@ -30,6 +31,7 @@ const Hero = () => {
         />
       </div>
       <ClientsSlider className="mt-16" />
+      <GalleryContainer />
     </div>
   );
 };

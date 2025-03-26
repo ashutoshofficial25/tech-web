@@ -4,7 +4,6 @@ import Home from "./pages/home";
 import AboutUs from "./pages/about";
 import ContactUs from "./pages/contact";
 import Works from "./pages/works";
-import Apex from "./pages/apex";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +27,6 @@ const router = createBrowserRouter([
         Component: Works,
       },
     ],
-  },
-  {
-    path: "/apex",
-    Component: Apex,
   },
 ]);
 

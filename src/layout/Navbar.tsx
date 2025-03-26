@@ -33,7 +33,7 @@ const Navbar = () => {
           />
           <Button
             variant="filled"
-            handleClick={() => navigate("/apex")}
+            handleClick={() => {}}
             className="px-12"
             title="Apex"
           />
