@@ -20,7 +20,7 @@ const Button = ({
   const getStyles = () => {
     switch (variant) {
       case "outlined":
-        return "text-primary border-primary ";
+        return "text-primary border-primary hover:text-white hover:bg-primary";
       case "filled":
         return "text-white border-transparent bg-primary";
     }

@@ -26,7 +26,7 @@ const ClientsSlider = ({ className }: { className?: string }) => {
           {clients?.map((clientLogoUrl: string, index: number) => {
             return (
               <div
-                className="!flex transition-all duration-500 ease-in-out hover:scale-120 hover:h-14 h-12 px-8 !items-center !justify-center "
+                className="!flex  px-8 !items-center !justify-center "
                 key={index}
               >
                 <img className="h-fit w-20 object-fit" src={clientLogoUrl} />
