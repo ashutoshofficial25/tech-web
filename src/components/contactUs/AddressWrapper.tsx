@@ -26,7 +26,9 @@ const AddressWrapper = () => {
           </div>
         </div>
       </div>
-      <MapContainer />
+      <div className="mt-12">
+        <MapContainer />
+      </div>
     </>
   );
 };

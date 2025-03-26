@@ -85,9 +85,8 @@ const ContactUs = () => {
         <SocialList />
       </div>
       <NewsletterForm />
-      <div className="mt-12">
-        <AddressWrapper />
-      </div>
+
+      <AddressWrapper />
     </div>
   );
 };

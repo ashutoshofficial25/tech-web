@@ -1,12 +1,10 @@
 import React from "react";
-import { IoIosArrowDown } from "react-icons/io";
 import kinLogoUrl from "../assets/kin-logo.png";
 import { useLocation, useNavigate } from "react-router";
 import Button from "../components/common/Button";
 interface INavItemProps {
   label: string;
   redirect: string;
-  icon?: React.JSX.Element;
 }
 const navs: INavItemProps[] = [
   { label: "Home", redirect: "/" },
@@ -14,7 +12,6 @@ const navs: INavItemProps[] = [
   {
     label: "Our Works",
     redirect: "/works",
-    icon: <IoIosArrowDown className="text-xl relative top-0.5" />,
   },
 ];
 const Navbar = () => {
@@ -36,8 +33,9 @@ const Navbar = () => {
           />
           <Button
             variant="filled"
-            handleClick={() => {}}
-            title="Book an Event"
+            handleClick={() => navigate("/apex")}
+            className="px-12"
+            title="Apex"
           />
         </div>
       </div>
@@ -66,7 +64,7 @@ const NavMenu = ({
   console.log(pathname);
   return (
     <ul className={`${className} flex items-center gap-x-12`}>
-      {navs?.map(({ label, redirect, icon }: INavItemProps, index: number) => {
+      {navs?.map(({ label, redirect }: INavItemProps, index: number) => {
         return (
           <li
             role="button"
@@ -79,7 +77,6 @@ const NavMenu = ({
             key={index}
           >
             <span>{label}</span>
-            {icon}
           </li>
         );
       })}
