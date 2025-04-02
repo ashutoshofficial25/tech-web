@@ -13,11 +13,37 @@ const ClientsSlider = ({ className }: { className?: string }) => {
     speed: 1000,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
 
   return (
     <div className={`${className} w-full flex flex-col items-center gap-y-6`}>
-      <p className="text-xl text-light font-normal ">
+      <p className="md:text-xl sm:text-base text-sm text-light font-normal ">
         Trusted by{" "}
         <span className="font-semibold text-primary">100+ clients</span>
       </p>

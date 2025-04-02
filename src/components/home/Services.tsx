@@ -14,7 +14,7 @@ interface CustomArrowProps {
 const services = [
   {
     icon: (
-      <FaTrophy className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaTrophy className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Major Games & Championshiops",
     description:
@@ -22,7 +22,7 @@ const services = [
   },
   {
     icon: (
-      <LuImages className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuImages className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Museum & Galleries build up",
     description:
@@ -30,7 +30,7 @@ const services = [
   },
   {
     icon: (
-      <MdSportsFootball className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Sports & Life Style Events",
     description:
@@ -38,7 +38,7 @@ const services = [
   },
   {
     icon: (
-      <LuVideo className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuVideo className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Live Streaming Production",
     description:
@@ -46,7 +46,7 @@ const services = [
   },
   {
     icon: (
-      <FaTrophy className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaTrophy className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Exhibitions & Expos",
     description:
@@ -54,7 +54,7 @@ const services = [
   },
   {
     icon: (
-      <LuImages className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuImages className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Brand Activations",
     description:
@@ -62,7 +62,7 @@ const services = [
   },
   {
     icon: (
-      <MdSportsFootball className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <MdSportsFootball className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Structural build & Installation",
     description:
@@ -70,7 +70,7 @@ const services = [
   },
   {
     icon: (
-      <LuVideo className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuVideo className="sm:text-8xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Event Planning and Management",
     description:
@@ -79,7 +79,7 @@ const services = [
 
   {
     icon: (
-      <FaTrophy className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaTrophy className="xl:sm:text-8xl sm:text-7xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Creative Conceptualization & Development",
     description:
@@ -87,7 +87,7 @@ const services = [
   },
   {
     icon: (
-      <LuImages className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuImages className="xl:sm:text-8xl sm:text-7xl text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Audio Visual Systems & Show Presentations",
     description:
@@ -95,7 +95,7 @@ const services = [
   },
   {
     icon: (
-      <MdSportsFootball className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Venue Sourcing & Management",
     description:
@@ -103,7 +103,7 @@ const services = [
   },
   {
     icon: (
-      <LuVideo className="text-8xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuVideo className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: "Design Production & Build",
     description:
@@ -120,20 +120,33 @@ const Services = () => {
     speed: 500,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
 
   return (
-    <div className="w-full pt-40">
-      <div className="container px-16  mx-auto flex flex-row justify-between items-center">
-        <h1 className="text-6xl font-semibold text-primary">Services</h1>
-        <p className="text-xl text-light font-normal">
-          Lorem ipsum dolar sit amet consectuer vasetches unemos sit met
-        </p>
+    <div className="w-full 2xl:pt-40 pt-28">
+      <div className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6  mx-auto flex flex-row justify-between items-center">
+        <h1 className="xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl text-2xl font-bold text-primary">
+          Services
+        </h1>
       </div>
-      <div className="mt-10 w-full pt-14 h-[460px] bg-primary">
-        <div className="mt-2 container   mx-auto w-full slider-container">
+      <div className="mt-10 w-full xl:pt-14 pt-10 xl:h-[460px] md:h-[400px] sm:h-[380px] h-[340px] bg-primary">
+        <div className="mt-2 xl:container   mx-auto w-full slider-container">
           <Slider {...settings}>
             {services?.map(
               (
@@ -149,7 +162,7 @@ const Services = () => {
                 index: number
               ) => {
                 return (
-                  <div key={index} className="px-4">
+                  <div key={index} className="xl:px-4 sm:px-2 px-1">
                     <ServicesCard
                       icon={icon}
                       title={title}

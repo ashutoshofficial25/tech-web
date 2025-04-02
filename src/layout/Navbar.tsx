@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import kinLogoUrl from "../assets/kin-logo.png";
 import { useLocation, useNavigate } from "react-router";
-import Button from "../components/common/Button";
+import Button, { HamburgerMenu } from "../components/common/Button";
 interface INavItemProps {
   label: string;
   redirect: string;
@@ -15,27 +15,55 @@ const navs: INavItemProps[] = [
   },
 ];
 const Navbar = () => {
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const [hasShadow, setHasShadow] = useState<boolean>(false);
   const navigate = useNavigate();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setHasShadow(true);
+      } else {
+        setHasShadow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="w-full  fixed top-0 py-5 bg-white z-50 left-1/2 -translate-x-1/2">
-      <div className="container mx-auto flex items-center flex-row justify-between">
+    <header
+      className={`w-full fixed top-0 py-5 bg-white z-50 left-1/2 -translate-x-1/2 transition-shadow duration-300 ${
+        hasShadow ? "shadow-lg" : "shadow-none"
+      }`}
+    >
+      <div className="lg:container  w-full lg:px-4  sm:px-6 px-4  mx-auto flex items-center flex-row justify-between">
         <Logo />
         <NavMenu
           navs={navs}
           handleClick={navigate}
-          className="relative left-28"
+          className={`md:relative absolute md:shadow-none shadow-lg md:top-0 top-16 lg:left-28  md:left-[-8vw] ${
+            isExpanded ? "left-0" : "-left-[110vw]"
+          }  md:w-fit w-full transition-all duration-[340ms] ease-in-out`}
         />
-        <div className="flex items-center gap-x-3">
+
+        <div className="flex  items-center xl:gap-x-3 sm:gap-x-2 gap-x-1.5">
           <Button
             variant="outlined"
             handleClick={() => navigate("/contact")}
             title="Contact Us"
+            module="navbar"
           />
           <Button
             variant="filled"
             handleClick={() => {}}
-            className="px-12"
+            className="!lg:px-12 !sm:px-10 !px-8"
             title="Apex"
+            module="navbar"
+          />
+          <HamburgerMenu
+            isExpanded={isExpanded}
+            className="md:hidden block"
+            handleClick={setIsExpanded}
           />
         </div>
       </div>
@@ -47,7 +75,7 @@ export default Navbar;
 const Logo = () => {
   return (
     <div className="cursor-pointer" onClick={() => {}}>
-      <img src={kinLogoUrl} alt="Logo" />
+      <img src={kinLogoUrl} alt="Logo" className="md:h-8 h-6" />
     </div>
   );
 };
@@ -61,9 +89,10 @@ const NavMenu = ({
   handleClick: (x: string) => void;
 }) => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
-    <ul className={`${className} flex items-center gap-x-12`}>
+    <ul
+      className={`${className} flex md:flex-row flex-col  items-center xl:gap-x-12 lg:gap-x-10 md:gap-x-8 md:gap-y-0 gap-y-12 md:py-0 py-10 bg-white`}
+    >
       {navs?.map(({ label, redirect }: INavItemProps, index: number) => {
         return (
           <li
@@ -72,7 +101,7 @@ const NavMenu = ({
               redirect === pathname
                 ? "text-primary font-semibold"
                 : "text-black/60 font-medium"
-            } cursor-pointer flex items-center gap-x-2 text-[18px]`}
+            } cursor-pointer flex items-center gap-x-2 xl:text-[18px] lg:text-base text-sm`}
             onClick={() => handleClick(redirect)}
             key={index}
           >
