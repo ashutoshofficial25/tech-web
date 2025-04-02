@@ -8,7 +8,7 @@ const HomeLayout = () => {
     <div className="w-full min-h-screen text-black bg-white">
       <Navbar />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
