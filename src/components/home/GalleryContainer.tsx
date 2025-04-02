@@ -7,10 +7,16 @@ const GalleryContainer = () => {
         return (
           <div key={index} className="">
             <img
-              className={`lg:rounded-xl rounded-lg ${
-                index === 0 && "rounded-tl-none rounded-bl-none"
+              className={` ${
+                index === 0
+                  ? "!rounded-tl-none !rounded-bl-none"
+                  : "xl:rounded-xl rounded-lg"
               }
-              ${index === 4 && "rounded-tr-none rounded-br-none"}
+              ${
+                index === 4
+                  ? "!rounded-tr-none !rounded-br-none"
+                  : "xl:rounded-xl rounded-lg"
+              }
               `}
               src={logoUrl}
             />
