@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Button from "../common/Button";
-import { useScroll } from "../../context/ScrollContext";
-import { useNavigate } from "react-router";
-import { FaBars, FaTimes } from "react-icons/fa";
-const navs = [
-  { label: "Home", id: "home" },
-  { label: "About Us", id: "about" },
-  { label: "Services", id: "services" },
+import React, { useEffect, useState } from 'react';
+import Button from '../common/Button';
+import { useScroll } from '../../context/ScrollContext';
+import { useNavigate } from 'react-router';
+import { FaBars, FaTimes } from 'react-icons/fa';
+interface NavItem {
+  label: string;
+  id: 'home' | 'about' | 'services' | 'contact';
+}
+
+const navs: NavItem[] = [
+  { label: 'Home', id: 'home' },
+  { label: 'About Us', id: 'about' },
+  { label: 'Services', id: 'services' },
 ];
 
 const Header = () => {
@@ -15,7 +20,7 @@ const Header = () => {
   const [hasShadow, setHasShadow] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
+    typeof window !== 'undefined' ? window.innerWidth : 0
   );
 
   useEffect(() => {
@@ -27,8 +32,8 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   useEffect(() => {
     const handleResize = () => {
@@ -38,8 +43,8 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const toggleMenu = () => {
@@ -49,7 +54,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        hasShadow ? "shadow-lg" : "shadow-none"
+        hasShadow ? 'shadow-lg' : 'shadow-none'
       } w-full fixed top-0 py-5 bg-white z-50 left-1/2 -translate-x-1/2`}
     >
       <div className="container mx-auto flex items-center flex-row justify-between px-4 md:px-6 lg:px-0">
@@ -75,7 +80,7 @@ const Header = () => {
         {/* Mobile Navigation Overlay */}
         <div
           className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-all duration-300 ${
-            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           } lg:hidden`}
         >
           <ul className="flex flex-col items-center gap-y-8">
@@ -86,7 +91,7 @@ const Header = () => {
                 key={index}
                 onClick={() => {
                   scrollToSection(
-                    id as "home" | "about" | "services" | "contact"
+                    id as 'home' | 'about' | 'services' | 'contact'
                   );
                   setIsMenuOpen(false);
                 }}
@@ -98,7 +103,7 @@ const Header = () => {
               <Button
                 variant="outlined"
                 handleClick={() => {
-                  scrollToSection("contact");
+                  scrollToSection('contact');
                   setIsMenuOpen(false);
                 }}
                 title="Contact Us"
@@ -118,12 +123,12 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-x-3">
           <Button
             variant="outlined"
-            handleClick={() => scrollToSection("contact")}
+            handleClick={() => scrollToSection('contact')}
             title="Contact Us"
           />
           <Button
             variant="filled"
-            handleClick={() => navigate("/")}
+            handleClick={() => navigate('/')}
             className="px-12"
             title="Kin"
           />
@@ -143,7 +148,19 @@ const Logo = () => {
   );
 };
 
-const NavMenu = ({ navs, className, scrollToSection }) => {
+interface NavMenuProps {
+  navs: NavItem[];
+  className?: string;
+  scrollToSection: (
+    sectionId: 'home' | 'about' | 'services' | 'contact'
+  ) => void;
+}
+
+const NavMenu: React.FC<NavMenuProps> = ({
+  navs,
+  className,
+  scrollToSection,
+}) => {
   return (
     <ul className={`${className} flex items-center gap-x-12`}>
       {navs?.map(({ label, id }, index) => (

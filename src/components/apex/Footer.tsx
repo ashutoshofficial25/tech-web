@@ -1,21 +1,33 @@
-import React from "react";
+import React from 'react';
 
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { useScroll } from "../../context/ScrollContext";
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useScroll } from '../../context/ScrollContext';
 
-const resources = [
-  { label: "home", id: "home" },
-  { label: "about us", id: "about" },
-  { label: "services", id: "services" },
-  { label: "Contacts", id: "contact" },
+interface ResourceItem {
+  label: string;
+  id: 'home' | 'about' | 'services' | 'contact';
+}
+
+interface SocialProfileItem {
+  label: string;
+  link: string;
+}
+
+const resources: ResourceItem[] = [
+  { label: 'home', id: 'home' },
+  { label: 'about us', id: 'about' },
+  { label: 'services', id: 'services' },
+  { label: 'Contacts', id: 'contact' },
 ];
-const socialProfiles = [
-  { label: "LinkedIn", link: "" },
-  { label: "Instagram", link: "" },
-  { label: "Facebook", link: "" },
+
+const socialProfiles: SocialProfileItem[] = [
+  { label: 'LinkedIn', link: '' },
+  { label: 'Instagram', link: '' },
+  { label: 'Facebook', link: '' },
 ];
-const handleRedirect = (link) => {
-  window.open(link, "_blank");
+
+const handleRedirect = (link: string): void => {
+  window.open(link, '_blank');
 };
 const Footer = () => {
   const { scrollToSection } = useScroll();
@@ -47,7 +59,7 @@ const Footer = () => {
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-xl font-medium text-white">Resources</h1>
             <ul className="font-light mt-8 capitalize flex flex-col gap-y-1 items-center sm:items-start">
-              {resources?.map((item, index) => {
+              {resources?.map((item: ResourceItem, index: number) => {
                 return (
                   <li
                     role="button"
@@ -64,7 +76,7 @@ const Footer = () => {
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-xl font-medium text-white">Social Profiles</h1>
             <ul className="font-light mt-8 capitalize flex flex-col gap-y-1 items-center sm:items-start">
-              {socialProfiles?.map((item, index) => {
+              {socialProfiles?.map((item: SocialProfileItem, index: number) => {
                 return (
                   <li
                     className="cursor-pointer"

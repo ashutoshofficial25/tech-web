@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { MdOutlineQueryStats } from "react-icons/md";
-import Button from "../common/Button";
-import heroFolderLogoUrl from "../../assets/hero-folder-logo.png";
-import { PiStrategyBold } from "react-icons/pi";
-import { BiStats } from "react-icons/bi";
-import { TbHeartStar, TbHomeStats } from "react-icons/tb";
-import { LuFolderHeart, LuMapPinCheck } from "react-icons/lu";
-import { TfiStatsUp } from "react-icons/tfi";
-import { FaMapLocationDot } from "react-icons/fa6";
-import { useScroll } from "../../context/ScrollContext";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import { MdOutlineQueryStats } from 'react-icons/md';
+import Button from '../common/Button';
+import heroFolderLogoUrl from '../../assets/hero-folder-logo.png';
+import { PiStrategyBold } from 'react-icons/pi';
+import { BiStats } from 'react-icons/bi';
+import { TbHeartStar, TbHomeStats } from 'react-icons/tb';
+import { LuFolderHeart, LuMapPinCheck } from 'react-icons/lu';
+import { TfiStatsUp } from 'react-icons/tfi';
+import { FaMapLocationDot } from 'react-icons/fa6';
+import { useScroll } from '../../context/ScrollContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
   const { homeRef, scrollToSection } = useScroll();
@@ -18,7 +18,7 @@ const Hero = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: "ease-out-quad",
+      easing: 'ease-out-quad',
       once: true,
       offset: 120,
     });
@@ -65,7 +65,7 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col relative z-10 items-center">
         <div
           style={{
-            boxShadow: "0 0 20px rgba(0,0,0,0.18)",
+            boxShadow: '0 0 20px rgba(0,0,0,0.18)',
           }}
           className="h-12 w-12 flex items-center justify-center rounded-lg"
           data-aos="zoom-in"
@@ -79,7 +79,7 @@ const Hero = () => {
           data-aos-delay="350"
         >
           <span className="text-secondary">Connecting Markets,</span> Creating
-          Opportunities,{" "}
+          Opportunities,{' '}
           <span className="text-black/20">Delivering Results</span>.
         </h1>
         <p
@@ -95,12 +95,12 @@ const Hero = () => {
           data-aos-delay="450"
         >
           <Button
-            handleClick={() => scrollToSection("services")}
+            handleClick={() => scrollToSection('services')}
             title="Explore Services"
             className="px-12 py-2.5"
           />
           <Button
-            handleClick={() => scrollToSection("contact")}
+            handleClick={() => scrollToSection('contact')}
             title="Get in touch"
             variant="outlined"
             className="px-12 py-2.5"
@@ -113,17 +113,37 @@ const Hero = () => {
 
 export default Hero;
 
-const HeroIllustractionCard = ({ className, logo, label, icon, ...props }) => {
+interface HeroIllustractionCardProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+  logo: React.ReactNode;
+  label: string;
+  icon: React.ReactNode;
+  'data-aos'?: string;
+  'data-aos-delay'?: string;
+}
+
+const HeroIllustractionCard: React.FC<HeroIllustractionCardProps> = ({
+  className,
+  logo,
+  label,
+  icon,
+  ...props
+}) => {
+  const baseDelay = props['data-aos-delay']
+    ? parseInt(props['data-aos-delay'])
+    : 0;
+
   return (
     <div
       className={`${className} h-48 w-64 sm:h-36 sm:w-48 absolute z-0 md:h-40 md:w-56 lg:h-48 lg:w-64`}
       {...props}
     >
       <div
-        style={{ boxShadow: "0 0 15px rgba(0,0,0,0.15)" }}
+        style={{ boxShadow: '0 0 15px rgba(0,0,0,0.15)' }}
         className="h-12 w-12 absolute top-12 -right-5 z-10 bg-white rounded-lg flex items-center justify-center"
         data-aos="zoom-in"
-        data-aos-delay={props["data-aos-delay"] + 100}
+        data-aos-delay={String(baseDelay + 100)}
       >
         <span>{icon}</span>
       </div>
@@ -131,12 +151,12 @@ const HeroIllustractionCard = ({ className, logo, label, icon, ...props }) => {
         src={heroFolderLogoUrl}
         className="absolute z-0 h-full w-full object-cover"
         data-aos="zoom-in"
-        data-aos-delay={props["data-aos-delay"] + 50}
+        data-aos-delay={String(baseDelay + 50)}
       />
       <div
         className="flex flex-col gap-y-4 w-full py-16 h-full absolute inset-0 items-center"
         data-aos="fade-in"
-        data-aos-delay={props["data-aos-delay"] + 150}
+        data-aos-delay={String(baseDelay + 150)}
       >
         <span>{logo}</span>
         <h1 className="text-xs text-light">{label}</h1>

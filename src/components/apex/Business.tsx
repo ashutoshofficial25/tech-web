@@ -1,14 +1,28 @@
-import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
-import businessBgLogoUrl from "../../assets/business-illustration.png";
-const details = [
-  { value: 100, suffix: "+", desc: "Successful events worldwide" },
-  { value: 2, suffix: "k+", desc: "Trade Deals" },
-  { value: 500, suffix: "+", desc: "Global Clients" },
+import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+import businessBgLogoUrl from '../../assets/business-illustration.png';
+
+interface BusinessDetail {
+  value: number;
+  suffix: string;
+  desc: string;
+}
+
+interface InfoCardProps {
+  value: number;
+  suffix: string;
+  desc: string;
+  startAnimation: boolean;
+}
+
+const details: BusinessDetail[] = [
+  { value: 100, suffix: '+', desc: 'Successful events worldwide' },
+  { value: 2, suffix: 'k+', desc: 'Trade Deals' },
+  { value: 500, suffix: '+', desc: 'Global Clients' },
 ];
 const Business = () => {
   const { ref, inView } = useInView({
@@ -63,7 +77,12 @@ const Business = () => {
 
 export default Business;
 
-const InfoCard = ({ value, suffix, desc, startAnimation }) => {
+const InfoCard: React.FC<InfoCardProps> = ({
+  value,
+  suffix,
+  desc,
+  startAnimation,
+}) => {
   return (
     <div className="flex flex-col items-center gap-y-1 w-full sm:w-auto">
       <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-primary">

@@ -1,25 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { exhibitions, events, conferences } from "../constants/media";
-import ImageGridLayout from "../layout/ImageGridLayout";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState, useEffect } from 'react';
+import { exhibitions, events, conferences } from '../constants/media';
+import ImageGridLayout from '../layout/ImageGridLayout';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const works = ["exhibitions", "events", "conferences"];
+const works = ['exhibitions', 'events', 'conferences'];
 
-const mediaUrls = {
+interface MediaItem {
+  details: {
+    name: string;
+    desc: string;
+  };
+  url: string;
+}
+
+interface MediaUrls {
+  [key: string]: MediaItem[];
+}
+
+const mediaUrls: MediaUrls = {
   exhibitions,
   events,
   conferences,
 };
 
 const Works = () => {
-  const [selected, setSelected] = useState<string>("exhibitions");
+  const [selected, setSelected] = useState<string>('exhibitions');
   const selectedMedia = mediaUrls[selected] || [];
 
   useEffect(() => {
     AOS.init({
       duration: 600,
-      easing: "ease-out-quad",
+      easing: 'ease-out-quad',
       offset: 120,
     });
   }, []);
@@ -41,7 +53,7 @@ const Works = () => {
         data-aos="fade-down"
         data-aos-delay="100"
       >
-        Our portfolio of{" "}
+        Our portfolio of{' '}
         <span className="capitalize font-medium">{selected}</span>
       </p>
 
@@ -85,7 +97,19 @@ const Works = () => {
 
 export default Works;
 
-const SorterButton = ({ label, selected, setSelected, index }) => {
+interface SorterButtonProps {
+  label: string;
+  selected: string;
+  setSelected: (value: string) => void;
+  index: number;
+}
+
+const SorterButton: React.FC<SorterButtonProps> = ({
+  label,
+  selected,
+  setSelected,
+  index,
+}) => {
   const [animationKey, setAnimationKey] = useState(0);
 
   const handleClick = () => {
@@ -98,7 +122,7 @@ const SorterButton = ({ label, selected, setSelected, index }) => {
       <button
         onClick={handleClick}
         className={`${
-          selected === label ? "text-white bg-primary" : "text-primary bg-white"
+          selected === label ? 'text-white bg-primary' : 'text-primary bg-white'
         } rounded-full cursor-pointer border-2 md:px-9 sm:px-6 px-5 md:py-2 sm:py-1.5 py-1 md:text-sm sm:text-xs text-[11px] capitalize border-primary transition-all duration-300`}
         data-aos="fade-up"
         data-aos-delay={index * 50}

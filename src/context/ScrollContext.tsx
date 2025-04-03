@@ -4,16 +4,16 @@ import React, {
   useRef,
   ReactNode,
   RefObject,
-} from "react";
+} from 'react';
 
 type ScrollContextType = {
   scrollToSection: (
-    sectionId: "home" | "about" | "services" | "contact"
+    sectionId: 'home' | 'about' | 'services' | 'contact'
   ) => void;
-  homeRef: RefObject<HTMLElement>;
-  aboutRef: RefObject<HTMLElement>;
-  servicesRef: RefObject<HTMLElement>;
-  contactRef: RefObject<HTMLElement>;
+  homeRef: RefObject<HTMLDivElement>;
+  aboutRef: RefObject<HTMLDivElement>;
+  servicesRef: RefObject<HTMLDivElement>;
+  contactRef: RefObject<HTMLDivElement>;
 };
 
 const ScrollContext = createContext<ScrollContextType | null>(null);
@@ -23,21 +23,21 @@ type ScrollProviderProps = {
 };
 
 export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
-  const homeRef = useRef<HTMLElement>(null!);
-  const aboutRef = useRef<HTMLElement>(null!);
-  const servicesRef = useRef<HTMLElement>(null!);
-  const contactRef = useRef<HTMLElement>(null!);
+  const homeRef = useRef<HTMLDivElement>(null!);
+  const aboutRef = useRef<HTMLDivElement>(null!);
+  const servicesRef = useRef<HTMLDivElement>(null!);
+  const contactRef = useRef<HTMLDivElement>(null!);
 
   const scrollToSection = (
-    sectionId: "home" | "about" | "services" | "contact"
+    sectionId: 'home' | 'about' | 'services' | 'contact'
   ) => {
-    const sectionRefs: Record<string, RefObject<HTMLElement>> = {
+    const sectionRefs: Record<string, RefObject<HTMLDivElement>> = {
       home: homeRef,
       about: aboutRef,
       services: servicesRef,
       contact: contactRef,
     };
-    sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: "smooth" });
+    sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -53,7 +53,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
 export const useScroll = (): ScrollContextType => {
   const context = useContext(ScrollContext);
   if (!context) {
-    throw new Error("useScroll must be used within a ScrollProvider");
+    throw new Error('useScroll must be used within a ScrollProvider');
   }
   return context;
 };

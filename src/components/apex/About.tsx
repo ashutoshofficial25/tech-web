@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { FiCalendar } from "react-icons/fi";
-import { ImStatsDots } from "react-icons/im";
-import { MdOutlineQueryStats } from "react-icons/md";
-import { useScroll } from "../../context/ScrollContext";
+import React, { useEffect, RefObject } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { FiCalendar } from 'react-icons/fi';
+import { ImStatsDots } from 'react-icons/im';
+import { MdOutlineQueryStats } from 'react-icons/md';
+import { useScroll } from '../../context/ScrollContext';
+
+interface ScrollContextType {
+  aboutRef: RefObject<HTMLDivElement>;
+}
 
 const About = () => {
   const { aboutRef } = useScroll();
@@ -13,7 +17,7 @@ const About = () => {
     AOS.init({
       duration: 1000,
       once: true,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
     });
   }, []);
 
