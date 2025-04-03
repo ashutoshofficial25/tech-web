@@ -1,4 +1,7 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import businessBgLogoUrl from "../../assets/business-illustration.png";
@@ -12,6 +15,9 @@ const Business = () => {
     triggerOnce: true,
     threshold: 0.3,
   });
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <div
       ref={ref}
@@ -22,8 +28,13 @@ const Business = () => {
         className="absolute z-0 top-12 left-1/2 -translate-x-1/2 w-full opacity-50 sm:opacity-70 md:opacity-100"
       />
       <div className="container relative z-10 mx-auto flex flex-col items-center px-4 sm:px-6 md:px-8">
-        <h2 className="text-secondary text-xl sm:text-2xl">Why Choose Us?</h2>
-        <h1 className="text-3xl sm:text-4xl md:text-[44px] mt-4 sm:mt-6 font-semibold text-primary w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-center">
+        <h2 className="text-secondary text-xl sm:text-2xl" data-aos="fade-up">
+          Why Choose Us?
+        </h2>
+        <h1
+          data-aos="fade-up"
+          className="text-3xl sm:text-4xl md:text-[44px] mt-4 sm:mt-6 font-semibold text-primary w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-center"
+        >
           We Have Helped Businesses Thrive Globally
         </h1>
         <p className="text-black/60 font-light mt-4 sm:mt-6 text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
