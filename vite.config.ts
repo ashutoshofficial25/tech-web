@@ -7,4 +7,14 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendors": ["react", "react-dom"],
+          "lodash-vendors": ["lodash"],
+        },
+      },
+    },
+  },
 });
