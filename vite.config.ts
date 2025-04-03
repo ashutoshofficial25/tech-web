@@ -12,9 +12,9 @@ export default defineConfig({
       output: {
         manualChunks: {
           "react-vendors": ["react", "react-dom"],
-          "lodash-vendors": ["lodash"],
         },
       },
     },
   },
+  publicDir: 'public',
 });

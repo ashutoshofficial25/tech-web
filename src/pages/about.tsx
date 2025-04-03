@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
-import aboutIllustrationBg from "../assets/illustration/hero-illustration.png";
-import wavyLinseIllustrationBg from "../assets/illustration/wavylines.png";
-import Button from "../components/common/Button";
-import TestimonialCard from "../components/aboutUs/TestimonialCard";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import aboutIllustrationBg from '../assets/illustration/hero-illustration.png';
+import wavyLinseIllustrationBg from '../assets/illustration/wavylines.png';
+import Button from '../components/common/Button';
+import TestimonialCard from '../components/aboutUs/TestimonialCard';
+import SEO from '../components/common/SEO';
+import StructuredData from '../components/common/StructuredData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutUs = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
       offset: 120,
     });
@@ -18,6 +20,24 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden relative w-full">
+      <SEO
+        title="About Us - Kin India | Our Story and Mission"
+        description="Learn about Kin Productions India, our journey, mission, and how we create unforgettable brand experiences and events across India."
+        keywords="about Kin India, event management company, brand experience agency, Kin Productions history, company mission, brand story"
+        url="/about"
+        author="Kin India"
+        language="en"
+      />
+      <StructuredData
+        type="WebPage"
+        data={{
+          name: 'About Us - Kin India',
+          description:
+            'Learn about Kin Productions India, our journey, mission, and how we create unforgettable brand experiences and events across India.',
+          url: 'https://kinindia.co/about',
+          lastReviewed: '2023-12-01',
+        }}
+      />
       <img
         src={aboutIllustrationBg}
         className="w-full absolute top-56 z-0 left-0"

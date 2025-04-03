@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import kinLogoUrl from "../assets/kin-logo.png";
-import { useLocation, useNavigate } from "react-router";
-import Button, { HamburgerMenu } from "../components/common/Button";
+import React, { useEffect, useState } from 'react';
+import kinLogoUrl from '../assets/kin-logo.png';
+import { useLocation, useNavigate } from 'react-router';
+import Button, { HamburgerMenu } from '../components/common/Button';
 interface INavItemProps {
   label: string;
   redirect: string;
 }
 const navs: INavItemProps[] = [
-  { label: "Home", redirect: "/" },
-  { label: "About Us", redirect: "/about" },
+  { label: 'Home', redirect: '/' },
+  { label: 'About Us', redirect: '/about' },
   {
-    label: "Our Works",
-    redirect: "/works",
+    label: 'Our Works',
+    redirect: '/works',
   },
 ];
 const Navbar = () => {
@@ -27,13 +27,13 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <header
       className={`w-full fixed top-0 py-5 bg-white z-[9999] left-1/2 -translate-x-1/2 transition-shadow duration-300 ${
-        hasShadow ? "shadow-lg" : "shadow-none"
+        hasShadow ? 'shadow-lg' : 'shadow-none'
       }`}
     >
       <div className="lg:container  w-full lg:px-4  sm:px-6 px-4  mx-auto flex items-center flex-row justify-between">
@@ -43,20 +43,20 @@ const Navbar = () => {
           setIsExpanded={setIsExpanded}
           handleClick={navigate}
           className={`md:relative absolute md:shadow-none shadow-lg md:top-0 top-16 lg:left-28  md:left-[-8vw] ${
-            isExpanded ? "left-0" : "-left-[110vw]"
+            isExpanded ? 'left-0' : '-left-[110vw]'
           }  md:w-fit w-full transition-all duration-[340ms] ease-in-out`}
         />
 
         <div className="flex  items-center xl:gap-x-3 sm:gap-x-2 gap-x-1.5">
           <Button
             variant="outlined"
-            handleClick={() => navigate("/contact")}
+            handleClick={() => navigate('/contact')}
             title="Contact Us"
             module="navbar"
           />
           <Button
             variant="filled"
-            handleClick={() => navigate("/apex")}
+            handleClick={() => navigate('/apex')}
             className="!lg:px-12 !sm:px-10 !px-8"
             title="Apex"
             module="navbar"
@@ -76,7 +76,7 @@ export default Navbar;
 const Logo = () => {
   return (
     <div className="cursor-pointer" onClick={() => {}}>
-      <img src={kinLogoUrl} alt="Logo" className="md:h-8 h-6" />
+      <img src={kinLogoUrl} alt="Kin India Logo" className="md:h-8 h-6" />
     </div>
   );
 };
@@ -102,8 +102,8 @@ const NavMenu = ({
             role="button"
             className={`hover:opacity-80 ${
               redirect === pathname
-                ? "text-primary font-semibold"
-                : "text-black/60 font-medium"
+                ? 'text-primary font-semibold'
+                : 'text-black/60 font-medium'
             } cursor-pointer flex items-center gap-x-2 xl:text-[18px] lg:text-base text-sm`}
             onClick={() => {
               handleClick(redirect);

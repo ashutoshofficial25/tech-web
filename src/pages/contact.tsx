@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
-import { IoCall, IoLocationSharp } from "react-icons/io5";
-import { LuMail } from "react-icons/lu";
-import aboutIllustrationBg from "../assets/illustration/hero-illustration.png";
-import CustomCard from "../components/contactUs/CustomCard";
-import { IoIosArrowRoundUp } from "react-icons/io";
-import ContactUsForm from "../components/contactUs/ContactUsForm";
-import SocialList from "../components/contactUs/SocialList";
-import NewsletterForm from "../components/contactUs/NewsletterForm";
-import AddressWrapper from "../components/contactUs/AddressWrapper";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import { IoCall, IoLocationSharp } from 'react-icons/io5';
+import { LuMail } from 'react-icons/lu';
+import aboutIllustrationBg from '../assets/illustration/hero-illustration.png';
+import CustomCard from '../components/contactUs/CustomCard';
+import { IoIosArrowRoundUp } from 'react-icons/io';
+import ContactUsForm from '../components/contactUs/ContactUsForm';
+import SocialList from '../components/contactUs/SocialList';
+import NewsletterForm from '../components/contactUs/NewsletterForm';
+import AddressWrapper from '../components/contactUs/AddressWrapper';
+import SEO from '../components/common/SEO';
+import StructuredData from '../components/common/StructuredData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface IContactUsCardProps {
   icon: React.JSX.Element;
@@ -23,21 +25,21 @@ const contactDetails: IContactUsCardProps[] = [
     icon: (
       <IoLocationSharp className="lg:text-4xl md:text-3xl text-2xl text-white/80" />
     ),
-    value: "D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA",
-    desc: "Connect Near and Far, Reach out us",
-    module: "location",
+    value: 'D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA',
+    desc: 'Connect Near and Far, Reach out us',
+    module: 'location',
   },
   {
     icon: <LuMail className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
-    value: "intro@kinindia.co",
+    value: 'intro@kinindia.co',
     desc: "Send us a message through Kin's official email",
-    module: "main",
+    module: 'main',
   },
   {
     icon: <IoCall className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
-    value: ["+918826204411", "+919810053543"],
-    desc: "Get in touch with us by phone",
-    module: "call",
+    value: ['+918826204411', '+919810053543'],
+    desc: 'Get in touch with us by phone',
+    module: 'call',
   },
 ];
 
@@ -45,14 +47,38 @@ const ContactUs = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
       offset: 120,
     });
   }, []);
 
   return (
-    <div className="min-h-screen relative w-full">
+    <div className="min-h-screen overflow-x-hidden relative w-full">
+      <SEO
+        title="Contact Us - Kin India | Get in Touch"
+        description="Contact Kin Productions India for your event management and brand experience needs. Reach out to our team for inquiries and collaborations."
+        keywords="contact Kin India, event management contact, brand experience inquiry, Kin Productions address, event planning contact, event inquiry"
+        url="/contact"
+        author="Kin India"
+        language="en"
+      />
+      <StructuredData
+        type="LocalBusiness"
+        data={{
+          name: 'Kin India',
+          image: 'https://kinindia.co/src/assets/kin-logo.png',
+          telephone: '+918826204411',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'D-148, SECTOR-61',
+            addressLocality: 'NOIDA',
+            postalCode: '201301',
+            addressRegion: 'U.P.',
+            addressCountry: 'INDIA',
+          },
+        }}
+      />
       <img
         src={aboutIllustrationBg}
         className="w-full absolute top-32 left-1/2 -translate-x-1/2 z-0 rotate-180"
@@ -85,7 +111,7 @@ const ContactUs = () => {
             data-aos="fade-down"
             data-aos-delay="150"
           >
-            How can we help you form
+            How can we help you?
           </h1>
           <div
             className="flex sm:flex-row flex-col items-center w-full xl:px-16 md:px-10 sm:px-5 xs:px-12 px-6 mt-4 xl:gap-x-8 lg:gap-x-4 sm:gap-x-2 sm:gap-y-0 gap-y-2"
@@ -128,7 +154,7 @@ const ContactUs = () => {
           data-aos-delay="100"
         >
           <p className="xl:text-2xl lg:text-xl text-base font-normal text-light">
-            We would love to hear you from
+            We would love to hear from you
           </p>
           <div
             className="h-6 w-6 flex items-center justify-center rounded-sm bg-primary text-white"

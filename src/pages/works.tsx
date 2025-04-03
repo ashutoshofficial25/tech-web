@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { exhibitions, events, conferences } from '../constants/media';
 import ImageGridLayout from '../layout/ImageGridLayout';
+import SEO from '../components/common/SEO';
+import StructuredData from '../components/common/StructuredData';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -42,6 +44,24 @@ const Works = () => {
 
   return (
     <div className="lg:container w-full lg:px-8 md:px-16 sm:px-10 px-6 min-h-screen relative z-10 mx-auto flex pt-32 flex-col items-center">
+      <SEO
+        title="Our Works - Kin India | Portfolio of Events & Exhibitions"
+        description="Explore Kin India's portfolio of successful events, exhibitions, and conferences. View our past projects and discover how we can bring your vision to life."
+        keywords="Kin India portfolio, event portfolio, exhibition showcase, conference management, brand activation examples, event case studies, project gallery"
+        url="/works"
+        author="Kin India"
+        language="en"
+      />
+      <StructuredData
+        type="WebPage"
+        data={{
+          name: 'Our Works - Kin India',
+          description:
+            "Explore Kin India's portfolio of successful events, exhibitions, and conferences. View our past projects and discover how we can bring your vision to life.",
+          url: 'https://kinindia.co/works',
+          lastReviewed: '2023-12-01',
+        }}
+      />
       <h1
         className="xl:text-5xl lg:text-4xl text-3xl font-medium text-primary"
         data-aos="fade-down"

@@ -1,13 +1,13 @@
-import React from "react";
-import kinLogoUrl from "../../assets/footer-logo.png";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { useNavigate } from "react-router";
-import { ISocialProfileProps, socialProfiles } from "../../constants/links";
+import React from 'react';
+import kinLogoUrl from '../../assets/footer-logo.png';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useNavigate } from 'react-router';
+import { ISocialProfileProps, socialProfiles } from '../../constants/links';
 const resources = [
-  { label: "home", newTab: false, link: "/" },
-  { label: "about us", newTab: false, link: "/about" },
-  { label: "services", newTab: false, link: "/services" },
-  { label: "Contacts", newTab: false, link: "/contact" },
+  { label: 'home', newTab: false, link: '/' },
+  { label: 'about us', newTab: false, link: '/about' },
+  { label: 'services', newTab: false, link: '/services' },
+  { label: 'Contacts', newTab: false, link: '/contact' },
 ];
 
 const Footer = () => {
@@ -20,7 +20,7 @@ const Footer = () => {
     link: string;
   }) => {
     if (newTab) {
-      window.open(link, "_blank");
+      window.open(link, '_blank');
       return;
     }
     navigate(link);
@@ -29,7 +29,7 @@ const Footer = () => {
     <div className="lg:h-96 sm:h-72 h-96 flex flex-col justify-between items-center 2xl:pb-6 pb-4  w-full bg-primary text-white">
       <div className="xl:container w-full xl:px-16 lg:px-10 sm:pl-10 sm:pr-4 px-6 h-full lg:pt-16 pt-10 mx-auto flex sm:flex-row flex-col 2xl:gap-x-0 xl:gap-x-52 lg:gap-x-32 md:gap-x-24 sm:gap-x-12   2xl:justify-between sm:items-start items-center">
         <div className="flex flex-col items-start">
-          <img src={kinLogoUrl} className="" />
+          <img src={kinLogoUrl} className="" alt="Kin India Logo Footer" />
           <h1 className="sm:mt-12 mt-4 text-sm font-normal text-white">
             Follow us on
           </h1>

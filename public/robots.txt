@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl-delay: 10
+
+Sitemap: https://kinindia.co/sitemap.xml
