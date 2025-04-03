@@ -1,60 +1,57 @@
 import React, { useState } from "react";
-import { exhibitions } from "../constants/media";
-const works = ["exhibitions", "events", "brandings"];
-const mediaUrls = [
-  {
-    label: "exhibitions",
-    value: exhibitions,
-  },
-  {
-    label: "events",
-    value: exhibitions,
-  },
-  {
-    label: "brandings",
-    value: exhibitions,
-  },
-];
+import { exhibitions, events, conferences } from "../constants/media";
+import ImageGridLayout from "../layout/ImageGridLayout";
+
+const works = ["exhibitions", "events", "conferences"];
+
+const mediaUrls = {
+  exhibitions,
+  events,
+  conferences,
+};
+
 const Works = () => {
   const [selected, setSelected] = useState<string>("exhibitions");
-  const logoUrlsList = mediaUrls.find(
-    (item: { label: string; value: string[] }) => item.label === selected
-  );
+  const selectedMedia = mediaUrls[selected] || [];
+
   return (
-    <div className="container min-h-screen relative z-20 mx-auto flex pt-32 flex-col items-center">
-      <h1 className="text-5xl font-medium text-primary">Our Works</h1>
-      <p className="mt-3 text-base text-primary font-normal">
-        Our portfolio of&nbsp;
+    <div className="lg:container w-full lg:px-8 md:px-16 sm:px-10 px-6 min-h-screen relative z-10 mx-auto flex pt-32 flex-col items-center">
+      <h1 className="xl:text-5xl lg:text-4xl text-3xl font-medium text-primary">
+        Our Works
+      </h1>
+      <p className="mt-3 md:text-base sm:text-sm text-xs text-primary font-normal">
+        Our portfolio of{" "}
         <span className="capitalize font-medium">{selected}</span>
       </p>
-      <div className="mt-10 flex flex-row items-center gap-x-3">
-        {works.map((item: string, index: number) => {
-          return (
-            <SorterButton
-              key={index}
-              selected={selected}
-              setSelected={setSelected}
-              label={item}
-            />
-          );
-        })}
+      <div className="md:mt-10 sm:mt-7 mt-4 flex flex-row items-center md:gap-x-3 sm:gap-x-2 gap-x-1.5">
+        {works.map((item, index) => (
+          <SorterButton
+            key={index}
+            selected={selected}
+            setSelected={setSelected}
+            label={item}
+          />
+        ))}
       </div>
-      <div className="w-full mt-8 mb-16 columns-3 gap-4 space-y-4">
-        {logoUrlsList?.value.map((logoUrl: string, index: number) => {
-          return (
-            <div key={index} className="break-inside-avoid">
+      <div className="w-full md:mt-8 sm:mt-5 mt-3   mb-16 grid lg:grid-cols-3 grid-cols-2 lg:gap-4 gap-2">
+        {selectedMedia.map(
+          (
+            media: { details: { name: string; desc: string }; url: string },
+            index: number
+          ) => (
+            <ImageGridLayout
+              key={index}
+              className="break-after-avoid"
+              details={media.details}
+            >
               <img
-                src={logoUrl}
+                src={media.url}
                 alt={selected}
-                className={`w-full object-cover rounded-2xl ${
-                  index === 9 && "2xl:h-[540px] xl:h-[446px] "
-                }
-                ${index === 2 && "2xl:h-[660px] xl:h-[558px]"}
-                `}
+                className={`w-full object-cover h-full rounded-2xl `}
               />
-            </div>
-          );
-        })}
+            </ImageGridLayout>
+          )
+        )}
       </div>
     </div>
   );
@@ -62,21 +59,13 @@ const Works = () => {
 
 export default Works;
 
-const SorterButton = ({
-  label,
-  selected,
-  setSelected,
-}: {
-  label: string;
-  selected: string;
-  setSelected: (x: string) => void;
-}) => {
+const SorterButton = ({ label, selected, setSelected }) => {
   return (
     <button
       onClick={() => setSelected(label)}
       className={`${
         selected === label ? "text-white bg-primary" : "text-primary bg-white"
-      } rounded-full cursor-pointer border-2 px-9 py-2 text-sm capitalize border-primary`}
+      } rounded-full cursor-pointer border-2 md:px-9 sm:px-6 px-5 md:py-2 sm:py-1.5 py-1 md:text-sm sm:text-xs text-[11px] capitalize border-primary`}
     >
       {label}
     </button>

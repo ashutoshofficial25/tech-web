@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "../../styles/home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { videoUrls } from "../../constants/media";
 const About = () => {
   const navigate = useNavigate();
   const settings = {
@@ -18,7 +19,7 @@ const About = () => {
     centerMode: true,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1536,
         settings: {
           slidesToShow: 1,
         },
@@ -72,8 +73,8 @@ const About = () => {
                 >
                   <div className="bg-white w-full rounded-3xl h-full">
                     <video
-                      className="h-full w-full object-cover cursor-pointer rounded-3xl"
-                      src="https://storage.googleapis.com/squidlor/kin/kin/about-us/about-us-video.mp4"
+                      className="h-full w-full object-fill cursor-pointer rounded-3xl"
+                      src={videoUrls[0]}
                       controls={false}
                       autoPlay
                       muted
