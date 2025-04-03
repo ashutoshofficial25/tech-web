@@ -20,7 +20,6 @@ const Works = () => {
     AOS.init({
       duration: 600,
       easing: "ease-out-quad",
-      once: true,
       offset: 120,
     });
   }, []);
@@ -46,11 +45,7 @@ const Works = () => {
         <span className="capitalize font-medium">{selected}</span>
       </p>
 
-      <div
-        className="md:mt-10 sm:mt-7 mt-4 flex flex-row items-center md:gap-x-3 sm:gap-x-2 gap-x-1.5"
-        data-aos="fade-up"
-        data-aos-delay="150"
-      >
+      <div className="md:mt-10 sm:mt-7 mt-4 flex flex-row items-center md:gap-x-3 sm:gap-x-2 gap-x-1.5">
         {works.map((item, index) => (
           <SorterButton
             key={index}
@@ -91,16 +86,25 @@ const Works = () => {
 export default Works;
 
 const SorterButton = ({ label, selected, setSelected, index }) => {
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const handleClick = () => {
+    setSelected(label);
+    setAnimationKey((prev) => prev + 1);
+  };
+
   return (
-    <button
-      onClick={() => setSelected(label)}
-      className={`${
-        selected === label ? "text-white bg-primary" : "text-primary bg-white"
-      } rounded-full cursor-pointer border-2 md:px-9 sm:px-6 px-5 md:py-2 sm:py-1.5 py-1 md:text-sm sm:text-xs text-[11px] capitalize border-primary transition-all duration-300`}
-      data-aos="fade-up"
-      data-aos-delay={200 + index * 50} // Staggered button animation
-    >
-      {label}
-    </button>
+    <div key={`${label}-${animationKey}`}>
+      <button
+        onClick={handleClick}
+        className={`${
+          selected === label ? "text-white bg-primary" : "text-primary bg-white"
+        } rounded-full cursor-pointer border-2 md:px-9 sm:px-6 px-5 md:py-2 sm:py-1.5 py-1 md:text-sm sm:text-xs text-[11px] capitalize border-primary transition-all duration-300`}
+        data-aos="fade-up"
+        data-aos-delay={index * 50}
+      >
+        {label}
+      </button>
+    </div>
   );
 };
