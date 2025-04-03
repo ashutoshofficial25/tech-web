@@ -47,7 +47,11 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full fixed top-0 py-5 bg-white z-50 left-1/2 -translate-x-1/2">
+    <header
+      className={`${
+        hasShadow ? "shadow-lg" : "shadow-none"
+      } w-full fixed top-0 py-5 bg-white z-50 left-1/2 -translate-x-1/2`}
+    >
       <div className="container mx-auto flex items-center flex-row justify-between px-4 md:px-6 lg:px-0">
         <Logo />
 
@@ -81,7 +85,9 @@ const Header = () => {
                 className="hover:opacity-80 text-black/60 font-medium cursor-pointer flex items-center gap-x-2 text-[22px]"
                 key={index}
                 onClick={() => {
-                  scrollToSection(id);
+                  scrollToSection(
+                    id as "home" | "about" | "services" | "contact"
+                  );
                   setIsMenuOpen(false);
                 }}
               >

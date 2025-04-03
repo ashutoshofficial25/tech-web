@@ -4,8 +4,16 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const ContactUsForm = () => {
   return (
-    <div className="lg:container w-full lg:px-20 md:px-0 xs:px-10 px-6  mx-auto   lg:py-16  py-12 flex sm:flex-row flex-col sm:justify-center lg:gap-x-4 sm:gap-x-2">
-      <div className="flex  lg:gap-y-3 gap-y-2 flex-col md:w-[45%] sm:w-1/2 w-full items-start">
+    <div
+      data-aos="fade-up"
+      data-aos-delay="200"
+      className="lg:container w-full lg:px-20 md:px-0 xs:px-10 px-6  mx-auto   lg:py-16  py-12 flex sm:flex-row flex-col sm:justify-center lg:gap-x-4 sm:gap-x-2"
+    >
+      <div
+        data-aos="fade-right"
+        data-aos-delay="250"
+        className="flex  lg:gap-y-3 gap-y-2 flex-col md:w-[45%] sm:w-1/2 w-full items-start"
+      >
         <div className="flex flex-col gap-y-1 items-start w-full">
           <label
             htmlFor="name"
@@ -72,7 +80,11 @@ const ContactUsForm = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:w-[35%] sm:w-1/2 w-full gap-y-1 items-start">
+      <div
+        data-aos="fade-left"
+        data-aos-delay="300"
+        className="flex flex-col md:w-[35%] sm:w-1/2 w-full gap-y-1 items-start"
+      >
         <label
           htmlFor="message"
           className="relative lg:left-3 md:left-2 left-1 lg:text-base md:text-sm sm:text-xs text-[10px] text-primary"
