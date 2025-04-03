@@ -23,7 +23,7 @@ const About = () => {
       className="mx-auto 2xl:px-32 lg:px-16 md:px-10 px-6 container"
     >
       <h1
-        className="text-6xl md:text-5xl sm:text-4xl text-black font-semibold md:relative md:left-8 sm:left-4 left-0"
+        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-black font-semibold md:relative md:left-8 sm:left-4 left-0"
         data-aos="fade-up"
       >
         About us

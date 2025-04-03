@@ -35,14 +35,14 @@ const ContactUs = () => {
         data-aos="fade-down"
       >
         <h2
-          className="text-secondary text-2xl"
+          className="text-secondary text-base sm:text-xl md:text-2xl"
           data-aos="fade-down"
           data-aos-delay="150"
         >
           Contact Us
         </h2>
         <h1
-          className="text-[44px] mt-2 font-semibold text-primary md:w-1/2 w-full px-4 md:px-0 text-center"
+          className="text-xl sm:text-3xl md:text-4xl lg:text-[44px] mt-2 font-semibold text-primary md:w-1/2 w-full px-4 md:px-0 text-center"
           data-aos="fade-down"
           data-aos-delay="200"
         >

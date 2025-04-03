@@ -28,16 +28,19 @@ const Business = () => {
         className="absolute z-0 top-12 left-1/2 -translate-x-1/2 w-full opacity-50 sm:opacity-70 md:opacity-100"
       />
       <div className="container relative z-10 mx-auto flex flex-col items-center px-4 sm:px-6 md:px-8">
-        <h2 className="text-secondary text-xl sm:text-2xl" data-aos="fade-up">
+        <h2
+          className="text-secondary text-base sm:text-xl md:text-2xl"
+          data-aos="fade-up"
+        >
           Why Choose Us?
         </h2>
         <h1
           data-aos="fade-up"
-          className="text-3xl sm:text-4xl md:text-[44px] mt-4 sm:mt-6 font-semibold text-primary w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-center"
+          className="text-xl sm:text-3xl md:text-4xl lg:text-[44px] mt-4 sm:mt-6 font-semibold text-primary w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-center"
         >
           We Have Helped Businesses Thrive Globally
         </h1>
-        <p className="text-black/60 font-light mt-4 sm:mt-6 text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
+        <p className="text-black/60 sm:text-base text-sm font-light mt-4 sm:mt-6 text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
           With a proven track record of success, we have empowered businesses
           worldwide by delivering strategic solutions in event planning, global
           trade, and market expansion.

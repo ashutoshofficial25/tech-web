@@ -5,7 +5,7 @@ const Newsletter = () => {
   const [email, setEmail] = useState("");
   const handleSubscribe = () => {};
   return (
-    <div className="container px-6 sm:px-8 md:px-12 lg:px-20 flex flex-col md:flex-row md:h-64 mx-auto rounded-[32px] bg-primary my-8 mb-16 sm:mb-8 md:my-16 py-8 md:py-0 justify-between items-center md:gap-x-20 gap-y-6">
+    <div className="container px-6 sm:px-8 md:px-12 lg:px-20 flex flex-col md:flex-row md:h-64 mx-auto md:rounded-[32px] sm:rounded-3xl rounded-2xl bg-primary my-8 mb-16 sm:mb-8 md:my-16 py-8 md:py-0 justify-between items-center md:gap-x-20 gap-y-6">
       <div className="flex flex-row w-full md:w-1/2 justify-between items-center gap-x-4">
         <div className="h-12 w-12 relative rounded-full flex items-center justify-center bg-white">
           <FaEnvelopeOpenText className="text-2xl text-primary" />

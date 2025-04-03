@@ -31,7 +31,7 @@ const Hero = () => {
     >
       <HeroIllustractionCard
         label="Growth-Driven Strategies"
-        className="top-32 -rotate-[11deg] left-8"
+        className="top-32 xl:scale-100 scale-60 -rotate-[11deg] xl:left-8 left-0 md:block hidden"
         icon={<BiStats className="text-[#0905c4] text-2xl" />}
         logo={<PiStrategyBold className="text-[#0905C4] text-5xl" />}
         data-aos="fade-right"
@@ -39,7 +39,7 @@ const Hero = () => {
       />
       <HeroIllustractionCard
         label="Client Satisfaction"
-        className="top-32 -rotate-[11deg] right-16"
+        className="top-32 xl:scale-100 scale-60  -rotate-[11deg] xl:right-16 right-0 md:block hidden"
         icon={<TbHeartStar className="text-[#2291D2] text-2xl" />}
         logo={<LuFolderHeart className="text-[#2291D2] text-5xl" />}
         data-aos="fade-left"
@@ -47,7 +47,7 @@ const Hero = () => {
       />
       <HeroIllustractionCard
         label="Global Reach"
-        className="bottom-32 -rotate-[11deg] right-40"
+        className="bottom-32 xl:scale-100 scale-60  -rotate-[11deg] xl:right-40 right-20 md:block hidden"
         icon={<LuMapPinCheck className="text-[#057BC4] text-2xl" />}
         logo={<FaMapLocationDot className="text-[#057BC4] text-5xl" />}
         data-aos="fade-left"
@@ -55,7 +55,7 @@ const Hero = () => {
       />
       <HeroIllustractionCard
         label="Proven Track Record"
-        className="bottom-32 rotate-[11deg] left-16 scale-110"
+        className="bottom-32  rotate-[11deg] xl:left-16 left-0 2xl:scale-110 xl:scale-100 scale-60  md:block hidden"
         icon={<TbHomeStats className="text-[#05C458] text-2xl" />}
         logo={<TfiStatsUp className="text-[#05C458] text-5xl" />}
         data-aos="fade-right"
@@ -74,7 +74,7 @@ const Hero = () => {
           <MdOutlineQueryStats className="text-xl text-primary" />
         </div>
         <h1
-          className="text-[32px] md:text-[48px] lg:text-[56px] text-primary font-semibold 2xl:w-3/5 w-4/5 leading-[1.2] text-center mt-5"
+          className="text-[32px] md:text-[48px] xl:text-[56px] text-primary font-semibold 2xl:w-3/5 w-4/5 leading-[1.2] text-center mt-5"
           data-aos="fade-up"
           data-aos-delay="350"
         >
