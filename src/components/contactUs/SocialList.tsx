@@ -6,13 +6,13 @@ const SocialList = () => {
     window.open(link, "_blank");
   };
   return (
-    <div className="container mx-auto flex gap-x-12 justify-end px-24 items-end py-10">
-      <p className="text-2xl font-normal text-primary ">
+    <div className="container mx-auto flex lg:gap-x-12 gap-x-8 lg:justify-end justify-center xl:px-24 sm:px-16 xs:px-10 px-6 items-end md:py-10 pb-10">
+      <p className="xl:text-2xl lg:text-xl md:text-base text-sm font-normal text-primary ">
         Get in touch with social updates
       </p>
       <div className="flex flex-col gap-y-2 items-start">
         <span className="font-normal text-light text-xs">Follow us on</span>
-        <div className="flex gap-x-5 items-center">
+        <div className="flex lg:gap-x-5 gap-x-4 items-center">
           {socialProfiles?.map((item: ISocialProfileProps, index: number) => {
             return (
               <div

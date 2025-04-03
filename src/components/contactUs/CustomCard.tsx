@@ -12,18 +12,18 @@ const CustomCard = ({
   module?: string;
 }) => {
   return (
-    <div className="h-64 w-full bg-primary rounded-3xl px-9 py-6 flex  flex-col items-start">
+    <div className="xl:h-64 sm:h-60 h-56 w-full bg-primary rounded-3xl xl:px-9 sm:px-7 px-8 sm:py-6 py-8  flex  flex-col items-start">
       {icon}
       <p
-        className={`text-white/80 font-normal mt-10 ${
-          module === "location" ? "w-3/5" : "w-full"
+        className={`text-white/80 font-normal xl:text-base lg:text-sm md:text-xs sm:text-[10px] text-sm lg:mt-10 mt-8 ${
+          module === "location" ? "sm:w-3/5 w-full" : "w-full"
         }`}
       >
         {desc}
       </p>
       {module === "call" ? (
         <>
-          <div className="flex text-white text-xl mt-4 flex-col gap-y-1 items-start">
+          <div className="flex text-white xl:text-xl lg:text-base sm:text-sm text-base  mt-4 flex-col gap-y-1 items-start">
             {Array.isArray(value) &&
               value?.map((item: string, index: number) => {
                 return <p key={index}>{item}</p>;
@@ -32,7 +32,9 @@ const CustomCard = ({
         </>
       ) : (
         <>
-          <h1 className="text-white w-[90%] text-xl mt-4">{value}</h1>
+          <h1 className="text-white  sm:w-[90%] w-full xl:text-xl lg:text-base sm:text-sm text-base mt-4">
+            {value}
+          </h1>
         </>
       )}
     </div>

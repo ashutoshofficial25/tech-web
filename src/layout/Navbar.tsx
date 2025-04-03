@@ -32,7 +32,7 @@ const Navbar = () => {
   }, []);
   return (
     <header
-      className={`w-full fixed top-0 py-5 bg-white z-50 left-1/2 -translate-x-1/2 transition-shadow duration-300 ${
+      className={`w-full fixed top-0 py-5 bg-white z-[9999] left-1/2 -translate-x-1/2 transition-shadow duration-300 ${
         hasShadow ? "shadow-lg" : "shadow-none"
       }`}
     >
@@ -40,6 +40,7 @@ const Navbar = () => {
         <Logo />
         <NavMenu
           navs={navs}
+          setIsExpanded={setIsExpanded}
           handleClick={navigate}
           className={`md:relative absolute md:shadow-none shadow-lg md:top-0 top-16 lg:left-28  md:left-[-8vw] ${
             isExpanded ? "left-0" : "-left-[110vw]"
@@ -83,10 +84,12 @@ const NavMenu = ({
   navs,
   className,
   handleClick,
+  setIsExpanded,
 }: {
   navs: INavItemProps[];
   className?: string;
   handleClick: (x: string) => void;
+  setIsExpanded?: any;
 }) => {
   const { pathname } = useLocation();
   return (
@@ -102,7 +105,10 @@ const NavMenu = ({
                 ? "text-primary font-semibold"
                 : "text-black/60 font-medium"
             } cursor-pointer flex items-center gap-x-2 xl:text-[18px] lg:text-base text-sm`}
-            onClick={() => handleClick(redirect)}
+            onClick={() => {
+              handleClick(redirect);
+              setIsExpanded(false);
+            }}
             key={index}
           >
             <span>{label}</span>

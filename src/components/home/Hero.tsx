@@ -3,8 +3,10 @@ import { FaStar } from "react-icons/fa";
 import Button from "../common/Button";
 import ClientsSlider from "./ClientsSlider";
 import GalleryContainer from "./GalleryContainer";
+import { useNavigate } from "react-router";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="h-full  w-full pt-36">
       <div className="container mx-auto flex flex-col items-center">
@@ -26,7 +28,7 @@ const Hero = () => {
         <Button
           title="View Gallery"
           className="md:mt-10 sm:mt-8 xs:mt-6 mt-5 md:px-9 "
-          handleClick={() => {}}
+          handleClick={() => navigate("works")}
           variant="filled"
         />
       </div>

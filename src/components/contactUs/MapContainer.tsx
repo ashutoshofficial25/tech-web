@@ -7,7 +7,7 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const position: [number, number] = [28.6163, 77.3757]; // Coordinates for Sector 61, Noida
+const position: [number, number] = [28.6163, 77.3757];
 
 const MyMapContainer = () => {
   return (
@@ -15,9 +15,9 @@ const MyMapContainer = () => {
       center={position}
       zoom={15}
       attributionControl={false}
-      scrollWheelZoom={true} // Enable zooming with the scroll wheel
-      zoomControl={true} // Enable zoom control buttons (+/-)
-      style={{ height: "560px", width: "100%" }}
+      scrollWheelZoom={true}
+      zoomControl={true}
+      style={{ height: "560px", width: "100%", zIndex: 2 }}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={position}>

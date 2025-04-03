@@ -5,28 +5,30 @@ import MapContainer from "./MapContainer";
 const AddressWrapper = () => {
   return (
     <>
-      <div className="container px-16 mx-auto pt-20">
-        <h2 className="text-xl text-black/40">Our Location</h2>
+      <div className="xl:container w-full sm:px-16 xs:px-10 px-6 mx-auto lg:pt-20 md:pt-16 pt-12">
+        <h2 className="lg:text-xl sm:text-base text-sm text-black/40">
+          Our Location
+        </h2>
         <div className="flex flex-row items-start justify-between">
           <div className="flex flex-col items-start">
-            <h1 className="text-4xl font-medium text-primary">
+            <h1 className="xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-medium text-primary">
               Connecting Near and Far
             </h1>
-            <p className="mt-2 w-1/2 font-light text-light">
+            <p className="mt-2 xl:w-1/2 w-3/5 font-light lg:text-base text-sm text-light">
               Bringing together diverse communities from all corners of the
               world, fostering meaningful connections, and creating a global
               network that transcends borders, cultures, and distances
             </p>
           </div>
-          <div className="flex flex-row gap-x-3 items-center">
-            <IoLocationSharp className="text-secondary text-4xl" />
-            <p className="font-light">
+          <div className="flex lg:w-fit w-full flex-row md:gap-x-3 sm:gap-x-2 gap-x-1.5 items-center">
+            <IoLocationSharp className="text-secondary lg:text-4xl md:text-3xl text-2xl" />
+            <p className="font-light lg:text-base md:text-sm sm:text-xs text-[11px]">
               D-148, SECTOR-61, NOIDA-201301(U.P.), INDIA
             </p>
           </div>
         </div>
       </div>
-      <div className="mt-12">
+      <div className="md:mt-12 sm:mt-8 mt-6">
         <MapContainer />
       </div>
     </>
