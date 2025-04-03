@@ -56,7 +56,7 @@ const Navbar = () => {
           />
           <Button
             variant="filled"
-            handleClick={() => {}}
+            handleClick={() => navigate("/apex")}
             className="!lg:px-12 !sm:px-10 !px-8"
             title="Apex"
             module="navbar"
