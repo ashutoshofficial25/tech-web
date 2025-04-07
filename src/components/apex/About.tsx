@@ -97,8 +97,10 @@ const About = () => {
               </p>
             </div>
             <p className="text-black text-sm md:text-base font-normal mt-4 md:mt-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Facilitating strategic international partnerships and business
+              expansions across key markets in Asia, Europe, and North America,
+              driving substantial growth for our clients through expertly
+              negotiated trade agreements.
             </p>
           </div>
           <div className="w-full md:w-1/3 lg:w-2/5 flex z-10 justify-end items-center h-full mt-6 md:mt-0">

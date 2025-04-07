@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { FaTrophy } from "react-icons/fa";
-import { LuImages, LuVideo } from "react-icons/lu";
-import { MdSportsFootball } from "react-icons/md";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import ServicesCard from "./ServicesCard";
-import { IoIosArrowRoundUp } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import { FaTrophy } from 'react-icons/fa';
+import { LuImages, LuVideo } from 'react-icons/lu';
+import { MdSportsFootball } from 'react-icons/md';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import ServicesCard from './ServicesCard';
+import { IoIosArrowRoundUp } from 'react-icons/io';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface CustomArrowProps {
   onClick?: () => void;
@@ -18,105 +18,105 @@ const services = [
     icon: (
       <FaTrophy className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Major Games & Championshiops",
+    title: 'Major Games & Championshiops',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Comprehensive management of large-scale sporting events, from planning to execution, ensuring memorable experiences for participants and spectators alike.',
   },
   {
     icon: (
       <LuImages className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Museum & Galleries build up",
+    title: 'Museum & Galleries build up',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Expert design and construction of engaging exhibition spaces that showcase collections and artworks with maximum impact and visitor engagement.',
   },
   {
     icon: (
       <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Sports & Life Style Events",
+    title: 'Sports & Life Style Events',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Creating dynamic lifestyle and sporting events that connect brands with their target audiences through authentic and immersive experiences.',
   },
   {
     icon: (
       <LuVideo className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Live Streaming Production",
+    title: 'Live Streaming Production',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Professional live streaming services with high-quality production values, ensuring your event reaches global audiences with crystal-clear audio and video.',
   },
   {
     icon: (
       <FaTrophy className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Exhibitions & Expos",
+    title: 'Exhibitions & Expos',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'End-to-end management of trade shows and exhibitions that maximize brand visibility and generate valuable business connections and leads.',
   },
   {
     icon: (
       <LuImages className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Brand Activations",
+    title: 'Brand Activations',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Strategic and creative brand activation campaigns that create meaningful connections between brands and consumers through memorable experiences.',
   },
   {
     icon: (
       <MdSportsFootball className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Structural build & Installation",
+    title: 'Structural build & Installation',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Custom design and construction of event structures, stands, and installations that bring your brand vision to life with precision and creativity.',
   },
   {
     icon: (
       <LuVideo className="sm:text-8xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Event Planning and Management",
+    title: 'Event Planning and Management',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Comprehensive event planning services covering everything from concept development to on-site management, ensuring flawless execution of your vision.',
   },
 
   {
     icon: (
       <FaTrophy className="xl:sm:text-8xl sm:text-7xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Creative Conceptualization & Development",
+    title: 'Creative Conceptualization & Development',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Innovative concept creation that transforms your brand objectives into compelling event experiences that resonate with your target audience.',
   },
   {
     icon: (
       <LuImages className="xl:sm:text-8xl sm:text-7xl text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Audio Visual Systems & Show Presentations",
+    title: 'Audio Visual Systems & Show Presentations',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'State-of-the-art audio-visual solutions that enhance your event with stunning visuals, perfect sound, and seamless technical execution.',
   },
   {
     icon: (
       <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Venue Sourcing & Management",
+    title: 'Venue Sourcing & Management',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'Expert venue selection and management services to find and optimize the perfect location that aligns with your event objectives and budget.',
   },
   {
     icon: (
       <LuVideo className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: "Design Production & Build",
+    title: 'Design Production & Build',
     description:
-      "Lorem ipsum dolar sit amet consectuer vasetches unemos sit met",
+      'End-to-end design and production services that transform creative concepts into tangible, impactful physical environments for your events.',
   },
 ];
 const Services = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
     });
   }, []);
@@ -129,7 +129,7 @@ const Services = () => {
     autoplay: true,
     speed: 500,
     autoplaySpeed: 3000,
-    cssEase: "linear",
+    cssEase: 'linear',
     responsive: [
       {
         breakpoint: 1280,
