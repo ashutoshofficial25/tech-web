@@ -10,6 +10,7 @@ import NewsletterForm from '../components/contactUs/NewsletterForm';
 import AddressWrapper from '../components/contactUs/AddressWrapper';
 import SEO from '../components/common/SEO';
 import StructuredData from '../components/common/StructuredData';
+import BacklinkSEO from '../components/common/BacklinkSEO';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -78,6 +79,72 @@ const ContactUs = () => {
             addressCountry: 'INDIA',
           },
         }}
+      />
+      <BacklinkSEO
+        pageUrl="/contact"
+        relatedLinks={[
+          {
+            url: '/',
+            title: 'Kin India - Home',
+            description:
+              'Discover how we can elevate your brand through unforgettable events',
+          },
+          {
+            url: '/about',
+            title: 'About Kin India',
+            description:
+              'Learn about our mission and vision in creating memorable brand experiences',
+          },
+          {
+            url: '/works',
+            title: 'Our Portfolio',
+            description:
+              'Explore our successful event management projects and brand activations',
+          },
+        ]}
+        industryLinks={[
+          {
+            url: 'https://www.eventplannernews.com',
+            title: 'Event Planner News',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.meetingsnet.com',
+            title: 'MeetingsNet',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.corporateeventnews.com',
+            title: 'Corporate Event News',
+            relationship: 'industry',
+          },
+        ]}
+        authorityLinks={[
+          {
+            url: 'https://www.inc.com/business-events',
+            title: 'Inc.com - Business Events',
+            description: 'Business event strategies and insights',
+          },
+          {
+            url: 'https://www.cvent.com/en/blog',
+            title: 'Cvent Blog',
+            description: 'Leading event management platform insights',
+          },
+        ]}
+        socialProfiles={[
+          {
+            platform: 'LinkedIn',
+            url: 'https://www.linkedin.com/company/kin-india',
+          },
+          {
+            platform: 'Instagram',
+            url: 'https://www.instagram.com/kinindia',
+          },
+          {
+            platform: 'Twitter',
+            url: 'https://twitter.com/kinindia',
+          },
+        ]}
       />
       <img
         src={aboutIllustrationBg}

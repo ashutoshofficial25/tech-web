@@ -2,18 +2,43 @@ import React, { useEffect, useState } from 'react';
 import kinLogoUrl from '../assets/kin-logo.png';
 import { useLocation, useNavigate } from 'react-router';
 import Button, { HamburgerMenu } from '../components/common/Button';
+import { Helmet } from 'react-helmet';
 interface INavItemProps {
   label: string;
   redirect: string;
+  description?: string; // Added for better SEO context
 }
 const navs: INavItemProps[] = [
-  { label: 'Home', redirect: '/' },
-  { label: 'About Us', redirect: '/about' },
+  {
+    label: 'Home',
+    redirect: '/',
+    description: 'Kin India - Event Management and Brand Experiences',
+  },
+  {
+    label: 'About Us',
+    redirect: '/about',
+    description: "Learn about Kin India's mission and story",
+  },
   {
     label: 'Our Works',
     redirect: '/works',
+    description:
+      "Explore Kin India's portfolio of successful events and brand activations",
   },
 ];
+// Navigation schema for structured data
+const navigationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SiteNavigationElement',
+  name: 'Kin India Navigation',
+  hasPart: navs.map((nav) => ({
+    '@type': 'WebPage',
+    name: nav.label,
+    description: nav.description || `${nav.label} page of Kin India`,
+    url: `https://kinindia.co${nav.redirect === '/' ? '' : nav.redirect}`,
+  })),
+};
+
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [hasShadow, setHasShadow] = useState<boolean>(false);
@@ -47,13 +72,21 @@ const Navbar = () => {
       className={`w-full fixed top-0 py-5 bg-white z-[9999] left-1/2 -translate-x-1/2 transition-shadow duration-300 ${
         hasShadow ? 'shadow-lg' : 'shadow-none'
       }`}
+      itemScope
+      itemType="https://schema.org/WPHeader"
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(navigationSchema)}
+        </script>
+      </Helmet>
       <div className="lg:container w-full lg:px-4 sm:px-6 px-4 mx-auto flex items-center flex-row justify-between relative">
         <Logo
           handleClick={() => {
             navigate('/');
             setIsExpanded(false);
           }}
+          alt="Kin India - Event Management and Brand Experiences"
         />
         <NavMenu
           navs={navs}
@@ -90,13 +123,20 @@ const Navbar = () => {
 };
 export default Navbar;
 
-const Logo = ({ handleClick }: { handleClick: () => void }) => {
+const Logo = ({
+  handleClick,
+  alt,
+}: {
+  handleClick: () => void;
+  alt?: string;
+}) => {
   return (
     <div className="cursor-pointer z-10" onClick={handleClick}>
       <img
         src={kinLogoUrl}
-        alt="Kin India Logo"
+        alt={alt || 'Kin India Logo'}
         className="md:h-8 h-6 transition-transform hover:scale-105 duration-200"
+        itemProp="logo"
       />
     </div>
   );
@@ -117,25 +157,32 @@ const NavMenu = ({
     <ul
       className={`${className} flex md:flex-row flex-col items-center xl:gap-x-12 lg:gap-x-10 md:gap-x-8 md:gap-y-0 gap-y-8`}
     >
-      {navs?.map(({ label, redirect }: INavItemProps, index: number) => {
-        return (
-          <li
-            role="button"
-            className={`hover:opacity-80 ${
-              redirect === pathname
-                ? 'text-primary font-semibold'
-                : 'text-black/60 font-medium'
-            } cursor-pointer flex items-center gap-x-2 xl:text-[18px] lg:text-base text-sm`}
-            onClick={() => {
-              handleClick(redirect);
-              setIsExpanded(false);
-            }}
-            key={index}
-          >
-            <span>{label}</span>
-          </li>
-        );
-      })}
+      {navs?.map(
+        ({ label, redirect, description }: INavItemProps, index: number) => {
+          return (
+            <li
+              role="button"
+              className={`hover:opacity-80 ${
+                redirect === pathname
+                  ? 'text-primary font-semibold'
+                  : 'text-black/60 font-medium'
+              } cursor-pointer flex items-center gap-x-2 xl:text-[18px] lg:text-base text-sm`}
+              itemScope
+              itemType="https://schema.org/SiteNavigationElement"
+              itemProp="url"
+              onClick={() => {
+                handleClick(redirect);
+                setIsExpanded(false);
+              }}
+              key={index}
+            >
+              <span itemProp="name" title={description || label}>
+                {label}
+              </span>
+            </li>
+          );
+        }
+      )}
     </ul>
   );
 };

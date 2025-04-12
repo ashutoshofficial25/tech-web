@@ -5,6 +5,7 @@ import Button from '../components/common/Button';
 import TestimonialCard from '../components/aboutUs/TestimonialCard';
 import SEO from '../components/common/SEO';
 import StructuredData from '../components/common/StructuredData';
+import BacklinkSEO from '../components/common/BacklinkSEO';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -37,6 +38,72 @@ const AboutUs = () => {
           url: 'https://kinindia.co/about',
           lastReviewed: '2023-12-01',
         }}
+      />
+      <BacklinkSEO
+        pageUrl="/about"
+        relatedLinks={[
+          {
+            url: '/',
+            title: 'Kin India - Home',
+            description:
+              'Discover how we can elevate your brand through unforgettable events',
+          },
+          {
+            url: '/works',
+            title: 'Our Portfolio',
+            description:
+              'Explore our successful event management projects and brand activations',
+          },
+          {
+            url: '/contact',
+            title: 'Contact Us',
+            description: 'Get in touch with our event management experts',
+          },
+        ]}
+        industryLinks={[
+          {
+            url: 'https://www.eventindustrynews.com',
+            title: 'Event Industry News',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.specialevents.com',
+            title: 'Special Events',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.exhibitoronline.com',
+            title: 'Exhibitor Magazine',
+            relationship: 'industry',
+          },
+        ]}
+        authorityLinks={[
+          {
+            url: 'https://www.eventbrite.com/blog',
+            title: 'Eventbrite Blog',
+            description:
+              'Leading resource for event planning tips and strategies',
+          },
+          {
+            url: 'https://www.forbes.com/business',
+            title: 'Forbes Business',
+            description: 'Business news, insights and expert opinions',
+          },
+        ]}
+        socialProfiles={[
+          {
+            platform: 'LinkedIn',
+            url: 'https://www.linkedin.com/company/kin-india',
+          },
+          {
+            platform: 'Instagram',
+            url: 'https://www.instagram.com/kinindia',
+          },
+          {
+            platform: 'Twitter',
+            url: 'https://twitter.com/kinindia',
+          },
+        ]}
       />
       <img
         src={aboutIllustrationBg}

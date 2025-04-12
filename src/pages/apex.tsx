@@ -11,6 +11,7 @@ import Footer from '../components/apex/Footer';
 import ClientsSlider from '../components/home/ClientsSlider';
 import SEO from '../components/common/SEO';
 import StructuredData from '../components/common/StructuredData';
+import BacklinkSEO from '../components/common/BacklinkSEO';
 
 const Apex = () => {
   return (
@@ -32,6 +33,77 @@ const Apex = () => {
           url: 'https://kinindia.co/apex',
           lastReviewed: '2023-12-01',
         }}
+      />
+      <BacklinkSEO
+        pageUrl="/apex"
+        relatedLinks={[
+          {
+            url: '/',
+            title: 'Kin India - Home',
+            description:
+              'Discover how we can elevate your brand through unforgettable events',
+          },
+          {
+            url: '/about',
+            title: 'About Kin India',
+            description:
+              'Learn about our mission and vision in creating memorable brand experiences',
+          },
+          {
+            url: '/works',
+            title: 'Our Portfolio',
+            description:
+              'Explore our successful event management projects and brand activations',
+          },
+          {
+            url: '/contact',
+            title: 'Contact Us',
+            description: 'Get in touch with our event management experts',
+          },
+        ]}
+        industryLinks={[
+          {
+            url: 'https://www.trade.gov',
+            title: 'International Trade Administration',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.wto.org',
+            title: 'World Trade Organization',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.iccwbo.org',
+            title: 'International Chamber of Commerce',
+            relationship: 'industry',
+          },
+        ]}
+        authorityLinks={[
+          {
+            url: 'https://www.mckinsey.com/industries/public-sector/our-insights/global-trade',
+            title: 'McKinsey - Global Trade Insights',
+            description: 'Expert insights on global trade and business',
+          },
+          {
+            url: 'https://www.worldbank.org/en/topic/trade',
+            title: 'World Bank - Trade',
+            description: 'Global trade research and development',
+          },
+        ]}
+        socialProfiles={[
+          {
+            platform: 'LinkedIn',
+            url: 'https://www.linkedin.com/company/kin-india',
+          },
+          {
+            platform: 'Instagram',
+            url: 'https://www.instagram.com/kinindia',
+          },
+          {
+            platform: 'Twitter',
+            url: 'https://twitter.com/kinindia',
+          },
+        ]}
       />
       <Header />
       <Hero />

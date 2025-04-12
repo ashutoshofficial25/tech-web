@@ -3,6 +3,7 @@ import { exhibitions, events, conferences } from '../constants/media';
 import ImageGridLayout from '../layout/ImageGridLayout';
 import SEO from '../components/common/SEO';
 import StructuredData from '../components/common/StructuredData';
+import BacklinkSEO from '../components/common/BacklinkSEO';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -61,6 +62,71 @@ const Works = () => {
           url: 'https://kinindia.co/works',
           lastReviewed: '2023-12-01',
         }}
+      />
+      <BacklinkSEO
+        pageUrl="/works"
+        relatedLinks={[
+          {
+            url: '/',
+            title: 'Kin India - Home',
+            description:
+              'Discover how we can elevate your brand through unforgettable events',
+          },
+          {
+            url: '/about',
+            title: 'About Kin India',
+            description:
+              'Learn about our mission and vision in creating memorable brand experiences',
+          },
+          {
+            url: '/contact',
+            title: 'Contact Us',
+            description: 'Get in touch with our event management experts',
+          },
+        ]}
+        industryLinks={[
+          {
+            url: 'https://www.bizbash.com',
+            title: 'BizBash',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.eventmanagerblog.com/event-portfolio',
+            title: 'Event Manager Blog - Portfolio Building',
+            relationship: 'industry',
+          },
+          {
+            url: 'https://www.exhibitionworld.co.uk',
+            title: 'Exhibition World',
+            relationship: 'industry',
+          },
+        ]}
+        authorityLinks={[
+          {
+            url: 'https://www.entrepreneur.com/growing-a-business/event-marketing',
+            title: 'Entrepreneur - Event Marketing',
+            description: 'Expert insights on event marketing strategies',
+          },
+          {
+            url: 'https://hbr.org/topic/marketing',
+            title: 'Harvard Business Review - Marketing',
+            description: 'Leading business insights on marketing strategies',
+          },
+        ]}
+        socialProfiles={[
+          {
+            platform: 'LinkedIn',
+            url: 'https://www.linkedin.com/company/kin-india',
+          },
+          {
+            platform: 'Instagram',
+            url: 'https://www.instagram.com/kinindia',
+          },
+          {
+            platform: 'Twitter',
+            url: 'https://twitter.com/kinindia',
+          },
+        ]}
       />
       <h1
         className="xl:text-5xl lg:text-4xl text-3xl font-medium text-primary"

@@ -1,9 +1,26 @@
+# Robots.txt for Kin India
+# Updated: 2023-12-15
+
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Crawl-delay: 10
+# Set crawl rate for all bots
+Crawl-delay: 10
 
+# Specific instructions for major search engines
+User-agent: Googlebot
+Crawl-delay: 5
+
+User-agent: Bingbot
+Crawl-delay: 5
+
+# Allow Google to access JS and CSS files
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# Sitemap location
 Sitemap: https://kinindia.co/sitemap.xml
