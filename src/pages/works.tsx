@@ -120,7 +120,7 @@ const Works = () => {
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kinindia',
+            url: 'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
           },
           {
             platform: 'Twitter',

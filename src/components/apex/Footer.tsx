@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import { useScroll } from '../../context/ScrollContext';
 
 interface ResourceItem {
@@ -21,9 +21,7 @@ const resources: ResourceItem[] = [
 ];
 
 const socialProfiles: SocialProfileItem[] = [
-  { label: 'LinkedIn', link: '' },
-  { label: 'Instagram', link: '' },
-  { label: 'Facebook', link: '' },
+  { label: 'LinkedIn', link: 'https://www.linkedin.com/company/apexvision01/' },
 ];
 
 const handleRedirect = (link: string): void => {
@@ -38,22 +36,20 @@ const Footer = () => {
           <h1 className="text-2xl font-bold">Apex</h1>
           <h1 className="mt-12 text-sm font-normal text-white">Follow us on</h1>
           <div className="flex gap-x-4 mt-3 items-center">
-            <FaInstagram className="cursor-pointer text-[18px] hover:opacity-80" />
-            <FaFacebook className="cursor-pointer text-[18px] hover:opacity-80" />
             <FaLinkedin className="cursor-pointer text-[18px] hover:opacity-80" />
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-y-10 sm:gap-y-0 xl:gap-x-36 gap-x-10 sm:gap-x-16 md:gap-x-24">
           <div className="flex font-light flex-col items-center sm:items-start">
-            <h1 className="text-xl font-medium text-white">Contacts Us</h1>
+            <h1 className="text-xl font-medium text-white">Contact Us</h1>
             <p className="mt-10 w-full sm:w-52 text-center sm:text-left">
-              D-148, SECTOR-61, NOIDA-201301 (U.P.), INDIA
+              D-55, Sector 80, Noida 201305 (U.P.), INDIA
             </p>
             <span className="mt-6 cursor-pointer block text-center sm:text-left">
-              +918080808080
+              +919810053543
             </span>
             <span className="mt-1.6 cursor-pointer block text-center sm:text-left">
-              intro@kinindia.co
+              intro@apexvision.co
             </span>
           </div>
           <div className="flex flex-col items-center sm:items-start">

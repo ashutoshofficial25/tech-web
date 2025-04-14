@@ -17,9 +17,9 @@ const Apex = () => {
   return (
     <ScrollProvider>
       <SEO
-        title="APEX - Kin India | Global Trade & Business Solutions"
-        description="Discover APEX by Kin India - Your gateway to global trade opportunities, business solutions, and international market expansion. Connect with global partners and grow your business."
-        keywords="APEX, global trade, business solutions, international markets, Kin India, export opportunities, import solutions, trade consulting, global business expansion"
+        title="APEX Vision- Kin India | Global Trade & Business Solutions"
+        description="Discover APEX Vision by Kin India - Your gateway to global trade opportunities, business solutions, and international market expansion. Connect with global partners and grow your business."
+        keywords="APEX Vision, global trade, business solutions, international markets, Kin India, export opportunities, import solutions, trade consulting, global business expansion"
         url="/apex"
         author="Kin India"
         language="en"
@@ -27,9 +27,9 @@ const Apex = () => {
       <StructuredData
         type="WebPage"
         data={{
-          name: 'APEX - Kin India | Global Trade & Business Solutions',
+          name: 'APEX Vision- Kin India | Global Trade & Business Solutions',
           description:
-            'Discover APEX by Kin India - Your gateway to global trade opportunities, business solutions, and international market expansion.',
+            'Discover APEX Vision by Kin India - Your gateway to global trade opportunities, business solutions, and international market expansion.',
           url: 'https://kinindia.co/apex',
           lastReviewed: '2023-12-01',
         }}
@@ -97,7 +97,7 @@ const Apex = () => {
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kinindia',
+            url: 'https://www.instagram.com/kin_productions_india',
           },
           {
             platform: 'Twitter',

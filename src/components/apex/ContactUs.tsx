@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import Button from "../common/Button";
-import contactBgLogoUrl from "../../assets/contact-illustration.png";
-import { useScroll } from "../../context/ScrollContext";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import { IoIosArrowDown } from 'react-icons/io';
+import Button from '../common/Button';
+import contactBgLogoUrl from '../../assets/contact-illustration.png';
+import { useScroll } from '../../context/ScrollContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactUs = () => {
   const { contactRef } = useScroll();
@@ -12,7 +12,7 @@ const ContactUs = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-out-quad",
+      easing: 'ease-out-quad',
       once: true,
       offset: 120,
     });
@@ -55,6 +55,19 @@ const ContactUs = () => {
         >
           We would love to hear you from
         </p>
+        <div
+          className="flex items-center gap-x-2 mt-3"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <span className="text-primary font-medium">Call us:</span>
+          <a
+            href="tel:+919810053543"
+            className="text-secondary hover:underline"
+          >
+            +91 9810053543
+          </a>
+        </div>
       </div>
 
       <div

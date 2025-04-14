@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { IoLocationSharp } from "react-icons/io5";
-import MapContainer from "./MapContainer";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import { IoLocationSharp } from 'react-icons/io5';
+import MapContainer from './MapContainer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AddressWrapper = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
     });
   }, []);
@@ -52,7 +52,7 @@ const AddressWrapper = () => {
           >
             <IoLocationSharp className="text-secondary lg:text-4xl md:text-3xl text-2xl" />
             <p className="font-light lg:text-base md:text-sm sm:text-xs text-[11px]">
-              D-148, SECTOR-61, NOIDA-201301(U.P.), INDIA
+              D-55, Sector 80, Noida 201305 (U.P.), INDIA
             </p>
           </div>
         </div>

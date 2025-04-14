@@ -51,7 +51,7 @@ const Home = () => {
           },
           {
             url: '/apex',
-            title: 'APEX - Global Trade Solutions',
+            title: 'APEX Vision- Global Trade Solutions',
             description: 'Discover our global trade and business solutions',
           },
         ]}
@@ -106,7 +106,7 @@ const Home = () => {
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kinindia',
+            url: 'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
           },
           {
             platform: 'Twitter',

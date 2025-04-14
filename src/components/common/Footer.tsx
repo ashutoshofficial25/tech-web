@@ -1,6 +1,6 @@
 import React from 'react';
 import kinLogoUrl from '../../assets/footer-logo.png';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
 import { ISocialProfileProps, socialProfiles } from '../../constants/links';
 const resources = [
@@ -34,21 +34,35 @@ const Footer = () => {
             Follow us on
           </h1>
           <div className="flex gap-x-4 mt-3 items-center">
-            <FaInstagram className="cursor-pointer text-[18px] hover:opacity-80" />
-            <FaFacebook className="cursor-pointer text-[18px] hover:opacity-80" />
-            <FaLinkedin className="cursor-pointer text-[18px] hover:opacity-80" />
+            <FaInstagram
+              className="cursor-pointer text-[18px] hover:opacity-80"
+              onClick={() =>
+                window.open(
+                  'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
+                  '_blank'
+                )
+              }
+              aria-label="Visit our Instagram"
+            />
+            <FaLinkedin
+              className="cursor-pointer text-[18px] hover:opacity-80"
+              onClick={() =>
+                window.open('https://linkedin.com/company/kinindia', '_blank')
+              }
+              aria-label="Visit our LinkedIn"
+            />
           </div>
         </div>
         <div className="flex  flex-row xl:gap-x-36 lg:gap-x-24 md:gap-x-10 gap-x-6 sm:mt-0 mt-8 sm:w-fit sm:justify-start justify-between w-full">
           <div className="flex font-light flex-col items-start">
             <h1 className="lg:text-xl md:text-base text-sm font-medium text-white">
-              Contacts Us
+              Contact Us
             </h1>
             <p className="xl:mt-10 lg:text-base md:text-sm text-xs sm:mt-6 mt-3 sm:w-52 w-32">
-              D-148, SECTOR-61, NOIDA-201301 (U.P.), INDIA
+              D-55, Sector 80, Noida 201305 (U.P.), INDIA
             </p>
             <span className="mt-6 lg:text-base md:text-sm text-xs cursor-pointer">
-              +918080808080
+              +918826204411
             </span>
             <span className="mt-1.6 lg:text-base md:text-sm text-xs cursor-pointer">
               intro@kinindia.co

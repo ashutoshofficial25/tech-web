@@ -143,7 +143,7 @@ export default Header;
 const Logo = () => {
   return (
     <div className="cursor-pointer" onClick={() => {}}>
-      <h1 className="text-2xl text-primary font-semibold">Apex</h1>
+      <h1 className="text-2xl text-primary font-semibold">Apex Vision</h1>
     </div>
   );
 };

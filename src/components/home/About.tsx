@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import Button from "../common/Button";
-import { useNavigate } from "react-router";
-import aboutIllustrationBg from "../../assets/illustration/hero-illustration.png";
-import Slider from "react-slick";
-import "../../styles/home.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { videoUrls } from "../../constants/media";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import Button from '../common/Button';
+import { useNavigate } from 'react-router';
+import aboutIllustrationBg from '../../assets/illustration/hero-illustration.png';
+import Slider from 'react-slick';
+import '../../styles/home.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { videoUrls } from '../../constants/media';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const About = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
     });
   }, []);
@@ -70,7 +70,7 @@ const About = () => {
           <Button
             title="Read More"
             className="sm:px-10 px-6 xl:mt-6 mt-4 relative sm:left-2"
-            handleClick={() => navigate("/about")}
+            handleClick={() => navigate('/about')}
             variant="filled"
             data-aos="fade-up"
             data-aos-delay="300"
@@ -120,7 +120,7 @@ const About = () => {
         data-aos-delay="400"
       >
         "Collective multi-disciplinary experience of
-        <span className="text-light">more than 50 years</span>, delivering
+        <span className="text-light"> more than 50 years</span>, delivering
         quality projects worldwide..."
       </h1>
 

@@ -27,9 +27,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           'Kin Productions India Private Limited specializes in creating memorable events, sports management, and brand experiences.',
         address: data.address || {
           '@type': 'PostalAddress',
-          streetAddress: 'D-148, SECTOR-61',
+          streetAddress: 'D-55, Sector 80',
           addressLocality: 'NOIDA',
-          postalCode: '201301',
+          postalCode: '201305',
           addressRegion: 'U.P.',
           addressCountry: 'INDIA',
         },
@@ -40,7 +40,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         },
         sameAs: data.sameAs || [
           'https://www.facebook.com/kinindia',
-          'https://www.instagram.com/kinindia',
+          'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
           'https://www.linkedin.com/company/kinindia',
         ],
       };
@@ -79,9 +79,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         telephone: data.telephone || '+918826204411',
         address: data.address || {
           '@type': 'PostalAddress',
-          streetAddress: 'D-148, SECTOR-61',
-          addressLocality: 'NOIDA',
-          postalCode: '201301',
+          streetAddress: 'D-55',
+          addressLocality: ' Sector 80 , Noida',
+          postalCode: '201305',
           addressRegion: 'U.P.',
           addressCountry: 'INDIA',
         },

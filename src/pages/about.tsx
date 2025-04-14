@@ -97,7 +97,7 @@ const AboutUs = () => {
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kinindia',
+            url: 'https://www.instagram.com/kin_productions_india',
           },
           {
             platform: 'Twitter',

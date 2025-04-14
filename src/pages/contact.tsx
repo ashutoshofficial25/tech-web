@@ -38,7 +38,7 @@ const contactDetails: IContactUsCardProps[] = [
   },
   {
     icon: <IoCall className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
-    value: ['+918826204411', '+919810053543'],
+    value: ['+91 8826204411'],
     desc: 'Get in touch with us by phone',
     module: 'call',
   },
@@ -72,9 +72,9 @@ const ContactUs = () => {
           telephone: '+918826204411',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'D-148, SECTOR-61',
+            streetAddress: 'D-55, Sector 80 ',
             addressLocality: 'NOIDA',
-            postalCode: '201301',
+            postalCode: '201305',
             addressRegion: 'U.P.',
             addressCountry: 'INDIA',
           },
@@ -138,7 +138,7 @@ const ContactUs = () => {
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kinindia',
+            url: 'https://www.instagram.com/kin_productions_india',
           },
           {
             platform: 'Twitter',

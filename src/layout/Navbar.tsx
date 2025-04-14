@@ -108,7 +108,7 @@ const Navbar = () => {
             variant="filled"
             handleClick={() => navigate('/apex')}
             className="!lg:px-12 !sm:px-10 !px-8"
-            title="Apex"
+            title="Apex Vision"
             module="navbar"
           />
           <HamburgerMenu

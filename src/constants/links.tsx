@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export interface ISocialProfileProps {
   label: string;
   newTab: boolean;
@@ -6,7 +6,16 @@ export interface ISocialProfileProps {
   icon: React.JSX.Element;
 }
 export const socialProfiles: ISocialProfileProps[] = [
-  { label: "LinkedIn", newTab: true, link: "", icon: <FaLinkedin /> },
-  { label: "Instagram", newTab: true, link: "", icon: <FaInstagram /> },
-  { label: "Facebook", newTab: true, link: "", icon: <FaFacebook /> },
+  {
+    label: 'LinkedIn',
+    newTab: true,
+    link: 'https://linkedin.com/company/kinindia',
+    icon: <FaLinkedin />,
+  },
+  {
+    label: 'Instagram',
+    newTab: true,
+    link: 'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
+    icon: <FaInstagram />,
+  },
 ];
