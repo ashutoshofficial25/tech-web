@@ -26,15 +26,16 @@ const contactDetails: IContactUsCardProps[] = [
     icon: (
       <IoLocationSharp className="lg:text-4xl md:text-3xl text-2xl text-white/80" />
     ),
-    value: 'D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA',
-    desc: 'Connect Near and Far, Reach out us',
+    value:
+      'Main Address: D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA\nOffice Address: D-55, Sector 80, NOIDA 201305(U.P.), INDIA',
+    desc: 'Connect Near and Far, Reach out to us',
     module: 'location',
   },
   {
     icon: <LuMail className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
     value: 'intro@kinindia.co',
     desc: "Send us a message through Kin's official email",
-    module: 'main',
+    module: 'mail',
   },
   {
     icon: <IoCall className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
@@ -174,14 +175,14 @@ const ContactUs = () => {
           data-aos="fade-up"
         >
           <h1
-            className="text-primary font-medium text-center lg:text-2xl md:text-xl text-base"
+            className="text-primary font-medium text-center lg:text-2xl md:text-xl text-base tracking-wide"
             data-aos="fade-down"
             data-aos-delay="150"
           >
             How can we help you?
           </h1>
           <div
-            className="flex sm:flex-row flex-col items-center w-full xl:px-16 md:px-10 sm:px-5 xs:px-12 px-6 mt-4 xl:gap-x-8 lg:gap-x-4 sm:gap-x-2 sm:gap-y-0 gap-y-2"
+            className="flex sm:flex-row flex-col items-stretch w-full xl:px-16 md:px-10 sm:px-5 xs:px-12 px-6 mt-6 xl:gap-x-8 lg:gap-x-4 sm:gap-x-4 sm:gap-y-0 gap-y-4"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -206,7 +207,7 @@ const ContactUs = () => {
       </div>
 
       <div
-        className="2xl:container w-full relative z-10 flex lg:mt-12 md:mt-8 sm:mt-6 mt-4 flex-col mx-auto items-center"
+        className="2xl:container w-full relative z-10 flex lg:mt-16 md:mt-12 sm:mt-8 mt-6 flex-col mx-auto items-center"
         data-aos="fade-up"
       >
         <h1
@@ -216,7 +217,7 @@ const ContactUs = () => {
           Meet Us
         </h1>
         <div
-          className="flex gap-x-4 mt-2.5 items-center justify-center"
+          className="flex gap-x-4 mt-3 items-center justify-center"
           data-aos="fade-down"
           data-aos-delay="100"
         >
@@ -224,7 +225,7 @@ const ContactUs = () => {
             We would love to hear from you
           </p>
           <div
-            className="h-6 w-6 flex items-center justify-center rounded-sm bg-primary text-white"
+            className="h-7 w-7 flex items-center justify-center rounded-md bg-primary text-white shadow-md"
             data-aos="zoom-in"
             data-aos-delay="150"
           >

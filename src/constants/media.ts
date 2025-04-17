@@ -1,32 +1,4 @@
-import countryFood from "../assets/clients/country-foods.png";
-import nike from "../assets/clients/nike.png";
-import singEx from "../assets/clients/sign-ex.png";
-import singaporeGp from "../assets/clients/singapore-gp.png";
-import activeSg from "../assets/clients/active-sg.png";
-import motul from "../assets/clients/motul.png";
-import capegemini from "../assets/clients/capegemini.png";
-import epson from "../assets/clients/epson.png";
-import pich from "../assets/clients/pich.png";
-const clients = [
-  countryFood,
-  nike,
-  singEx,
-  singaporeGp,
-  activeSg,
-  motul,
-  capegemini,
-  epson,
-  pich,
-  countryFood,
-  nike,
-  singEx,
-  singaporeGp,
-  activeSg,
-  motul,
-  capegemini,
-  epson,
-  pich,
-];
+const clients = Array.from({ length: 21 }, (_, i) => `/src/assets/clients/${i + 1}.png`);
 export default clients;
 
 export const conferences = [
@@ -43,7 +15,27 @@ export const conferences = [
       desc: "Executive conference focused on strategic growth and innovation in the post-pandemic business landscape",
     },
     url: "https://storage.googleapis.com/squidlor/kin/kin/conferences/2.jpg",
+  },  
+  {
+    details: {
+      name: "Digital Transformation Summit",
+      desc: "Industry-focused conference exploring digital strategies and technological advancements reshaping business operations",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/conferences/3.jpeg",
+  },  {
+    details: {
+      name: "Sustainable Business Conference",
+      desc: "Forum for business leaders committed to implementing sustainable practices and ESG principles in corporate strategy",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/conferences/4.jpeg",
+  },  {
+    details: {
+      name: "Future of Work Symposium",
+      desc: "Executive gathering focused on workplace evolution, remote collaboration, and building resilient organizational cultures",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/conferences/5.jpeg",
   },
+
 ];
 export const events = [
   {
