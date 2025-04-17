@@ -7,20 +7,21 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Set crawl rate for all bots
-Crawl-delay: 10
-
 # Specific instructions for major search engines
 User-agent: Googlebot
-Crawl-delay: 5
+Allow: /
+Allow: /*.js
+Allow: /*.css
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
 
 User-agent: Bingbot
 Crawl-delay: 5
-
-# Allow Google to access JS and CSS files
-User-agent: Googlebot
-Allow: /*.js$
-Allow: /*.css$
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
 
 # Sitemap location
 Sitemap: https://kinindia.co/sitemap.xml
