@@ -7,6 +7,8 @@
     <title>Kin India - Elevating Brands Through Unforgettable Events</title>
     <meta name="description" content="Kin Productions India Private Limited specializes in creating memorable events, sports management, and brand experiences. We craft unforgettable moments for top brands across India." />
     <link rel="manifest" href="/manifest.json" />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" type="module" />
     <meta name="keywords" content="event management, brand experiences, sports events, Kin India, corporate events, brand activation, event production" />
     <meta name="author" content="Kin India" />
     <meta name="robots" content="index, follow" />
@@ -14,6 +16,9 @@
     <meta name="geo.placename" content="Noida" />
     <meta name="geo.position" content="28.5961;77.3183" />
     <meta name="ICBM" content="28.5961, 77.3183" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/assets/kin-logo.png" as="image" type="image/png" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -66,5 +71,31 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Social Media Integration -->
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" crossorigin="anonymous"></script>
+    
+    <!-- Defer non-critical JavaScript -->
+    <script>
+      // Add lazy loading for images
+      document.addEventListener('DOMContentLoaded', function() {
+        var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+        if ('IntersectionObserver' in window) {
+          let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                let lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.classList.remove('lazy');
+                lazyImageObserver.unobserve(lazyImage);
+              }
+            });
+          });
+          lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+          });
+        }
+      });
+    </script>
   </body>
 </html>

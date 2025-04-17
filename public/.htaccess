@@ -9,6 +9,9 @@ RewriteRule ^(.*)$ https://www.kinindia.co/$1 [R=301,L]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+# Custom 404 error page
+ErrorDocument 404 /index.html
+
 # Set browser caching
 <IfModule mod_expires.c>
   ExpiresActive On

@@ -5,6 +5,7 @@ import AboutUs from "./pages/about";
 import ContactUs from "./pages/contact";
 import Works from "./pages/works";
 import Apex from "./pages/apex";
+import NotFound from "./pages/notFound";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/apex",
     Component: Apex,
+  },
+  {
+    path: "*",
+    Component: NotFound,
   },
 ]);
 
