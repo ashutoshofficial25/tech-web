@@ -102,7 +102,7 @@ const Home = () => {
         socialProfiles={[
           {
             platform: 'LinkedIn',
-            url: 'https://www.linkedin.com/company/kin-india',
+            url: 'https://www.linkedin.com/company/kin-productions-india/',
           },
           {
             platform: 'Instagram',

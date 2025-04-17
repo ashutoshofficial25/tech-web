@@ -9,7 +9,7 @@ export const socialProfiles: ISocialProfileProps[] = [
   {
     label: 'LinkedIn',
     newTab: true,
-    link: 'https://linkedin.com/company/kinindia',
+    link: 'https://www.linkedin.com/company/kin-productions-india/',
     icon: <FaLinkedin />,
   },
   {

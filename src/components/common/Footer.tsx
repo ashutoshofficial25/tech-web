@@ -47,7 +47,10 @@ const Footer = () => {
             <FaLinkedin
               className="cursor-pointer text-[18px] hover:opacity-80"
               onClick={() =>
-                window.open('https://linkedin.com/company/kinindia', '_blank')
+                window.open(
+                  'https://www.linkedin.com/company/kin-productions-india/',
+                  '_blank'
+                )
               }
               aria-label="Visit our LinkedIn"
             />
