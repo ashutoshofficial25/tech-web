@@ -1,4 +1,7 @@
-const clients = Array.from({ length: 21 }, (_, i) => `/src/assets/clients/${i + 1}.png`);
+// Use Vite's recommended approach for handling assets in both dev and production
+const clients = Array.from({ length: 21 }, (_, i) => `/assets/clients/${i + 1}.png`);
+// Note: In Vite, assets in the public folder are served at the root path
+// For assets in src, we should use relative paths without the leading slash
 export default clients;
 
 export const conferences = [
