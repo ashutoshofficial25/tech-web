@@ -89,6 +89,8 @@ const About = () => {
         <div className="flex slider-container flex-row md:mt-6 mt-4 gap-x-4 xl:h-[340px] h-[300px] w-full">
           <Slider {...settings} className="w-full relative h-full">
             {[...Array(3)].map((_, index: number) => {
+              // Use the index to access different videos, with fallback to reuse videos if needed
+              const videoIndex = index % videoUrls.length;
               return (
                 <div
                   key={index}
@@ -99,7 +101,7 @@ const About = () => {
                   <div className="bg-white w-full rounded-3xl h-full">
                     <video
                       className="h-full w-full object-fill cursor-pointer rounded-3xl"
-                      src={videoUrls[0]}
+                      src={videoUrls[videoIndex]}
                       controls={false}
                       autoPlay
                       muted

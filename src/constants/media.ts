@@ -210,5 +210,7 @@ export const museums = [
 ];
 
 export const videoUrls = [
-  "https://storage.googleapis.com/squidlor/kin/kin/about-us/about-us-video.mp4",
+  "https://storage.googleapis.com/squidlor/kin/kin/about-us/1.mp4",
+  "https://storage.googleapis.com/squidlor/kin/kin/about-us/2.mp4",
+  "https://storage.googleapis.com/squidlor/kin/kin/about-us/10.mp4",
 ];
