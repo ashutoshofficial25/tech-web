@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { exhibitions, events, conferences } from '../constants/media';
+import { exhibitions, events, conferences, museums } from '../constants/media';
 import ImageGridLayout from '../layout/ImageGridLayout';
 import SEO from '../components/common/SEO';
 import StructuredData from '../components/common/StructuredData';
@@ -7,7 +7,7 @@ import BacklinkSEO from '../components/common/BacklinkSEO';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const works = ['exhibitions', 'events', 'conferences'];
+const works = ['exhibitions', 'events', 'conferences', 'museums'];
 
 interface MediaItem {
   details: {
@@ -25,6 +25,7 @@ const mediaUrls: MediaUrls = {
   exhibitions,
   events,
   conferences,
+  museums,
 };
 
 const Works = () => {

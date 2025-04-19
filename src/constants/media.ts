@@ -143,6 +143,72 @@ export const exhibitions = [
   },
 ];
 
+export const museums = [
+  {
+    details: {
+      name: "Contemporary Art Museum",
+      desc: "Showcasing modern artistic expressions and innovative installations",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/1.jpeg",
+  },
+  {
+    details: {
+      name: "Historical Artifacts Exhibition",
+      desc: "Preserving cultural heritage through carefully curated historical collections",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/2.jpeg",
+  },
+  {
+    details: {
+      name: "Science & Technology Museum",
+      desc: "Interactive displays highlighting scientific achievements and technological innovations",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/3.jpeg",
+  },
+  {
+    details: {
+      name: "Natural History Collection",
+      desc: "Exploring biodiversity and geological wonders through comprehensive exhibits",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/4.jpeg",
+  },
+  {
+    details: {
+      name: "Cultural Heritage Museum",
+      desc: "Celebrating diverse cultural traditions and their historical significance",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/5.jpeg",
+  },
+  {
+    details: {
+      name: "Modern Design Gallery",
+      desc: "Featuring innovative architectural concepts and contemporary design solutions",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/6.jpeg",
+  },
+  {
+    details: {
+      name: "Photography Exhibition",
+      desc: "Showcasing powerful visual storytelling through captivating photographic works",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/7.jpeg",
+  },
+  {
+    details: {
+      name: "Interactive Media Museum",
+      desc: "Engaging visitors through immersive digital experiences and multimedia installations",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/8.jpeg",
+  },
+  {
+    details: {
+      name: "Industrial Design Showcase",
+      desc: "Highlighting functional aesthetics and innovative product design solutions",
+    },
+    url: "https://storage.googleapis.com/squidlor/kin/kin/museum/9.jpeg",
+  },
+];
+
 export const videoUrls = [
   "https://storage.googleapis.com/squidlor/kin/kin/about-us/about-us-video.mp4",
 ];
