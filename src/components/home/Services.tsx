@@ -16,14 +16,6 @@ interface CustomArrowProps {
 const services = [
   {
     icon: (
-      <FaTrophy className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
-    ),
-    title: 'Major Games & Championshiops',
-    description:
-      'Comprehensive management of large-scale sporting events, from planning to execution, ensuring memorable experiences for participants and spectators alike.',
-  },
-  {
-    icon: (
       <LuImages className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Museum & Galleries build up',
@@ -32,19 +24,11 @@ const services = [
   },
   {
     icon: (
-      <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <LuImages className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Sports & Life Style Events',
+    title: 'Brand Activations',
     description:
-      'Creating dynamic lifestyle and sporting events that connect brands with their target audiences through authentic and immersive experiences.',
-  },
-  {
-    icon: (
-      <LuVideo className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
-    ),
-    title: 'Live Streaming Production',
-    description:
-      'Professional live streaming services with high-quality production values, ensuring your event reaches global audiences with crystal-clear audio and video.',
+      'Strategic and creative brand activation campaigns that create meaningful connections between brands and consumers through memorable experiences.',
   },
   {
     icon: (
@@ -56,12 +40,29 @@ const services = [
   },
   {
     icon: (
-      <LuImages className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaTrophy className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Brand Activations',
+    title: 'Major Games & Championships',
     description:
-      'Strategic and creative brand activation campaigns that create meaningful connections between brands and consumers through memorable experiences.',
+      'Comprehensive management of large-scale sporting events, from planning to execution, ensuring memorable experiences for participants and spectators alike.',
   },
+  {
+    icon: (
+      <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+    ),
+    title: 'Sports & Life Style Events',
+    description:
+      'Creating dynamic lifestyle and sporting events that connect brands with their target audiences through authentic and immersive experiences.',
+  },
+  // {
+  //   icon: (
+  //     <LuVideo className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+  //   ),
+  //   title: 'Live Streaming Production',
+  //   description:
+  //     'Professional live streaming services with high-quality production values, ensuring your event reaches global audiences with crystal-clear audio and video.',
+  // },
+
   {
     icon: (
       <MdSportsFootball className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />

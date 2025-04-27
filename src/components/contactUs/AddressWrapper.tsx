@@ -55,7 +55,7 @@ const AddressWrapper = () => {
               <FaBuilding className="text-primary lg:text-2xl md:text-xl text-lg mt-1" />
               <div>
                 <h3 className="font-medium text-primary lg:text-base text-sm">
-                  Main Address
+                  Registered Address
                 </h3>
                 <p className="font-light lg:text-base md:text-sm text-xs text-light mt-1">
                   D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA

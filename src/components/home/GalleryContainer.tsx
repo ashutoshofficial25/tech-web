@@ -1,20 +1,23 @@
-import React from "react";
-import { exhibitions } from "../../constants/media";
+import React from 'react';
+import { exhibitions } from '../../constants/media';
 
-const GalleryContainer = () => {
+const GalleryContainer = ({ className }: { className?: string }) => {
   return (
-    <div className="w-full columns-5 xl:mt-16 lg:mt-12 md:mt-8 mt-5 xl:gap-x-3 lg:gap-x-2 md:gap-x-1.5 gap-x-1">
+    <div className={`w-full columns-5 xl:mt-16 lg:mt-12 md:mt-8 mt-5 xl:gap-x-3 lg:gap-x-2 md:gap-x-1.5 gap-x-1 ${className || ''}`}>
       {exhibitions?.slice(5, 10).map((media, index) => (
-        <div key={index} className="">
+        <div
+          key={index}
+          className="transition-transform duration-300 hover:scale-125"
+        >
           <img
             className={`w-full object-cover ${
               index === 0
-                ? "!rounded-tl-none !rounded-bl-none"
-                : "xl:rounded-xl rounded-lg"
+                ? '!rounded-tl-none !rounded-bl-none'
+                : 'xl:rounded-xl rounded-lg'
             } ${
               index === 4
-                ? "!rounded-tr-none !rounded-br-none"
-                : "xl:rounded-xl rounded-lg"
+                ? '!rounded-tr-none !rounded-br-none'
+                : 'xl:rounded-xl rounded-lg'
             }`}
             src={media.url}
             alt={`Exhibition Image ${index + 1}`}

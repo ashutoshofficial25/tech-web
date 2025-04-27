@@ -27,7 +27,7 @@ const contactDetails: IContactUsCardProps[] = [
       <IoLocationSharp className="lg:text-4xl md:text-3xl text-2xl text-white/80" />
     ),
     value:
-      'Main Address: D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA\nOffice Address: D-55, Sector 80, NOIDA 201305(U.P.), INDIA',
+      'Registered Address: D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA\nOffice Address: D-55, Sector 80, NOIDA 201305(U.P.), INDIA',
     desc: 'Connect Near and Far, Reach out to us',
     module: 'location',
   },

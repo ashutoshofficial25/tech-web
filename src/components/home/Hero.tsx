@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
-import Button from "../common/Button";
-import ClientsSlider from "./ClientsSlider";
-import GalleryContainer from "./GalleryContainer";
-import { useNavigate } from "react-router";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from 'react';
+import { FaStar } from 'react-icons/fa';
+import Button from '../common/Button';
+import ClientsSlider from './ClientsSlider';
+import GalleryContainer from './GalleryContainer';
+import { useNavigate } from 'react-router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import heroBackground from '../../assets/illustration/hero-illustration.png';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -13,14 +14,23 @@ const Hero = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
     });
   }, []);
 
   return (
-    <div className="h-full w-full pt-36">
-      <div className="container mx-auto flex flex-col items-center">
+    <div className="h-full w-full pt-36 relative">
+      {/* Background image with 20% opacity */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src="https://storage.googleapis.com/squidlor/kin/kin/museum/12.jpeg"
+          alt="Background"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
+
+      <div className="container mx-auto flex flex-col items-center relative z-10">
         <div
           className="flex flex-row gap-x-2"
           data-aos="fade-up"
@@ -54,7 +64,7 @@ const Hero = () => {
           title="View Gallery"
           className={`md:mt-10 sm:mt-8 xs:mt-6 mt-5 md:px-9 
               `}
-          handleClick={() => navigate("works")}
+          handleClick={() => navigate('works')}
           variant="filled"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -62,12 +72,16 @@ const Hero = () => {
       </div>
 
       <ClientsSlider
-        className="md:mt-16 mt-10"
+        className="md:mt-16 mt-10 relative z-10"
         data-aos="fade-up"
         data-aos-delay="100"
       />
 
-      <GalleryContainer data-aos="fade-up" data-aos-delay="600" />
+      <GalleryContainer
+        data-aos="fade-up"
+        data-aos-delay="600"
+        className="relative z-10"
+      />
     </div>
   );
 };

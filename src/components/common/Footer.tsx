@@ -1,17 +1,27 @@
 import React from 'react';
-import kinLogoUrl from '../../assets/footer-logo.png';
+import kinLogoUrl from '../../assets/footer-logo.png'; // Ensure this path is correct
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
-import { ISocialProfileProps, socialProfiles } from '../../constants/links';
-const resources = [
-  { label: 'home', newTab: false, link: '/' },
-  { label: 'about us', newTab: false, link: '/about' },
-  { label: 'services', newTab: false, link: '/services' },
-  { label: 'Contacts', newTab: false, link: '/contact' },
+import { ISocialProfileProps, socialProfiles } from '../../constants/links'; // Assuming this import is correct
+
+// Define Resource type locally if not imported
+interface ResourceItem {
+  label: string;
+  newTab: boolean;
+  link: string;
+}
+
+const resources: ResourceItem[] = [
+  { label: 'Home', newTab: false, link: '/' }, // Capitalized labels
+  { label: 'About Us', newTab: false, link: '/about' },
+  { label: 'Services', newTab: false, link: '/services' },
+  { label: 'Contact', newTab: false, link: '/contact' }, // Changed from 'Contacts'
 ];
 
 const Footer = () => {
   const navigate = useNavigate();
+
+  // Combined handler for navigation and external links
   const handleRedirect = ({
     newTab,
     link,
@@ -20,105 +30,145 @@ const Footer = () => {
     link: string;
   }) => {
     if (newTab) {
-      window.open(link, '_blank');
-      return;
+      window.open(link, '_blank', 'noopener,noreferrer'); // Added security attributes
+    } else {
+      navigate(link);
     }
-    navigate(link);
   };
+
   return (
-    <div className="lg:h-96 sm:h-72 h-96 flex flex-col justify-between items-center 2xl:pb-6 pb-4  w-full bg-primary text-white">
-      <div className="xl:container w-full xl:px-16 lg:px-10 sm:pl-10 sm:pr-4 px-6 h-full lg:pt-16 pt-10 mx-auto flex sm:flex-row flex-col 2xl:gap-x-0 xl:gap-x-52 lg:gap-x-32 md:gap-x-24 sm:gap-x-12   2xl:justify-between sm:items-start items-center">
-        <div className="flex flex-col items-start">
-          <img src={kinLogoUrl} className="" alt="Kin India Logo Footer" />
-          <h1 className="sm:mt-12 mt-4 text-sm font-normal text-white">
+    // Adjusted padding and structure slightly for clarity
+    <div className="w-full bg-primary text-white pt-10 md:pt-16 pb-6 md:pb-8">
+      <div className="container mx-auto xl:px-16 px-6 sm:px-10 h-full flex flex-col md:flex-row gap-y-10 md:gap-x-16 lg:gap-x-24 xl:gap-x-32 2xl:justify-between items-center md:items-start">
+        {/* Left Section: Logo & Social Icons */}
+        <div className="flex flex-col items-center md:items-start flex-shrink-0">
+          <img
+            src={kinLogoUrl}
+            className="h-10 w-auto" // Added height/width constraint
+            alt="Kin India Logo Footer"
+          />
+          <h1 className="mt-6 md:mt-8 text-sm font-normal text-white">
             Follow us on
           </h1>
           <div className="flex gap-x-4 mt-3 items-center">
-            <FaInstagram
-              className="cursor-pointer text-[18px] hover:opacity-80"
-              onClick={() =>
-                window.open(
-                  'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
-                  '_blank'
-                )
-              }
-              aria-label="Visit our Instagram"
-            />
-            <FaLinkedin
-              className="cursor-pointer text-[18px] hover:opacity-80"
-              onClick={() =>
-                window.open(
-                  'https://www.linkedin.com/company/kin-productions-india/',
-                  '_blank'
-                )
-              }
-              aria-label="Visit our LinkedIn"
-            />
+            {/* Map over socialProfiles from constants for consistency */}
+            {socialProfiles.map((profile) => (
+              <a
+                key={profile.label}
+                href={profile.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Follow us on ${profile.label}`}
+                className="hover:opacity-80 transition-opacity"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default if using onClick for consistency
+                  handleRedirect(profile);
+                }}
+              >
+                {profile.label === 'Instagram' && (
+                  <FaInstagram className="text-[20px]" />
+                )}
+                {profile.label === 'LinkedIn' && (
+                  <FaLinkedin className="text-[20px]" />
+                )}
+                {/* Add other icons based on profile.label */}
+              </a>
+            ))}
           </div>
         </div>
-        <div className="flex  flex-row xl:gap-x-36 lg:gap-x-24 md:gap-x-10 gap-x-6 sm:mt-0 mt-8 sm:w-fit sm:justify-start justify-between w-full">
-          <div className="flex font-light flex-col items-start">
-            <h1 className="lg:text-xl md:text-base text-sm font-medium text-white">
+
+        {/* Right Section: Links & Contact */}
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-y-10 sm:gap-y-0 xl:gap-x-24 gap-x-10 sm:gap-x-16 md:gap-x-20 w-full md:w-auto">
+          {/* Contact Us Section */}
+          <div className="flex font-light flex-col items-center sm:items-start text-center sm:text-left">
+            <h1 className="lg:text-xl md:text-base text-sm font-medium text-white mb-5 md:mb-6">
               Contact Us
             </h1>
-            <p className="xl:mt-10 lg:text-base md:text-sm text-xs sm:mt-6 mt-3 sm:w-52 w-32">
-              D-55, Sector 80, Noida 201305 (U.P.), INDIA
-            </p>
-            <span className="mt-6 lg:text-base md:text-sm text-xs cursor-pointer">
-              +918826204411
-            </span>
-            <span className="mt-1.6 lg:text-base md:text-sm text-xs cursor-pointer">
+            {/* --- FIX: Added Registered Address --- */}
+            <div className="mb-4">
+              <strong className="block font-medium text-xs md:text-sm mb-1">
+                Registered Address:
+              </strong>
+              <p className="text-xs md:text-sm lg:text-base leading-relaxed">
+                D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA
+              </p>
+            </div>
+            {/* --- FIX: Added Office Address --- */}
+            <div className="mb-5">
+              <strong className="block font-medium text-xs md:text-sm mb-1">
+                Office Address:
+              </strong>
+              <p className="text-xs md:text-sm lg:text-base leading-relaxed">
+                D-55, Sector 80, NOIDA 201305(U.P.), INDIA
+              </p>
+            </div>
+            {/* Phone and Email */}
+            <a
+              href="tel:+918826204411"
+              className="lg:text-base md:text-sm text-xs cursor-pointer hover:opacity-80 transition-opacity block mb-1.5"
+            >
+              +91 88262 04411
+            </a>
+            <a
+              href="mailto:intro@kinindia.co"
+              className="lg:text-base md:text-sm text-xs cursor-pointer hover:opacity-80 transition-opacity block"
+            >
               intro@kinindia.co
-            </span>
+            </a>
           </div>
-          <div className="flex flex-col items-start">
-            <h1 className="lg:text-xl md:text-base text-sm font-medium text-white">
+
+          {/* Resources Section */}
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h1 className="lg:text-xl md:text-base text-sm font-medium text-white mb-5 md:mb-6">
               Resources
             </h1>
-            <ul className="font-light xl:mt-8 mt-5 capitalize flex flex-col gap-y-1">
-              {resources?.map(
-                (
-                  item: { label: string; newTab: boolean; link: string },
-                  index: number
-                ) => {
-                  return (
-                    <li
-                      className="cursor-pointer lg:text-base text-sm"
-                      onClick={() => handleRedirect(item)}
-                      key={index}
-                    >
-                      {item.label}
-                    </li>
-                  );
-                }
-              )}
+            <ul className="font-light capitalize flex flex-col gap-y-2 items-center sm:items-start">
+              {resources?.map((item: ResourceItem) => (
+                <li key={item.link}>
+                  <button
+                    onClick={() => handleRedirect(item)}
+                    className="cursor-pointer lg:text-base md:text-sm text-xs hover:opacity-80 transition-opacity"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="flex flex-col items-start">
-            <h1 className="lg:text-xl md:text-base text-sm font-medium text-white">
+
+          {/* Social Profiles Links Section */}
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h1 className="lg:text-xl md:text-base text-sm font-medium text-white mb-5 md:mb-6">
               Social Profiles
             </h1>
-            <ul className="font-light xl:mt-8 mt-5 capitalize flex flex-col gap-y-1">
-              {socialProfiles?.map(
-                (item: ISocialProfileProps, index: number) => {
-                  return (
-                    <li
-                      className="cursor-pointer lg:text-base text-sm"
-                      onClick={() => handleRedirect(item)}
-                      key={index}
-                    >
-                      {item.label}
-                    </li>
-                  );
-                }
-              )}
+            <ul className="font-light capitalize flex flex-col gap-y-2 items-center sm:items-start">
+              {socialProfiles?.map((item: ISocialProfileProps) => (
+                <li key={item.label}>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleRedirect(item);
+                    }}
+                    className="cursor-pointer lg:text-base md:text-sm text-xs hover:opacity-80 transition-opacity"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
-      <p className="lg:text-base md:text-sm text-xs font-light">
-        &copy; Copyright 2023 kin.co All rights reserved
-      </p>
+      {/* Copyright Section */}
+      <div className="container mx-auto xl:px-16 px-6 sm:px-10 mt-8 md:mt-12 border-t border-white/20 pt-4 md:pt-6 text-center">
+        <p className="lg:text-sm text-xs font-light text-white/70">
+          &copy; Copyright {new Date().getFullYear()} Kin Productions India Pvt.
+          Ltd. All rights reserved.
+        </p>
+      </div>
     </div>
   );
 };

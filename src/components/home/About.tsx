@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Button from '../common/Button';
 import { useNavigate } from 'react-router';
 import aboutIllustrationBg from '../../assets/illustration/hero-illustration.png';
@@ -8,10 +8,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { videoUrls } from '../../constants/media';
 import AOS from 'aos';
+import { IoIosArrowRoundUp } from 'react-icons/io';
 import 'aos/dist/aos.css';
 
+interface CustomArrowProps {
+  onClick?: () => void;
+}
 const About = () => {
   const navigate = useNavigate();
+  const sliderRef = useRef<Slider>(null);
 
   useEffect(() => {
     AOS.init({
@@ -22,12 +27,11 @@ const About = () => {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: false,
     centerMode: true,
     responsive: [
       {
@@ -37,23 +41,25 @@ const About = () => {
         },
       },
     ],
-    customPaging: () => (
-      <div className="w-2 h-2 absolute md:left-0 left-4  -bottom-2 bg-white rounded-full transition-all duration-300 hover:bg-light"></div>
-    ),
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    // customPaging: () => (
+    //   <div className="w-2 h-2 absolute md:left-0 left-4  -bottom-2 bg-white rounded-full transition-all duration-300 hover:bg-light"></div>
+    // ),
   };
 
   return (
     <div className="w-full h-full xs:pb-20 pb-10 xl:pt-32 lg:pt-24 md:pt-20 pt-16 relative">
       <div className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6 flex md:flex-row flex-col md:gap-x-16 mx-auto">
         <div
-          className="flex md:w-[34%] w-full flex-col items-start"
+          className="flex md:w-[34%] w-full flex-col items-start mt-12"
           data-aos="fade-right"
           data-aos-delay="100"
         >
           <h1 className="xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl text-2xl font-bold text-primary">
             About Us
           </h1>
-          <p className="2xl:text-2xl xl:text-xl text-base text-black/90 font-light lg:mt-10 mt-4">
+          <p className="2xl:text-[18px] xl:text-base text-sm text-black/80 font-light xl:mt-10 mt-6">
             Kin Productions India Private Limited is an associate of Kin
             Productions, Singapore. KIN is an integrated experiential agency
             that is passionate about creating the best experiences for our
@@ -87,9 +93,12 @@ const About = () => {
           Events
         </h1>
         <div className="flex slider-container flex-row md:mt-6 mt-4 gap-x-4 xl:h-[340px] h-[300px] w-full">
-          <Slider {...settings} className="w-full relative h-full">
+          <Slider
+            ref={sliderRef}
+            {...settings}
+            className="w-full relative h-full"
+          >
             {[...Array(3)].map((_, index: number) => {
-              // Use the index to access different videos, with fallback to reuse videos if needed
               const videoIndex = index % videoUrls.length;
               return (
                 <div
@@ -107,6 +116,11 @@ const About = () => {
                       muted
                       loop
                       playsInline
+                      onEnded={() => {
+                        if (sliderRef.current) {
+                          sliderRef.current.slickNext();
+                        }
+                      }}
                     ></video>
                   </div>
                 </div>
@@ -137,3 +151,29 @@ const About = () => {
 };
 
 export default About;
+
+const CustomPrevArrow: React.FC<CustomArrowProps> = ({ onClick }) => {
+  return (
+    <div
+      className="absolute -bottom-12 right-20 z-10 hover:opacity-80 transition-all duration-300 ease active:scale-[0.96] group bg-white p-1 rounded-full cursor-pointer"
+      onClick={onClick}
+      data-aos="fade-left"
+      data-aos-delay="300"
+    >
+      <IoIosArrowRoundUp className="text-primary text-3xl -rotate-90 group-active:right-[2px] relative" />
+    </div>
+  );
+};
+
+const CustomNextArrow: React.FC<CustomArrowProps> = ({ onClick }) => {
+  return (
+    <div
+      className="absolute -bottom-12 right-4 z-10 hover:opacity-80 transition-all duration-300 ease active:scale-[0.96] group bg-white p-1 rounded-full cursor-pointer"
+      onClick={onClick}
+      data-aos="fade-right"
+      data-aos-delay="300"
+    >
+      <IoIosArrowRoundUp className="text-primary text-3xl rotate-90 group-active:left-[2px] relative" />
+    </div>
+  );
+};
