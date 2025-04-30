@@ -3,6 +3,8 @@ import aboutIllustrationBg from '../assets/illustration/hero-illustration.png';
 import wavyLinseIllustrationBg from '../assets/illustration/wavylines.png';
 import Button from '../components/common/Button';
 import TestimonialCard from '../components/aboutUs/TestimonialCard';
+import Timeline from '../components/aboutUs/Timeline';
+import CompanyHistory from '../components/aboutUs/CompanyHistory';
 import SEO from '../components/common/SEO';
 import StructuredData from '../components/common/StructuredData';
 import BacklinkSEO from '../components/common/BacklinkSEO';
@@ -198,6 +200,12 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+
+      {/* Timeline Section */}
+      <Timeline />
+
+      {/* Company History Section */}
+      <CompanyHistory />
 
       <div className="w-full flex text-primary relative mt-12 z-20 flex-col items-center">
         <h1
