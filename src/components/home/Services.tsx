@@ -1,7 +1,16 @@
 import React, { useEffect } from 'react';
-import { FaTrophy } from 'react-icons/fa';
-import { LuImages, LuVideo } from 'react-icons/lu';
-import { MdSportsFootball } from 'react-icons/md';
+import {
+  FaTrophy,
+  FaBuilding,
+  FaTools,
+  FaChartLine,
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
+import { LuImages, LuVideo, LuMapPin } from 'react-icons/lu';
+import { MdSportsFootball, MdEvent, MdDesignServices } from 'react-icons/md';
+import { TbBuildingMinus, TbBrandCampaignmonitor } from 'react-icons/tb';
+import { BiSolidMegaphone } from 'react-icons/bi';
+import { PiSpeakerHighBold } from 'react-icons/pi';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -16,7 +25,7 @@ interface CustomArrowProps {
 const services = [
   {
     icon: (
-      <LuImages className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <TbBuildingMinus className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Museum & Galleries build up',
     description:
@@ -24,7 +33,7 @@ const services = [
   },
   {
     icon: (
-      <LuImages className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <BiSolidMegaphone className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Brand Activations',
     description:
@@ -32,7 +41,7 @@ const services = [
   },
   {
     icon: (
-      <FaTrophy className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <TbBrandCampaignmonitor className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Exhibitions & Expos',
     description:
@@ -65,7 +74,7 @@ const services = [
 
   {
     icon: (
-      <MdSportsFootball className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaBuilding className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Structural build & Installation',
     description:
@@ -73,7 +82,7 @@ const services = [
   },
   {
     icon: (
-      <LuVideo className="sm:text-8xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <MdEvent className="sm:text-8xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Event Planning and Management',
     description:
@@ -82,7 +91,7 @@ const services = [
 
   {
     icon: (
-      <FaTrophy className="xl:sm:text-8xl sm:text-7xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaChartLine className="xl:sm:text-8xl sm:text-7xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Creative Conceptualization & Development',
     description:
@@ -90,7 +99,7 @@ const services = [
   },
   {
     icon: (
-      <LuImages className="xl:sm:text-8xl sm:text-7xl text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <PiSpeakerHighBold className="xl:sm:text-8xl sm:text-7xl text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Audio Visual Systems & Show Presentations',
     description:
@@ -98,7 +107,7 @@ const services = [
   },
   {
     icon: (
-      <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaMapMarkerAlt className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Venue Sourcing & Management',
     description:
@@ -106,7 +115,7 @@ const services = [
   },
   {
     icon: (
-      <LuVideo className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <MdDesignServices className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
     title: 'Design Production & Build',
     description:
