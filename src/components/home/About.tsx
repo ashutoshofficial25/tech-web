@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Button from '../common/Button';
 import { useNavigate } from 'react-router';
 import aboutIllustrationBg from '../../assets/illustration/hero-illustration.png';
+import kinLogoUrl from '../../assets/kin-logo.png';
 import Slider from 'react-slick';
 import '../../styles/home.css';
 import 'slick-carousel/slick/slick.css';
@@ -9,6 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { videoUrls } from '../../constants/media';
 import AOS from 'aos';
 import { IoIosArrowRoundUp } from 'react-icons/io';
+import { FaQuoteLeft } from 'react-icons/fa';
 import 'aos/dist/aos.css';
 
 interface CustomArrowProps {
@@ -49,7 +51,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full h-full xs:pb-20 pb-10 xl:pt-32 lg:pt-24 md:pt-20 pt-16 relative">
+    <div className="w-full h-full xs:pb-20 pb-10 xl:pt-32 lg:pt-24 md:pt-20 pt-16 relative overflow-hidden">
       <div className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6 flex md:flex-row flex-col md:gap-x-16 mx-auto">
         <div
           className="flex md:w-[34%] w-full flex-col items-start mt-12"
@@ -85,7 +87,7 @@ const About = () => {
       </div>
 
       <div
-        className="md:absolute xl:h-[520px] md:h-[460px] h-[420px] md:rounded-tl-[44px] md:mt-0 mt-12 md:rounded-bl-[44px] z-30 bg-primary md:w-3/5 w-full right-0 2xl:top-44 xl:top-40 md:top-24 md:py-10 py-6 lg:pl-16 md:pl-10"
+        className="md:absolute xl:h-[520px] md:h-[460px] h-[380px] md:rounded-tl-[44px] md:mt-0 mt-12 md:rounded-bl-[44px] z-30 bg-primary md:w-3/5 w-full right-0 2xl:top-44 xl:top-40 md:top-24 md:py-10 py-6 lg:pl-16 md:pl-10"
         data-aos="fade-left"
         data-aos-delay="200"
       >
@@ -130,21 +132,59 @@ const About = () => {
         </div>
       </div>
 
-      <h1
-        className="2xl:text-6xl xl:text-5xl lg:text-4xl xs:text-2xl text-base absolute left-1/2 -translate-x-1/2 2xl:top-[1080px] xl:top-[1020px] md:top-[840px] xs:top-[1020px] top-[1040px] z-10 font-normal leading-[1.22] md:text-left text-center mx-auto 2xl:indent-52 xl:indent-44 md:indent-32 indent-0 2xl:w-[1360px] xl:w-[1120px] lg:w-[820px] w-full lg:px-0 md:px-12 px-8"
+      <div
+        className="quote-container relative md:mt-0 mt-[180px] 2xl:top-[340px] xl:top-[420px] lg:top-[300px] md:top-[280px] z-20 mx-auto 2xl:w-[1360px] xl:w-[1120px] lg:w-[820px] w-full lg:px-0 md:px-12 px-8 transition-all duration-500 hover:scale-[1.02] cursor-default group shadow-lg hover:shadow-xl rounded-xl bg-white/5 backdrop-blur-sm"
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        "Collective multi-disciplinary experience of
-        <span className="text-light"> more than 50 years</span>, delivering
-        quality projects worldwide..."
-      </h1>
+        {/* Logo watermark in background with subtle animation */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] overflow-hidden pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.06]">
+          <img
+            src={kinLogoUrl}
+            alt="Kin Logo Watermark"
+            className="w-[80%] max-w-[800px] object-contain transform transition-transform duration-1000 ease-in-out hover:rotate-1"
+          />
+        </div>
+
+        {/* Decorative element */}
+        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-primary text-5xl opacity-30">
+          <FaQuoteLeft />
+        </div>
+
+        <h1 className="text-4xl xl:text-5xl lg:text-4xl xs:text-2xl text-xl font-normal leading-[1.3] md:text-left text-center mx-auto 2xl:indent-52 xl:indent-44 md:indent-32 indent-0 relative backdrop-blur-[1px] p-4 md:p-6 rounded-lg">
+          <span className="block mb-4 text-primary/80 text-sm font-light tracking-widest uppercase">
+            Our Legacy
+          </span>
+          "Collective multi-disciplinary experience of
+          <span className="text-light font-medium"> more than 50 years</span>,
+          delivering quality projects worldwide..."
+        </h1>
+
+        {/* Add subtle animation and decorative elements */}
+        <div
+          className="absolute -bottom-8 right-1/4 w-16 h-1 bg-primary/30 rounded-full"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        ></div>
+        <div
+          className="absolute -bottom-8 left-1/4 w-16 h-1 bg-light/50 rounded-full"
+          data-aos="fade-left"
+          data-aos-delay="700"
+        ></div>
+
+        {/* Add subtle corner accents */}
+        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/20 rounded-tl-lg"></div>
+        <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary/20 rounded-tr-lg"></div>
+        <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-light/20 rounded-bl-lg"></div>
+        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-light/20 rounded-br-lg"></div>
+      </div>
 
       <img
         src={aboutIllustrationBg}
-        className="w-full relative z-0 -translate-x-1/2 left-1/2 top-16"
+        className="w-full relative z-10 -translate-x-1/2 left-1/2 -top-16 max-w-[140%] md:max-w-full"
         data-aos="fade"
         data-aos-delay="500"
+        alt="Background Illustration" // Added alt text
       />
     </div>
   );

@@ -47,6 +47,7 @@ const generateMediaArray = (
 
 // --- Base URLs ---
 const MUSEUM_BASE_URL = 'https://storage.googleapis.com/squidlor/kin/kin/museum/';
+const FINAL_MUSEUM_BASE_URL = 'https://storage.googleapis.com/squidlor/kin/kin/finalMuseum/';
 const EXHIBITION_BASE_URL =
   'https://storage.googleapis.com/squidlor/kin/kin/exhibitions/';
 
@@ -55,14 +56,115 @@ const EXHIBITION_BASE_URL =
 // --- FIX: Define numbers to exclude for museums ---
 const museumExclusions: ExcludeNumbers = [22, 26, 27];
 
+// Define the specific sequence for final museum images
+const finalMuseumImages: string[] = [
+  'Bihar1.jpeg', 'Bihar2.jpeg', 'Bihar3.jpeg',
+  'Odhisa1.jpeg', 'Odhisa2.jpeg', 'Odhisa3.jpeg',
+  'Contemp1.jpeg', 'Contemp2.jpeg', 'Contemp3.jpeg',
+  'UdaiRaj1.jpeg', 'UdaiRaj2.jpeg', 'UdaiRaj3.jpeg',
+  'Patna1.jpeg', 'Patna2.jpeg', 'Patna3.jpeg'
+];
+
 // Exceptions for exhibitions 1-10 (remains the same)
 const exhibitionExceptions: ExtensionExceptions = {};
 for (let i = 1; i <= 10; i++) {
   exhibitionExceptions[i] = 'jpg';
 }
 
+// Define a type for numbers to include (only these numbers will be included)
+type IncludeNumbers = number[];
+
+// Helper function to generate media array with specific image names
+const generateMediaArrayWithSpecificNames = (
+  imageNames: string[],
+  baseUrl: string,
+  categoryName: string
+): MediaItem[] => {
+  const items: MediaItem[] = [];
+  
+  // Custom descriptions for the final museum images
+  const customDescriptions = [
+    // Bihar Museum (first 3 images)
+    { name: 'Bihar Museum 1', desc: 'Bihar Museum exhibition space showcasing cultural artifacts.' },
+    { name: 'Bihar Museum 2', desc: 'Bihar Museum gallery with historical collections.' },
+    { name: 'Bihar Museum 3', desc: 'Bihar Museum architectural interior and exhibits.' },
+    
+    // Odisha State Museum (next 3 images)
+    { name: 'Orientation Gallery', desc: 'Odisha State Museum inaugurated by Odisha CM.' },
+    { name: 'Odisha State Museum', desc: 'Odisha State Museum gallery inaugurated by Odisha CM.' },
+    { name: 'Odisha Exhibition', desc: 'Odisha State Museum special exhibition inaugurated by Odisha CM.' },
+    
+    // Contemporary Exhibition (next 3 images)
+    { name: 'Contemporary Exhibition 1', desc: 'Contemporary Exhibition in Bihar Museum - Opening by artist Subodh Gupta and Director General of Bihar Museum Shri Anjani Kumar Singh.' },
+    { name: 'Contemporary Exhibition 2', desc: 'Contemporary Exhibition in Bihar Museum featuring modern artworks curated by Subodh Gupta.' },
+    { name: 'Contemporary Exhibition 3', desc: 'Contemporary Exhibition in Bihar Museum showcasing innovative installations and sculptures.' },
+    
+    // Suryakaal Exhibition (next 3 images)
+    { name: 'Suryakaal Exhibition 1', desc: 'Suryakaal Exhibition by artist Udairaj Gadnis setup in Bihar Museum and opened by Shri Anjani Kumar Singh - Director General - Bihar Museum.' },
+    { name: 'Suryakaal Exhibition 2', desc: 'Suryakaal Exhibition by artist Udairaj Gadnis featuring sun-themed artworks.' },
+    { name: 'Suryakaal Exhibition 3', desc: 'Suryakaal Exhibition by artist Udairaj Gadnis with special installations and paintings.' },
+    
+    // Patna Museum (next 3 images)
+    { name: 'Patna Museum 1', desc: 'Patna Museum artefact mounting works and preservation efforts.' },
+    { name: 'Patna Museum 2', desc: 'Patna Museum display setup and artifact arrangement.' },
+    { name: 'Patna Museum 3', desc: 'Patna Museum conservation and exhibition preparation.' }
+  ];
+  
+  // Process each image name in the array
+  imageNames.forEach((imageName, index) => {
+    // Use custom description if available, otherwise use default
+    const details = index < customDescriptions.length 
+      ? customDescriptions[index] 
+      : {
+          name: `${categoryName} Exhibit ${index + 1}`,
+          desc: `Image ${index + 1} from our ${categoryName.toLowerCase()} portfolio.`
+        };
+    
+    items.push({
+      details,
+      url: `${baseUrl}${imageName}`,
+    });
+  });
+  
+  return items;
+};
+
+// Helper function to generate media array with an include list
+const generateMediaArrayWithIncludeList = (
+  includeNumbers: IncludeNumbers,
+  baseUrl: string,
+  categoryName: string,
+  defaultExtension: string = 'jpeg',
+  exceptions: ExtensionExceptions = {}
+): MediaItem[] => {
+  const items: MediaItem[] = [];
+  
+  // Only process the numbers in the include list
+  for (const imageNumber of includeNumbers) {
+    const fileExtension = exceptions[imageNumber] || defaultExtension;
+    
+    items.push({
+      details: {
+        name: `${categoryName} Exhibit ${imageNumber}`,
+        desc: `Image ${imageNumber} from our ${categoryName.toLowerCase()} portfolio.`,
+      },
+      url: `${baseUrl}${imageNumber}.${fileExtension}`,
+    });
+  }
+  
+  return items;
+};
+
 // --- Generate the arrays with exceptions and exclusions ---
-export const museums: MediaItem[] = generateMediaArray(
+// Generate the final museum images with the specific sequence
+const finalMuseumItems: MediaItem[] = generateMediaArrayWithSpecificNames(
+  finalMuseumImages,
+  FINAL_MUSEUM_BASE_URL,
+  'Museum'
+);
+
+// Generate the original museum images (keeping for backward compatibility)
+const originalMuseumItems: MediaItem[] = generateMediaArray(
   74, // Still generate up to 74 conceptually, but filter out exclusions
   MUSEUM_BASE_URL,
   'Museum',
@@ -71,13 +173,22 @@ export const museums: MediaItem[] = generateMediaArray(
   museumExclusions // Pass the numbers to exclude
 );
 
-export const exhibitions: MediaItem[] = generateMediaArray(
-  50,
+// Combine both arrays, with final museum images first
+export const museums: MediaItem[] = [...finalMuseumItems, ...originalMuseumItems];
+
+
+// Define the specific sequence for exhibitions
+const exhibitionIncludeList: IncludeNumbers = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 11, 18, 19, 20, 21, 22, 24, 25, 27, 28, 29, 31, 33, 34, 36, 37, 38, 49
+];
+
+// Generate exhibitions with only the specified numbers
+export const exhibitions: MediaItem[] = generateMediaArrayWithIncludeList(
+  exhibitionIncludeList,
   EXHIBITION_BASE_URL,
   'Exhibition',
   'jpeg',
   exhibitionExceptions // Pass exhibition extension exceptions
-  // No exclusions needed for exhibitions based on current info
 );
 
 // --- Keep existing arrays ---
