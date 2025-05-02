@@ -54,7 +54,7 @@ const EXHIBITION_BASE_URL =
 // --- Define Exceptions and Exclusions ---
 
 // --- FIX: Define numbers to exclude for museums ---
-const museumExclusions: ExcludeNumbers = [22, 26, 27];
+const museumExclusions: ExcludeNumbers = [8, 10, 13, 17, 19, 20, 22, 23, 24, 26, 27, 28, 31, 32, 33, 38, 40, 41, 45, 46, 51, 55, 56, 57, 60, 62, 71, 72];
 
 // Define the specific sequence for final museum images
 const finalMuseumImages: string[] = [
