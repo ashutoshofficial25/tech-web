@@ -193,10 +193,10 @@ export const exhibitions: MediaItem[] = generateMediaArrayWithIncludeList(
 
 // --- Keep existing arrays ---
 
-const clients = Array.from(
-  { length: 21 },
-  (_, i) => new URL(`../assets/clients/${i + 1}.png`, import.meta.url).href
-);
+const clients = Array.from({ length: 21 }, (_, i) => i + 1)
+  .filter(n => n !== 5)
+  .map(n => new URL(`../assets/clients/${n}.png`, import.meta.url).href);
+
 export default clients;
 
 export const conferences: MediaItem[] = [

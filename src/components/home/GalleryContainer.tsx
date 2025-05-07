@@ -3,14 +3,18 @@ import { exhibitions } from '../../constants/media';
 
 const GalleryContainer = ({ className }: { className?: string }) => {
   return (
-    <div className={`w-full columns-5 xl:mt-16 lg:mt-12 md:mt-8 mt-5 xl:gap-x-3 lg:gap-x-2 md:gap-x-1.5 gap-x-1 ${className || ''}`}>
+    <div
+      className={`w-full grid grid-cols-5 xl:mt-16 lg:mt-12 md:mt-8 mt-5 xl:gap-x-3 lg:gap-x-2 md:gap-x-1.5 gap-x-1 ${
+        className || ''
+      }`}
+    >
       {exhibitions?.slice(5, 10).map((media, index) => (
         <div
           key={index}
-          className="transition-transform duration-300 hover:scale-125"
+          className="transition-transform duration-300 hover:scale-125 overflow-hidden"
         >
           <img
-            className={`w-full object-cover ${
+            className={`w-full h-full object-cover ${
               index === 0
                 ? '!rounded-tl-none !rounded-bl-none'
                 : 'xl:rounded-xl rounded-lg'
@@ -21,6 +25,7 @@ const GalleryContainer = ({ className }: { className?: string }) => {
             }`}
             src={media.url}
             alt={`Exhibition Image ${index + 1}`}
+            style={{ objectFit: 'cover' }}
           />
         </div>
       ))}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import aboutIllustrationBg from '../assets/illustration/hero-illustration.png';
 import wavyLinseIllustrationBg from '../assets/illustration/wavylines.png';
+import kinLogoPattern from '../assets/illustration/kin-logo-pattern.svg';
 import Button from '../components/common/Button';
 import TestimonialCard from '../components/aboutUs/TestimonialCard';
 import Timeline from '../components/aboutUs/Timeline';
@@ -108,11 +108,12 @@ const AboutUs = () => {
         ]}
       />
       <img
-        src={aboutIllustrationBg}
-        className="w-full absolute top-56 z-0 left-0"
-        data-aos="fade"
-        data-aos-delay="500"
+        src={kinLogoPattern}
+        className="w-full h-full absolute top-0 z-0 left-0 object-cover"
+        aria-hidden="true"
+        alt=""
       />
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-[1px] z-[1]"></div>
 
       <div className="lg:container w-full lg:px-6 px-8 relative z-20 mx-auto flex flex-col pt-32 items-center">
         <h1
@@ -212,7 +213,7 @@ const AboutUs = () => {
           className="xl:text-5xl lg:text-4xl text-3xl font-semibold"
           data-aos="fade-down"
         >
-          We focuses <span>on</span>
+          We focus <span>on</span>
         </h1>
 
         <div className="lg:h-[500px] h-[400px] z-20 relative my-12 w-full">
@@ -235,7 +236,7 @@ const AboutUs = () => {
             data-aos-delay="300"
           />
           <TestimonialCard
-            title="Large scale Products"
+            title="Large scale Projects"
             className="sm:left-2/5 left-12 lg:bottom-12 md:bottom-20 bottom-12 lg:hover:bottom-11 md:hover:bottom-[76px] hover:botom-11"
             data-aos="fade-left"
             data-aos-delay="200"

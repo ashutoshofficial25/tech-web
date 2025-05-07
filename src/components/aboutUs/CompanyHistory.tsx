@@ -1,11 +1,19 @@
 import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import kinStoryPattern from '../../assets/illustration/kin-story-pattern.svg';
 
 const CompanyHistory: React.FC = () => {
   return (
-    <div className="w-full py-12 bg-gray-50">
-      <div className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6 mx-auto">
+    <div className="w-full py-12 bg-gray-50 relative overflow-hidden">
+      <img
+        src={kinStoryPattern}
+        className="absolute inset-0 w-full h-full object-cover"
+        aria-hidden="true"
+        alt=""
+      />
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-[1]"></div>
+      <div className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6 mx-auto relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2
             className="xl:text-4xl lg:text-3xl text-2xl font-medium text-primary mb-4"

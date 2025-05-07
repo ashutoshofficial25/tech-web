@@ -1,0 +1,56 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Primary brand color gradient -->
+    <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062b42" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.02"/>
+    </linearGradient>
+    
+    <!-- Abstract geometric pattern -->
+    <pattern id="geometric-pattern" x="0" y="0" width="240" height="240" patternUnits="userSpaceOnUse">
+      <!-- Diagonal lines -->
+      <path d="M0 0 L60 60 M180 180 L240 240" stroke="#062b42" stroke-width="2" opacity="0.08" stroke-linecap="round"/>
+      <!-- Vertical lines -->
+      <path d="M120 60 L120 180" stroke="#062b42" stroke-width="2" opacity="0.08" stroke-linecap="round"/>
+      <!-- Horizontal lines -->
+      <path d="M60 120 L180 120" stroke="#062b42" stroke-width="2" opacity="0.08" stroke-linecap="round"/>
+    </pattern>
+    
+    <!-- Event-themed pattern with subtle icons -->
+    <pattern id="event-icons" x="0" y="0" width="240" height="240" patternUnits="userSpaceOnUse">
+      <!-- Simplified stage icon -->
+      <rect x="60" y="60" width="40" height="20" rx="2" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.08"/>
+      <!-- Simplified podium -->
+      <path d="M160 160 L180 160 L180 180 L160 180 Z M140 180 L200 180 L200 190 L140 190 Z" fill="none" stroke="#062b42" stroke-width="1" opacity="0.07"/>
+      <!-- Simplified connection lines -->
+      <path d="M100 100 L140 140" stroke="#3B82F6" stroke-width="1" opacity="0.06" stroke-dasharray="2 4"/>
+    </pattern>
+    
+    <!-- Subtle dots for texture -->
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#3B82F6" opacity="0.15"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base layer with subtle gradient -->
+  <rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="url(#brand-gradient)"/>
+  
+  <!-- Pattern layers -->
+  <rect width="100%" height="100%" fill="url(#dots)"/>
+  <rect width="100%" height="100%" fill="url(#geometric-pattern)"/>
+  <rect width="100%" height="100%" fill="url(#event-icons)"/>
+  
+  <!-- Decorative elements -->
+  <path d="M0 200 Q720 250, 1440 150" fill="none" stroke="#062b42" stroke-width="1.5" opacity="0.07"/>
+  <path d="M0 600 Q720 550, 1440 650" fill="none" stroke="#3B82F6" stroke-width="1.5" opacity="0.07"/>
+  
+  <!-- Additional decorative elements -->
+  <circle cx="200" cy="200" r="80" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.04"/>
+  <circle cx="1240" cy="600" r="100" fill="none" stroke="#062b42" stroke-width="1" opacity="0.04"/>
+  <path d="M1200 200 L1300 200 L1300 300 L1200 300 Z" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.04"/>
+  
+  <!-- Abstract hexagon patterns -->
+  <path d="M400 300 L430 350 L400 400 L340 400 L310 350 L340 300 Z" fill="none" stroke="#062b42" stroke-width="1" opacity="0.05"/>
+  <path d="M900 500 L930 550 L900 600 L840 600 L810 550 L840 500 Z" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.05"/>
+</svg>

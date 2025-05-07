@@ -3,6 +3,7 @@ import { IoIosArrowRoundUp } from 'react-icons/io';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../styles/timeline.css';
+import timelinePattern from '../../assets/illustration/timeline-pattern.svg';
 
 interface TimelineEvent {
   year: string;
@@ -65,15 +66,18 @@ const Timeline: React.FC = () => {
 
   return (
     <div className="w-full py-20 relative overflow-hidden bg-gray-50">
-      {/* Background decoration */}
-      <div className="absolute w-full h-full opacity-5 z-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-primary"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-56 h-56 rounded-full bg-secondary"></div>
-        <div className="absolute top-3/4 right-1/3 w-40 h-40 rounded-full bg-primary"></div>
-      </div>
+      {/* Background pattern */}
+      <img
+        src={timelinePattern}
+        className="absolute w-full h-full object-cover opacity-90 z-0"
+        aria-hidden="true"
+        alt=""
+      />
+      {/* Semi-transparent overlay for better readability */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-[1]"></div>
 
       <div
-        className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6 mx-auto relative z-10"
+        className="xl:container w-full xl:px-16 lg:px-20 md:px-16 sm:px-12 xs:px-10 px-6 mx-auto relative z-20"
         data-aos="fade-down"
       >
         <div className="text-center mb-16">

@@ -1,0 +1,54 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Timeline-themed gradient -->
+    <linearGradient id="timeline-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.7"/>
+    </linearGradient>
+    
+    <!-- Timeline dots pattern -->
+    <pattern id="timeline-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="3" fill="#062b42" opacity="0.1"/>
+    </pattern>
+    
+    <!-- Circle markers pattern -->
+    <pattern id="circle-markers" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
+      <circle cx="100" cy="100" r="8" fill="#062b42" opacity="0.08"/>
+      <circle cx="300" cy="200" r="8" fill="#062b42" opacity="0.08"/>
+      <circle cx="100" cy="300" r="8" fill="#062b42" opacity="0.08"/>
+      <circle cx="300" cy="100" r="8" fill="#3B82F6" opacity="0.08"/>
+    </pattern>
+    
+    <!-- Connection lines pattern -->
+    <pattern id="connection-lines" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="200" y2="200" stroke="#3B82F6" stroke-width="1" opacity="0.05" stroke-dasharray="5 5"/>
+      <line x1="200" y1="0" x2="0" y2="200" stroke="#3B82F6" stroke-width="1" opacity="0.05" stroke-dasharray="5 5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base layer with subtle gradient -->
+  <rect width="100%" height="100%" fill="url(#timeline-gradient)"/>
+  
+  <!-- Pattern layers -->
+  <rect width="100%" height="100%" fill="url(#timeline-dots)"/>
+  <rect width="100%" height="100%" fill="url(#circle-markers)"/>
+  <rect width="100%" height="100%" fill="url(#connection-lines)"/>
+  
+  <!-- Vertical timeline line -->
+  <line x1="720" y1="0" x2="720" y2="800" stroke="#062b42" stroke-width="1" opacity="0.08" stroke-dasharray="10 10"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="720" cy="200" r="8" fill="#062b42" opacity="0.08"/>
+  <circle cx="720" cy="400" r="8" fill="#062b42" opacity="0.08"/>
+  <circle cx="720" cy="600" r="8" fill="#062b42" opacity="0.08"/>
+  
+  <!-- Event-related decorative elements -->
+  <path d="M200 300 L300 300 L300 350 L200 350 Z" fill="none" stroke="#062b42" stroke-width="1" opacity="0.05"/>
+  <path d="M1100 500 L1200 500 L1200 550 L1100 550 Z" fill="none" stroke="#062b42" stroke-width="1" opacity="0.05"/>
+  
+  <!-- Additional decorative elements -->
+  <path d="M400 200 C450 150, 500 150, 550 200" fill="none" stroke="#062b42" stroke-width="1" opacity="0.05"/>
+  <path d="M900 600 C950 550, 1000 550, 1050 600" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.05"/>
+  <path d="M300 400 L350 450 L400 400 L350 350 Z" fill="none" stroke="#062b42" stroke-width="1" opacity="0.05"/>
+  <path d="M1000 300 L1050 350 L1100 300 L1050 250 Z" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.05"/>
+</svg>
