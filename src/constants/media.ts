@@ -271,7 +271,7 @@ export const events: MediaItem[] = [
 export const videoUrls: string[] = [
   'https://storage.googleapis.com/squidlor/kin/kin/about-us/1.mp4',
   'https://storage.googleapis.com/squidlor/kin/kin/about-us/2.mp4',
-  'https://storage.googleapis.com/squidlor/kin/kin/about-us/10.mp4',
+  'https://storage.googleapis.com/squidlor/kin/kin/about-us/5.mp4',
 ];
 
 export type { MediaItem }; // Export type if needed

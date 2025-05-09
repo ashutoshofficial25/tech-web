@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
-import newsletterIllustrationUrl from "../../assets/illustration/newsletter-illustration.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState, useEffect } from 'react';
+import newsletterIllustrationUrl from '../../assets/illustration/newsletter-illustration.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const NewsLetter = () => {
-  const [email, setEmail] = useState<string>("");
+  const [email, setEmail] = useState<string>('');
 
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
     });
   }, []);
 
   const handleSubscribe = () => {
     if (!email) {
-      console.error("Please enter email address!");
+      console.error('Please enter email address!');
     }
   };
 
@@ -38,7 +38,7 @@ const NewsLetter = () => {
           data-aos="fade-down"
           data-aos-delay="100"
         >
-          Subscribe to our newsletter
+          Get in touch with us
         </h2>
 
         <h1
@@ -46,8 +46,7 @@ const NewsLetter = () => {
           data-aos="zoom-in"
           data-aos-delay="150"
         >
-          The best <span className="text-secondary">Event Planner</span> right
-          in your box
+          We're Excited to Hear From You!
         </h1>
 
         <p
@@ -55,8 +54,8 @@ const NewsLetter = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Enter your email address and Stay up to date with our latest news and
-          updates.
+          Have a question, a brilliant idea, or just want to stay in the loop?
+          Share your email and we will get back to you as soon as possible.
         </p>
 
         <div
@@ -68,14 +67,14 @@ const NewsLetter = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
+            placeholder="Your email address"
             className="xs:placeholder:text-xs placeholder:text-[10px] placeholder:text-light sm:w-96 xs:w-72 w-44 outline-none rounded-lg text-light sm:px-5 px-4 sm:text-base xs:text-sm text-xs sm:py-2 py-[5px] bg-[#EBEBEB] font-normal"
           />
           <button
             onClick={handleSubscribe}
             className="sm:px-8 xs:px-6 px-4 sm:py-2.5 xs:py-[7px] py-1.5 font-normal hover:opacity-90 active:scale-[0.98] transition-all duration-300 ease sm:text-sm xs:text-xs text-[10px] border-none text-white rounded-lg cursor-pointer bg-primary outline-none"
           >
-            Subscribe
+            Keep Me Updated
           </button>
         </div>
       </div>
