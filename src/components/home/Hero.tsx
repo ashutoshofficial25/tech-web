@@ -24,9 +24,9 @@ const Hero = () => {
       {/* Background image with 20% opacity */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="https://storage.googleapis.com/squidlor/kin/kin/museum/12.jpeg"
+          src="/hero-bg.png"
           alt="Background"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full relative -top-48 object-contain opacity-20"
         />
       </div>
 
@@ -49,20 +49,21 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h1 className="text-center">Elevating Brands</h1>
-          <h1 className="text-center">Through Unforgettable Events</h1>
+          <h1 className="text-center">Transform Your Business with</h1>
+          <h1 className="text-center">Cutting-Edge Tech Solutions</h1>
         </div>
 
         <p
-          className="w-72 xs:text-base text-sm text-light font-normal sm:mt-10 mt-6 text-center"
+          className="xs:w-[500px] w-80 xs:text-base text-sm text-light font-normal sm:mt-10 mt-6 text-center"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          Delivering Unmatched Excellence in Every Aspect of Our Service.
+          Expert Web & Mobile Development, Custom Software, and
+          Industry-Specific Solutions for Healthcare, Education & Real Estate
         </p>
         <Button
-          title="View Gallery"
-          className={`md:mt-10 sm:mt-8 xs:mt-6 mt-5 md:px-9 
+          title="View Our Work"
+          className={`md:mt-10 sm:mt-8 xs:mt-6 mt-5 md:px-9
               `}
           handleClick={() => navigate('works')}
           variant="filled"

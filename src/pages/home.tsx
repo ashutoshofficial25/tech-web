@@ -12,21 +12,21 @@ const Home = () => {
   return (
     <section>
       <SEO
-        title="Kin India - Elevating Brands Through Unforgettable Events"
-        description="Kin Productions India specializes in creating memorable events and brand experiences. Discover how we can elevate your brand through unforgettable events."
-        keywords="event management, brand experiences, sports events, Kin India, corporate events, event planning, brand activation, experiential marketing"
+        title="ReactCube.tech - Transform Your Business with Cutting-Edge Tech Solutions"
+        description="ReactCube Technologies delivers innovative web and mobile applications, custom software solutions, and industry-specific platforms for healthcare, education, and real estate."
+        keywords="web development, mobile app development, custom software, CRM, HRM, ReactCube, healthcare software, education technology, real estate tech, software solutions"
         url="/"
-        author="Kin India"
+        author="ReactCube Technologies"
         language="en"
       />
       <StructuredData
         type="Organization"
         data={{
-          name: 'Kin India',
-          url: 'https://kinindia.co',
-          logo: 'https://kinindia.co/src/assets/kin-logo.png',
+          name: 'ReactCube Technologies',
+          url: 'https://reactcube.tech',
+          logo: 'https://reactcube.tech/logo.png',
           description:
-            'Kin Productions India Private Limited specializes in creating memorable events, sports management, and brand experiences.',
+            'ReactCube Technologies delivers innovative web and mobile applications, custom software solutions, and industry-specific platforms.',
         }}
       />
       <BacklinkSEO
@@ -34,7 +34,7 @@ const Home = () => {
         relatedLinks={[
           {
             url: '/about',
-            title: 'About Kin India',
+            title: 'About ReactCube India',
             description:
               'Learn about our mission and vision in creating memorable brand experiences',
           },

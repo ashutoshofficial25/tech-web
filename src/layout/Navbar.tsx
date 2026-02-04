@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import kinLogoUrl from '../assets/kin-logo.png';
+import reactCubeLogo from '../assets/react-logo.png';
 import { useLocation, useNavigate } from 'react-router';
 import Button, { HamburgerMenu } from '../components/common/Button';
 import { Helmet } from 'react-helmet';
@@ -12,30 +12,30 @@ const navs: INavItemProps[] = [
   {
     label: 'Home',
     redirect: '/',
-    description: 'Kin India - Event Management and Brand Experiences',
+    description: 'ReactCube - Technology Solutions and Software Development',
   },
   {
     label: 'About Us',
     redirect: '/about',
-    description: "Learn about Kin India's mission and story",
+    description: "Learn about ReactCube's mission and technology expertise",
   },
   {
     label: 'Our Works',
     redirect: '/works',
     description:
-      "Explore Kin India's portfolio of successful events and brand activations",
+      "Explore ReactCube's portfolio of web applications, mobile apps, and software projects",
   },
 ];
 // Navigation schema for structured data
 const navigationSchema = {
   '@context': 'https://schema.org',
   '@type': 'SiteNavigationElement',
-  name: 'Kin India Navigation',
+  name: 'ReactCube Navigation',
   hasPart: navs.map((nav) => ({
     '@type': 'WebPage',
     name: nav.label,
-    description: nav.description || `${nav.label} page of Kin India`,
-    url: `https://kinindia.co${nav.redirect === '/' ? '' : nav.redirect}`,
+    description: nav.description || `${nav.label} page of ReactCube`,
+    url: `https://reactcube.tech${nav.redirect === '/' ? '' : nav.redirect}`,
   })),
 };
 
@@ -86,7 +86,7 @@ const Navbar = () => {
             navigate('/');
             setIsExpanded(false);
           }}
-          alt="Kin India - Event Management and Brand Experiences"
+          alt="ReactCube.tech - Technology Solutions"
         />
         <NavMenu
           navs={navs}
@@ -108,7 +108,7 @@ const Navbar = () => {
             variant="filled"
             handleClick={() => navigate('/apex')}
             className="!lg:px-12 !sm:px-10 !px-8"
-            title="Apex Vision"
+            title="Enterprise Solutions"
             module="navbar"
           />
           <HamburgerMenu
@@ -133,9 +133,9 @@ const Logo = ({
   return (
     <div className="cursor-pointer z-10" onClick={handleClick}>
       <img
-        src={kinLogoUrl}
-        alt={alt || 'Kin India Logo'}
-        className="md:h-8 h-6 transition-transform hover:scale-105 duration-200"
+        src={reactCubeLogo}
+        alt={alt || 'ReactCube Technologies Logo'}
+        className="md:h-12 h-8 transition-transform hover:scale-105 duration-200"
         itemProp="logo"
       />
     </div>

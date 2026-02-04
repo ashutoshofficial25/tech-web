@@ -1,19 +1,19 @@
 {
-  "name": "Kin India - Event Management & Brand Experiences",
-  "short_name": "Kin India",
-  "description": "Kin Productions India Private Limited specializes in creating memorable events, sports management, and brand experiences.",
+  "name": "ReactCube.tech - Tech Solutions",
+  "short_name": "ReactCube",
+  "description": "ReactCube Technologies delivers innovative web and mobile applications, custom software solutions, and industry-specific platforms.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#062b42",
   "icons": [
     {
-      "src": "/src/assets/kin-logo.png",
+      "src": "/logo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/src/assets/kin-logo.png",
+      "src": "/logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }

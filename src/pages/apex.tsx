@@ -17,21 +17,21 @@ const Apex = () => {
   return (
     <ScrollProvider>
       <SEO
-        title="APEX Vision- Kin India | Global Trade & Business Solutions"
-        description="Discover APEX Vision by Kin India - Your gateway to global trade opportunities, business solutions, and international market expansion. Connect with global partners and grow your business."
-        keywords="APEX Vision, global trade, business solutions, international markets, Kin India, export opportunities, import solutions, trade consulting, global business expansion"
+        title="Enterprise Solutions - ReactCube | Scalable Tech for Large Organizations"
+        description="Discover ReactCube Enterprise Solutions - Cloud migration, microservices architecture, DevOps automation, and enterprise-grade security for large organizations."
+        keywords="enterprise solutions, cloud migration, microservices, DevOps, enterprise software, scalable architecture, ReactCube, digital transformation, enterprise tech"
         url="/apex"
-        author="Kin India"
+        author="ReactCube Technologies"
         language="en"
       />
       <StructuredData
         type="WebPage"
         data={{
-          name: 'APEX Vision- Kin India | Global Trade & Business Solutions',
+          name: 'Enterprise Solutions - ReactCube Technologies',
           description:
-            'Discover APEX Vision by Kin India - Your gateway to global trade opportunities, business solutions, and international market expansion.',
-          url: 'https://kinindia.co/apex',
-          lastReviewed: '2023-12-01',
+            'Discover ReactCube Enterprise Solutions - Scalable, secure, and enterprise-grade technology solutions for large organizations.',
+          url: 'https://reactcube.tech/apex',
+          lastReviewed: '2025-02-05',
         }}
       />
       <BacklinkSEO
@@ -39,69 +39,69 @@ const Apex = () => {
         relatedLinks={[
           {
             url: '/',
-            title: 'Kin India - Home',
+            title: 'ReactCube - Home',
             description:
-              'Discover how we can elevate your brand through unforgettable events',
+              'Discover cutting-edge technology solutions for your business',
           },
           {
             url: '/about',
-            title: 'About Kin India',
+            title: 'About ReactCube',
             description:
-              'Learn about our mission and vision in creating memorable brand experiences',
+              'Learn about our mission to deliver innovative software solutions',
           },
           {
             url: '/works',
             title: 'Our Portfolio',
             description:
-              'Explore our successful event management projects and brand activations',
+              'Explore our successful web, mobile, and enterprise software projects',
           },
           {
             url: '/contact',
             title: 'Contact Us',
-            description: 'Get in touch with our event management experts',
+            description: 'Get in touch with our technology experts',
           },
         ]}
         industryLinks={[
           {
-            url: 'https://www.trade.gov',
-            title: 'International Trade Administration',
+            url: 'https://www.stackshare.io',
+            title: 'StackShare - Tech Stack Insights',
             relationship: 'industry',
           },
           {
-            url: 'https://www.wto.org',
-            title: 'World Trade Organization',
+            url: 'https://www.gartner.com/en/information-technology',
+            title: 'Gartner IT',
             relationship: 'industry',
           },
           {
-            url: 'https://www.iccwbo.org',
-            title: 'International Chamber of Commerce',
+            url: 'https://techcrunch.com',
+            title: 'TechCrunch',
             relationship: 'industry',
           },
         ]}
         authorityLinks={[
           {
-            url: 'https://www.mckinsey.com/industries/public-sector/our-insights/global-trade',
-            title: 'McKinsey - Global Trade Insights',
-            description: 'Expert insights on global trade and business',
+            url: 'https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights',
+            title: 'McKinsey - Digital Insights',
+            description: 'Expert insights on digital transformation and technology',
           },
           {
-            url: 'https://www.worldbank.org/en/topic/trade',
-            title: 'World Bank - Trade',
-            description: 'Global trade research and development',
+            url: 'https://hbr.org/topic/technology',
+            title: 'Harvard Business Review - Technology',
+            description: 'Leading insights on technology and innovation',
           },
         ]}
         socialProfiles={[
           {
             platform: 'LinkedIn',
-            url: 'https://www.linkedin.com/company/kin-productions-india/',
+            url: 'https://www.linkedin.com/company/reactcube-tech/',
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kin_productions_india',
+            url: 'https://www.instagram.com/reactcube_tech',
           },
           {
             platform: 'Twitter',
-            url: 'https://twitter.com/kinindia',
+            url: 'https://twitter.com/reactcube',
           },
         ]}
       />

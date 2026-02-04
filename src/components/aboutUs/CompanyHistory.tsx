@@ -19,7 +19,7 @@ const CompanyHistory: React.FC = () => {
             className="xl:text-4xl lg:text-3xl text-2xl font-medium text-primary mb-4"
             data-aos="fade-down"
           >
-            Our Story
+            About ReactCube Technologies
           </h2>
           <div
             className="w-20 h-1.5 bg-secondary mb-8"
@@ -29,18 +29,18 @@ const CompanyHistory: React.FC = () => {
 
           <div className="space-y-6 text-black/80 font-light">
             <p className="lg:text-lg" data-aos="fade-up" data-aos-delay="150">
-              Mr. Bhopal Singh has been a prominent figure in the events and
-              exhibition industry for close to five decades. He began his
-              journey in 1981 and, in 1995, founded Cityneon Dag India Private
-              Limited, which collaborated with Cityneon Events Pte Ltd to
-              organize events, exhibitions, and roadshows.
+              ReactCube Technologies was founded with a vision to democratize technology
+              and empower businesses of all sizes with world-class software solutions.
+              Our team of experienced developers, designers, and strategists work together
+              to create solutions that not only meet technical requirements but also
+              deliver exceptional user experiences.
             </p>
 
             <p className="lg:text-lg" data-aos="fade-up" data-aos-delay="200">
-              Through this venture, his team gained expertise in technical
-              aspects like erection and dismantling of setups. After the
-              COVID-19 pandemic, he launched Kin India, which is currently
-              involved in projects such as the Bihar Museum and Odisha Museum.
+              We specialize in building custom software, web applications, and mobile apps
+              for diverse industries including healthcare, education, real estate, and
+              e-commerce. Our approach combines agile methodologies with best practices in
+              software development to ensure on-time delivery and superior quality.
             </p>
 
             <div
@@ -49,16 +49,19 @@ const CompanyHistory: React.FC = () => {
               data-aos-delay="250"
             >
               <h3 className="text-xl font-medium text-primary mb-3">
-                Core Business
+                Our Mission & Values
               </h3>
-              <p className="lg:text-lg">
-                The core business of Bhopal Singh's companies revolves around
-                organizing large-scale events, exhibitions, and roadshows, with
-                a focus on technical execution and creative project management.
-                Kin India extends this legacy, working on culturally significant
-                museum projects. He also runs a company called Apex Vision,
-                which is into Project Consultation and Market Expansion support.
+              <p className="lg:text-lg mb-4">
+                We deliver innovative, scalable, and user-centric technology solutions
+                that drive business growth and digital transformation. Our core values
+                guide everything we do:
               </p>
+              <ul className="list-disc list-inside space-y-2 lg:text-lg">
+                <li><strong>Innovation:</strong> Constantly exploring new technologies and methodologies</li>
+                <li><strong>Quality:</strong> Uncompromising commitment to code quality and security</li>
+                <li><strong>Partnership:</strong> Building long-term relationships based on trust</li>
+                <li><strong>Transparency:</strong> Clear communication and honest timelines</li>
+              </ul>
             </div>
 
             <div
@@ -68,15 +71,13 @@ const CompanyHistory: React.FC = () => {
             >
               <div className="md:w-1/2 bg-white p-6 rounded-lg shadow-sm border-t-4 border-secondary">
                 <h3 className="text-xl font-medium text-primary mb-3">
-                  Operations in Odisha
+                  Technology Expertise
                 </h3>
                 <p>
-                  In Odisha, Kin India is currently operating in Bhubaneswar,
-                  the state's capital and a major city on the museum project.
-                  While Cuttack is another notable city nearby, Bhubaneswar
-                  serves as the primary hub for its activities in the region. In
-                  the past it has also worked on Bihar Museum project - from
-                  planning, designing and execution.
+                  Our technical expertise spans across modern frameworks and languages
+                  including React, Node.js, Python, Flutter, and cloud platforms like AWS
+                  and Azure. We stay updated with the latest industry trends to deliver
+                  cutting-edge solutions that give your business a competitive advantage.
                 </p>
               </div>
 
@@ -86,13 +87,14 @@ const CompanyHistory: React.FC = () => {
                 data-aos-delay="350"
               >
                 <h3 className="text-xl font-medium text-primary mb-3">
-                  Presence in Delhi
+                  Industry Focus
                 </h3>
                 <p>
-                  Bhopal Singh's companies are indeed based in Delhi and the
-                  National Capital Region (NCR). These cities have been the
-                  operational base for his ventures, including Cityneon Dag
-                  India and Kin India.
+                  We serve diverse industries with specialized solutions: Healthcare
+                  (HIPAA-compliant systems), Education (e-learning platforms), Real Estate
+                  (property management), E-commerce (scalable marketplaces), and Enterprise
+                  (digital transformation). Each solution is tailored to meet specific
+                  industry requirements and compliance standards.
                 </p>
               </div>
             </div>

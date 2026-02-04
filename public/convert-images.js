@@ -109,7 +109,7 @@ async function processDirectories() {
   console.log(`
 <picture>
   <source srcset="/src/assets/kin-logo.webp" type="image/webp">
-  <img src="/src/assets/kin-logo.png" alt="Kin Logo">
+  <img src="/src/assets/react-logo.png" alt="Kin Logo">
 </picture>
   `);
 }

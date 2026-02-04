@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
 import {
-  FaTrophy,
-  FaBuilding,
-  FaTools,
-  FaChartLine,
-  FaMapMarkerAlt,
+  FaCode,
+  FaMobile,
+  FaLaptopCode,
+  FaUsers,
+  FaUserTie,
+  FaCloud,
+  FaRobot,
+  FaCubes,
+  FaNetworkWired,
+  FaPalette,
+  FaHospital,
+  FaGraduationCap,
+  FaHome,
 } from 'react-icons/fa';
-import { LuImages, LuVideo, LuMapPin } from 'react-icons/lu';
-import { MdSportsFootball, MdEvent, MdDesignServices } from 'react-icons/md';
-import { TbBuildingMinus, TbBrandCampaignmonitor } from 'react-icons/tb';
-import { BiSolidMegaphone } from 'react-icons/bi';
-import { PiSpeakerHighBold } from 'react-icons/pi';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,101 +28,107 @@ interface CustomArrowProps {
 const services = [
   {
     icon: (
-      <TbBuildingMinus className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaCode className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Museum & Galleries build up',
+    title: 'Web Application Development',
     description:
-      'Expert design and construction of engaging exhibition spaces that showcase collections and artworks with maximum impact and visitor engagement.',
+      'Custom web applications built with React, Angular, Vue, and Next.js. Responsive, scalable, and optimized for performance.',
   },
   {
     icon: (
-      <BiSolidMegaphone className="sm:text-8xl  text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaMobile className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Brand Activations',
+    title: 'Mobile App Development',
     description:
-      'Strategic and creative brand activation campaigns that create meaningful connections between brands and consumers through memorable experiences.',
+      'Native and cross-platform mobile apps for iOS and Android using React Native, Flutter, and native technologies.',
   },
   {
     icon: (
-      <TbBrandCampaignmonitor className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaLaptopCode className="sm:text-8xl text-6xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Exhibitions & Expos',
+    title: 'Custom Software Solutions',
     description:
-      'End-to-end management of trade shows and exhibitions that maximize brand visibility and generate valuable business connections and leads.',
+      'End-to-end software development tailored to your business needs. From concept to deployment and maintenance.',
   },
   {
     icon: (
-      <FaTrophy className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaUsers className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Major Games & Championships',
+    title: 'CRM Solutions',
     description:
-      'Comprehensive management of large-scale sporting events, from planning to execution, ensuring memorable experiences for participants and spectators alike.',
+      'Customer relationship management systems using Salesforce, HubSpot, or custom-built solutions to streamline your sales process.',
   },
   {
     icon: (
-      <MdSportsFootball className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaUserTie className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Sports & Life Style Events',
+    title: 'HRM & ERP Systems',
     description:
-      'Creating dynamic lifestyle and sporting events that connect brands with their target audiences through authentic and immersive experiences.',
-  },
-  // {
-  //   icon: (
-  //     <LuVideo className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
-  //   ),
-  //   title: 'Live Streaming Production',
-  //   description:
-  //     'Professional live streaming services with high-quality production values, ensuring your event reaches global audiences with crystal-clear audio and video.',
-  // },
-
-  {
-    icon: (
-      <FaBuilding className="sm:text-8xl  text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
-    ),
-    title: 'Structural build & Installation',
-    description:
-      'Custom design and construction of event structures, stands, and installations that bring your brand vision to life with precision and creativity.',
+      'Human resource management and enterprise resource planning solutions for efficient business operations.',
   },
   {
     icon: (
-      <MdEvent className="sm:text-8xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaCloud className="sm:text-8xl text-6xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Event Planning and Management',
+    title: 'Cloud Services & DevOps',
     description:
-      'Comprehensive event planning services covering everything from concept development to on-site management, ensuring flawless execution of your vision.',
-  },
-
-  {
-    icon: (
-      <FaChartLine className="xl:sm:text-8xl sm:text-7xl text-6xl   text-primary transition-all duration-[600ms] group-hover:scale-120" />
-    ),
-    title: 'Creative Conceptualization & Development',
-    description:
-      'Innovative concept creation that transforms your brand objectives into compelling event experiences that resonate with your target audience.',
+      'Cloud migration, infrastructure management, and DevOps automation using AWS, Azure, and Google Cloud Platform.',
   },
   {
     icon: (
-      <PiSpeakerHighBold className="xl:sm:text-8xl sm:text-7xl text-6xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaRobot className="sm:text-8xl text-6xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Audio Visual Systems & Show Presentations',
+    title: 'AI & Machine Learning',
     description:
-      'State-of-the-art audio-visual solutions that enhance your event with stunning visuals, perfect sound, and seamless technical execution.',
+      'Intelligent solutions including predictive analytics, chatbots, computer vision, and natural language processing.',
   },
   {
     icon: (
-      <FaMapMarkerAlt className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaCubes className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Venue Sourcing & Management',
+    title: 'Blockchain & Web3',
     description:
-      'Expert venue selection and management services to find and optimize the perfect location that aligns with your event objectives and budget.',
+      'Decentralized applications, smart contracts, NFT platforms, and cryptocurrency solutions.',
   },
   {
     icon: (
-      <MdDesignServices className="sm:text-8xl  xs:text-6xl text-5xl  text-primary transition-all duration-[600ms] group-hover:scale-120" />
+      <FaNetworkWired className="sm:text-8xl text-6xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
     ),
-    title: 'Design Production & Build',
+    title: 'IoT Solutions',
     description:
-      'End-to-end design and production services that transform creative concepts into tangible, impactful physical environments for your events.',
+      'Connected device ecosystems, industrial IoT, and smart automation systems for modern businesses.',
+  },
+  {
+    icon: (
+      <FaPalette className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+    ),
+    title: 'UI/UX Design',
+    description:
+      'User-centered design, prototyping, design systems, and brand identity creation for exceptional user experiences.',
+  },
+  {
+    icon: (
+      <FaHospital className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+    ),
+    title: 'Healthcare Solutions',
+    description:
+      'HIPAA-compliant healthcare management systems, telemedicine platforms, and patient management solutions.',
+  },
+  {
+    icon: (
+      <FaGraduationCap className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+    ),
+    title: 'Education Technology',
+    description:
+      'School and college management systems, e-learning platforms, and student information systems.',
+  },
+  {
+    icon: (
+      <FaHome className="sm:text-8xl xs:text-6xl text-5xl text-primary transition-all duration-[600ms] group-hover:scale-120" />
+    ),
+    title: 'Real Estate Technology',
+    description:
+      'Property management systems, listing platforms, CRM for real estate, and virtual tour solutions.',
   },
 ];
 const Services = () => {

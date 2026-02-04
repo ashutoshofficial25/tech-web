@@ -24,21 +24,21 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen overflow-x-hidden relative w-full">
       <SEO
-        title="About Us - Kin India | Our Story and Mission"
-        description="Learn about Kin Productions India, our journey, mission, and how we create unforgettable brand experiences and events across India."
-        keywords="about Kin India, event management company, brand experience agency, Kin Productions history, company mission, brand story"
+        title="About Us - ReactCube | Our Story and Mission"
+        description="Learn about ReactCube Technologies, our journey, mission, and how we deliver innovative web and mobile applications across diverse industries."
+        keywords="about ReactCube, software development company, technology services, ReactCube Technologies history, company mission, tech story"
         url="/about"
-        author="Kin India"
+        author="ReactCube Technologies"
         language="en"
       />
       <StructuredData
         type="WebPage"
         data={{
-          name: 'About Us - Kin India',
+          name: 'About Us - ReactCube Technologies',
           description:
-            'Learn about Kin Productions India, our journey, mission, and how we create unforgettable brand experiences and events across India.',
-          url: 'https://kinindia.co/about',
-          lastReviewed: '2023-12-01',
+            'Learn about ReactCube Technologies, our journey, mission, and how we deliver innovative software solutions across diverse industries.',
+          url: 'https://reactcube.tech/about',
+          lastReviewed: '2025-02-05',
         }}
       />
       <BacklinkSEO
@@ -46,64 +46,64 @@ const AboutUs = () => {
         relatedLinks={[
           {
             url: '/',
-            title: 'Kin India - Home',
+            title: 'ReactCube - Home',
             description:
-              'Discover how we can elevate your brand through unforgettable events',
+              'Discover cutting-edge technology solutions for your business',
           },
           {
             url: '/works',
             title: 'Our Portfolio',
             description:
-              'Explore our successful event management projects and brand activations',
+              'Explore our successful web, mobile, and enterprise software projects',
           },
           {
             url: '/contact',
             title: 'Contact Us',
-            description: 'Get in touch with our event management experts',
+            description: 'Get in touch with our technology experts',
           },
         ]}
         industryLinks={[
           {
-            url: 'https://www.eventindustrynews.com',
-            title: 'Event Industry News',
+            url: 'https://www.techcrunch.com',
+            title: 'TechCrunch',
             relationship: 'industry',
           },
           {
-            url: 'https://www.specialevents.com',
-            title: 'Special Events',
+            url: 'https://www.wired.com',
+            title: 'Wired',
             relationship: 'industry',
           },
           {
-            url: 'https://www.exhibitoronline.com',
-            title: 'Exhibitor Magazine',
+            url: 'https://www.theverge.com',
+            title: 'The Verge',
             relationship: 'industry',
           },
         ]}
         authorityLinks={[
           {
-            url: 'https://www.eventbrite.com/blog',
-            title: 'Eventbrite Blog',
+            url: 'https://martinfowler.com',
+            title: 'Martin Fowler',
             description:
-              'Leading resource for event planning tips and strategies',
+              'Leading resource for software development and architecture',
           },
           {
-            url: 'https://www.forbes.com/business',
-            title: 'Forbes Business',
-            description: 'Business news, insights and expert opinions',
+            url: 'https://www.forbes.com/technology',
+            title: 'Forbes Technology',
+            description: 'Technology news, insights and expert opinions',
           },
         ]}
         socialProfiles={[
           {
             platform: 'LinkedIn',
-            url: 'https://www.linkedin.com/company/kin-productions-india/',
+            url: 'https://www.linkedin.com/company/reactcube-tech/',
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kin_productions_india',
+            url: 'https://www.instagram.com/reactcube_tech',
           },
           {
             platform: 'Twitter',
-            url: 'https://twitter.com/kinindia',
+            url: 'https://twitter.com/reactcube',
           },
         ]}
       />
@@ -133,38 +133,35 @@ const AboutUs = () => {
             data-aos-delay="200"
           >
             <h2 className="lg:text-3xl sm:text-2xl text-xl font-semibold text-primary">
-              We craft memories for you
+              We build digital solutions for you
             </h2>
             <div className="flex pb-8 lg:text-base sm:text-sm text-xs font-normal text-light flex-col xl:gap-y-5 gap-y-3 xl:mt-8 sm:mt-6 mt-4 items-start">
               <p data-aos="fade-right" data-aos-delay="250">
-                Kin Productions India Private Limited is an associate of Kin
-                Productions, Singapore. KIN is an integrated experiential agency
-                that is passionate about creating the best experiences for our
-                clients and partners, using all the tools and expertise that we
-                have at our disposal.
+                ReactCube Technologies is a full-stack technology solutions provider
+                specializing in web development, mobile applications, and custom software
+                solutions. We're passionate about creating exceptional digital products for our
+                clients and partners, using cutting-edge technologies and industry best practices.
               </p>
               <p data-aos="fade-right" data-aos-delay="300">
-                We embrace challenging timelines, complex projects which we tend
-                to simplify for our clients. Our track record for working
-                quickly, efficiently, yet creatively, has been rewarded with the
-                trust of our clients. In fact, developing strong relationships
-                with our clients is part of our DNA.
+                We embrace challenging technical requirements and complex projects,
+                delivering solutions with clean code, best practices, and modern architectures.
+                Our track record for delivering high-quality software on time has earned us the
+                trust of clients worldwide. Building long-term partnerships based on
+                transparency and excellence is at the core of what we do.
               </p>
               <p data-aos="fade-right" data-aos-delay="350">
-                Kin primely focuses on Mega Exhibitions, Large scale
-                Events/Product launches, Live Events and Branding.
+                ReactCube specializes in Web & Mobile Applications, Custom Software Solutions,
+                CRM/HRM Systems, Healthcare Technology, Education Platforms, and Real Estate Solutions.
               </p>
               <p data-aos="fade-right" data-aos-delay="400">
-                We implicitly believe that well-crafted experiences in relation
-                to our client's brands allow their consumers to form an
-                emotional connection that will enhance brand loyalty. We are
-                deeply aware of how experience creations can be shaped to the
-                satisfaction of increasingly tech-savvy and demanding
-                stakeholders in the new normal.
+                We believe that well-architected software solutions empower businesses to
+                scale efficiently and deliver exceptional user experiences. We understand
+                how technology can transform operations and create competitive advantages
+                in today's digital-first landscape.
               </p>
               <Button
                 handleClick={() => {}}
-                title="Book an Event"
+                title="Get a Consultation"
                 data-aos="zoom-in"
                 data-aos-delay="450"
               />
@@ -218,31 +215,31 @@ const AboutUs = () => {
 
         <div className="lg:h-[500px] h-[400px] z-20 relative my-12 w-full">
           <TestimonialCard
-            title="Live Events"
+            title="Web Development"
             className="lg:top-10 md:top-14 top-5 sm:left-72 left-20 lg:hover:top-11 md:hover:top-[60px] hover:top-6"
             data-aos="fade-right"
             data-aos-delay="100"
           />
           <TestimonialCard
-            title="Large scale Events"
+            title="Mobile Apps"
             className="md:left-16 left-7 lg:hover:bottom-[236px] hover:bottom-[204px] md:bottom-60 bottom-52"
             data-aos="fade-right"
             data-aos-delay="200"
           />
           <TestimonialCard
-            title="Mega Exhibitions"
+            title="Custom Software"
             className="sm:left-3/5 xs:left-40 left-28 top-1/2 hover:mt-1 sm:-translate-y-1/2"
             data-aos="zoom-in"
             data-aos-delay="300"
           />
           <TestimonialCard
-            title="Large scale Projects"
+            title="Cloud Solutions"
             className="sm:left-2/5 left-12 lg:bottom-12 md:bottom-20 bottom-12 lg:hover:bottom-11 md:hover:bottom-[76px] hover:botom-11"
             data-aos="fade-left"
             data-aos-delay="200"
           />
           <TestimonialCard
-            title="Branding"
+            title="AI & ML"
             className="top-20 lg:right-28 right-8 hover:top-[84px]"
             data-aos="fade-left"
             data-aos-delay="100"

@@ -113,7 +113,7 @@ const Header = () => {
                 variant="filled"
                 handleClick={() => {}}
                 className="w-48"
-                title="Kin"
+                title="ReactCube"
               />
             </div>
           </ul>

@@ -9,13 +9,13 @@ export const socialProfiles: ISocialProfileProps[] = [
   {
     label: 'LinkedIn',
     newTab: true,
-    link: 'https://www.linkedin.com/company/kin-productions-india/',
+    link: 'https://www.linkedin.com/company/reactcube-tech/',
     icon: <FaLinkedin />,
   },
   {
     label: 'Instagram',
     newTab: true,
-    link: 'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
+    link: 'https://www.instagram.com/reactcube_tech',
     icon: <FaInstagram />,
   },
 ];

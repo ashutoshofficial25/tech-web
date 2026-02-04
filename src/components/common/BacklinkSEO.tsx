@@ -49,7 +49,7 @@ const BacklinkSEO: React.FC<BacklinkSEOProps> = ({
   authorityLinks = [],
   socialProfiles = [],
 }) => {
-  const siteUrl = 'https://kinindia.co';
+  const siteUrl = 'https://reactcube.tech';
   const canonicalUrl = `${siteUrl}${pageUrl}`;
 
   // Create structured data for related content
@@ -108,7 +108,7 @@ const BacklinkSEO: React.FC<BacklinkSEOProps> = ({
       ? {
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'Kin India',
+          name: 'ReactCube Technologies',
           url: siteUrl,
           sameAs: socialProfiles.map((profile) => profile.url),
         }

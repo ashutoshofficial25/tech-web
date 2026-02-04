@@ -30,7 +30,7 @@ const Hero = () => {
       className="min-h-screen relative w-full pt-44 md:pt-32 lg:pt-44"
     >
       <HeroIllustractionCard
-        label="Growth-Driven Strategies"
+        label="99.9% Uptime Guarantee"
         className="top-32 xl:scale-100 scale-60 -rotate-[11deg] xl:left-8 left-0 md:block hidden"
         icon={<BiStats className="text-[#0905c4] text-2xl" />}
         logo={<PiStrategyBold className="text-[#0905C4] text-5xl" />}
@@ -38,7 +38,7 @@ const Hero = () => {
         data-aos-delay="100"
       />
       <HeroIllustractionCard
-        label="Client Satisfaction"
+        label="Security Certified"
         className="top-32 xl:scale-100 scale-60  -rotate-[11deg] xl:right-16 right-0 md:block hidden"
         icon={<TbHeartStar className="text-[#2291D2] text-2xl" />}
         logo={<LuFolderHeart className="text-[#2291D2] text-5xl" />}
@@ -46,7 +46,7 @@ const Hero = () => {
         data-aos-delay="100"
       />
       <HeroIllustractionCard
-        label="Global Reach"
+        label="100+ Enterprise Clients"
         className="bottom-32 xl:scale-100 scale-60  -rotate-[11deg] xl:right-40 right-20 md:block hidden"
         icon={<LuMapPinCheck className="text-[#057BC4] text-2xl" />}
         logo={<FaMapLocationDot className="text-[#057BC4] text-5xl" />}
@@ -54,7 +54,7 @@ const Hero = () => {
         data-aos-delay="200"
       />
       <HeroIllustractionCard
-        label="Proven Track Record"
+        label="24/7 Support"
         className="bottom-32  rotate-[11deg] xl:left-16 left-0 2xl:scale-110 xl:scale-100 scale-60  md:block hidden"
         icon={<TbHomeStats className="text-[#05C458] text-2xl" />}
         logo={<TfiStatsUp className="text-[#05C458] text-5xl" />}
@@ -78,16 +78,16 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="350"
         >
-          <span className="text-secondary">Connecting Markets,</span> Creating
-          Opportunities,{' '}
-          <span className="text-black/20">Delivering Results</span>.
+          <span className="text-secondary">Enterprise-Grade Solutions,</span> Scalable
+          Architecture,{' '}
+          <span className="text-black/20">Exceptional Performance</span>.
         </h1>
         <p
           className="mt-10 text-lg md:text-xl font-normal w-full md:w-96 text-center"
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          Delivering Unmatched Excellence in Every Aspect of Our Service.
+          Cloud migration, microservices, DevOps automation, and enterprise security for large organizations.
         </p>
         <div
           className="mt-8 flex flex-col md:flex-row items-center gap-y-3 md:gap-x-3"

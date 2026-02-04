@@ -13,16 +13,16 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Kin India - Elevating Brands Through Unforgettable Events',
-  description = 'Kin Productions India Private Limited specializes in creating memorable events, sports management, and brand experiences. We craft unforgettable moments for top brands across India.',
-  keywords = 'event management, brand experiences, sports events, Kin India, corporate events, brand activation, event production',
-  image = '/src/assets/kin-logo.png',
-  url = 'https://kinindia.co',
+  title = 'ReactCube.tech - Transform Your Business with Cutting-Edge Tech Solutions',
+  description = 'ReactCube Technologies delivers innovative web and mobile applications, custom software solutions, CRM/HRM systems, and industry-specific platforms for healthcare, education, and real estate sectors.',
+  keywords = 'web development, mobile app development, custom software, CRM, HRM, healthcare software, education technology, real estate tech, ReactCube, software solutions, cloud services',
+  image = '/logo.png',
+  url = 'https://reactcube.tech',
   type = 'website',
   language = 'en',
-  author = 'Kin India',
+  author = 'ReactCube Technologies',
 }) => {
-  const siteUrl = 'https://kinindia.co';
+  const siteUrl = 'https://reactcube.tech';
   const canonicalUrl = `${siteUrl}${url}`;
 
   return (
@@ -46,7 +46,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`${siteUrl}${image}`} />
-      <meta property="og:site_name" content="Kin India" />
+      <meta property="og:site_name" content="ReactCube Technologies" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
@@ -55,7 +55,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={`${siteUrl}${image}`} />
-      <meta name="twitter:creator" content="@kinindia" />
+      <meta name="twitter:creator" content="@reactcube" />
     </Helmet>
   );
 };

@@ -6,11 +6,11 @@ import "aos/dist/aos.css";
 const clientelesInfo = [
   {
     title: "Who We Serve",
-    desc: "Our clientele includes businesses, brands, entrepreneurs, and individuals seeking expert event planning, branding, conferences, and exhibition management. We work with corporate organizations, startups, and professionals to bring their vision to life with creativity and precision.",
+    desc: "We partner with startups, SMEs, healthcare providers, educational institutions, real estate firms, and enterprise organizations. From MVP development for emerging startups to digital transformation for established businesses, we deliver tailored technology solutions that drive growth across diverse industries.",
   },
   {
     title: "Our Commitment",
-    desc: "We are dedicated to delivering exceptional experiences, from high-profile conferences to bespoke brand activations. With a focus on innovation, seamless execution, and attention to detail, we ensure that every event and branding project leaves a lasting impact.",
+    desc: "We are dedicated to delivering world-class software solutions with clean code, best practices, and cutting-edge technologies. With a focus on innovation, agile methodologies, and transparent communication, we ensure every project meets the highest standards of quality, security, and performance.",
   },
 ];
 

@@ -12,46 +12,28 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
   {
-    year: '1981',
-    event: 'Started work in Exhibition space',
+    year: 'Phase 1',
+    event: 'Discovery & Planning - Requirements gathering, technical feasibility analysis, and project scope definition',
   },
   {
-    year: '1990',
-    event: 'Worked for India Engineering Trade fair with UK as Partner country',
+    year: 'Phase 2',
+    event: 'Design & Prototyping - UI/UX design, user flows, wireframing, and interactive prototypes',
   },
   {
-    year: '1995',
-    event: 'Joint venture established with Cityneon',
+    year: 'Phase 3',
+    event: 'Development - Agile sprints, code reviews, continuous integration, and regular client updates',
   },
   {
-    year: '1996',
-    event:
-      'Multiple road shows, brand shops work started with Samsung and Hyundai',
+    year: 'Phase 4',
+    event: 'Quality Assurance - Comprehensive testing, security audits, and performance optimization',
   },
   {
-    year: '2003',
-    event: 'Set up factory at Sector 63, Noida',
+    year: 'Phase 5',
+    event: 'Deployment - CI/CD pipeline setup, cloud deployment, monitoring, and launch support',
   },
   {
-    year: '2006',
-    event: 'Large scale KOTRA events conducted',
-  },
-  {
-    year: '2010',
-    event: 'Worked on multiple projects for Common Wealth Games, Delhi',
-  },
-  {
-    year: '2016',
-    event: 'Worked with Ford Motors for their car launch in JLN, Delhi',
-  },
-  {
-    year: '2020',
-    event: 'KIN Productions India established',
-  },
-  {
-    year: '2023',
-    event:
-      'Entered into museum curation space with projects such as Odisha museum and Patna museum',
+    year: 'Phase 6',
+    event: 'Support & Maintenance - 24/7 technical support, regular updates, and feature enhancements',
   },
 ];
 
@@ -82,12 +64,12 @@ const Timeline: React.FC = () => {
       >
         <div className="text-center mb-16">
           <h2 className="xl:text-5xl lg:text-4xl text-3xl font-bold text-primary mb-4 inline-block relative">
-            Our Legacy
+            Our Development Process
             <div className="absolute -bottom-3 left-0 w-full h-1.5 bg-secondary"></div>
           </h2>
           <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
-            Explore our history of innovation and excellence spanning over four
-            decades
+            A systematic approach to delivering high-quality software solutions
+            from concept to deployment and beyond
           </p>
         </div>
 

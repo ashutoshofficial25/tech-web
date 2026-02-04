@@ -7,7 +7,7 @@ const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>Page Not Found | Kin India</title>
+        <title>Page Not Found | ReactCube</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
@@ -15,8 +15,8 @@ const NotFound: React.FC = () => {
         <div>
           <img
             className="mx-auto h-24 w-auto"
-            src="/src/assets/kin-logo.png"
-            alt="Kin India Logo"
+            src="/logo.png"
+            alt="ReactCube Logo"
           />
           <h1 className="mt-6 text-5xl font-extrabold text-gray-900">404</h1>
           <h2 className="mt-2 text-3xl font-bold text-gray-900">

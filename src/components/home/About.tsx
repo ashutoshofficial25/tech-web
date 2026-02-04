@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Button from '../common/Button';
 import { useNavigate } from 'react-router';
 import aboutIllustrationBg from '../../assets/illustration/hero-illustration.png';
-import kinLogoUrl from '../../assets/kin-logo.png';
+import kinLogoUrl from '../../assets/react-logo.png';
 import Slider from 'react-slick';
 import '../../styles/home.css';
 import 'slick-carousel/slick/slick.css';
@@ -62,18 +62,19 @@ const About = () => {
             About Us
           </h1>
           <p className="2xl:text-[18px] xl:text-base text-sm text-black/80 font-light xl:mt-10 mt-6">
-            Kin Productions India Private Limited is an associate of Kin
-            Productions, Singapore. KIN is an integrated experiential agency
-            that is passionate about creating the best experiences for our
-            clients and partners, using all the tools and expertise that we have
-            at our disposal.
+            ReactCube Technologies is a full-stack technology solutions provider
+            specializing in web development, mobile applications, and custom
+            software solutions. We partner with businesses across healthcare,
+            education, real estate, and e-commerce to build scalable, innovative
+            digital products that drive growth and efficiency.
           </p>
           <p className="2xl:text-[18px] xl:text-base text-sm text-black/80 font-light xl:mt-10 mt-6">
-            We embrace challenging timelines, complex projects which we tend to
-            simplify for our clients. Our track record for working quickly,
-            efficiently, yet creatively, has been rewarded with the trust of our
-            clients. In fact, developing strong relationships with our clients
-            is part of our DNA.
+            We embrace challenging technical requirements and complex projects,
+            delivering solutions with clean code, best practices, and
+            cutting-edge technologies. Our track record for delivering
+            high-quality software on time has earned us the trust of clients
+            worldwide. Building long-term partnerships based on transparency and
+            excellence is at the core of what we do.
           </p>
           <Button
             title="Read More"
@@ -92,7 +93,7 @@ const About = () => {
         data-aos-delay="200"
       >
         <h1 className="md:pl-12 pl-8 md:text-xl text-base font-light text-white">
-          Events
+          Projects Showcase
         </h1>
         <div className="flex slider-container flex-row md:mt-6 mt-4 gap-x-4 xl:h-[340px] h-[300px] w-full">
           <Slider
@@ -141,7 +142,7 @@ const About = () => {
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] overflow-hidden pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.06]">
           <img
             src={kinLogoUrl}
-            alt="Kin Logo Watermark"
+            alt="ReactCube Logo Watermark"
             className="w-[80%] max-w-[800px] object-contain transform transition-transform duration-1000 ease-in-out hover:rotate-1"
           />
         </div>
@@ -153,11 +154,14 @@ const About = () => {
 
         <h1 className="text-4xl xl:text-5xl lg:text-4xl xs:text-2xl text-xl font-normal leading-[1.3] md:text-left text-center mx-auto 2xl:indent-52 xl:indent-44 md:indent-32 indent-0 relative backdrop-blur-[1px] p-4 md:p-6 rounded-lg">
           <span className="block mb-4 text-primary/80 text-sm font-light tracking-widest uppercase">
-            Our Legacy
+            Our Commitment
           </span>
-          "Collective multi-disciplinary experience of
-          <span className="text-light font-medium"> more than 50 years</span>,
-          delivering quality projects worldwide..."
+          "Delivering excellence in software development with
+          <span className="text-light font-medium">
+            {' '}
+            50+ successful projects
+          </span>
+          , powered by innovation and cutting-edge technology..."
         </h1>
 
         {/* Add subtle animation and decorative elements */}

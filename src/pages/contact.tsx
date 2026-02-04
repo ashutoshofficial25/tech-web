@@ -27,19 +27,19 @@ const contactDetails: IContactUsCardProps[] = [
       <IoLocationSharp className="lg:text-4xl md:text-3xl text-2xl text-white/80" />
     ),
     value:
-      'Registered Address: D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA\nOffice Address: D-55, Sector 80, NOIDA 201305(U.P.), INDIA',
-    desc: 'Connect Near and Far, Reach out to us',
+      '[To Be Updated - Contact Information]',
+    desc: 'Connect with our team, reach out to us',
     module: 'location',
   },
   {
     icon: <LuMail className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
-    value: 'intro@kinindia.co',
-    desc: "Send us a message through Kin's official email",
+    value: 'contact@reactcube.tech',
+    desc: "Send us a message through ReactCube's official email",
     module: 'mail',
   },
   {
     icon: <IoCall className="lg:text-4xl md:text-3xl text-2xl text-white/80" />,
-    value: ['+91 8826204411'],
+    value: ['+91-XXXXXXXXXX'],
     desc: 'Get in touch with us by phone',
     module: 'call',
   },
@@ -58,18 +58,18 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen overflow-x-hidden relative w-full">
       <SEO
-        title="Contact Us - Kin India | Get in Touch"
-        description="Contact Kin Productions India for your event management and brand experience needs. Reach out to our team for inquiries and collaborations."
-        keywords="contact Kin India, event management contact, brand experience inquiry, Kin Productions address, event planning contact, event inquiry"
+        title="Contact Us - ReactCube | Get in Touch"
+        description="Contact ReactCube Technologies for your web development, mobile app, and custom software needs. Reach out to our team for inquiries and consultations."
+        keywords="contact ReactCube, software development contact, web development inquiry, ReactCube Technologies address, tech services contact, software inquiry"
         url="/contact"
-        author="Kin India"
+        author="ReactCube Technologies"
         language="en"
       />
       <StructuredData
         type="LocalBusiness"
         data={{
-          name: 'Kin India',
-          image: 'https://kinindia.co/src/assets/kin-logo.png',
+          name: 'ReactCube Technologies',
+          image: 'https://reactcube.tech/logo.png',
           telephone: '+918826204411',
           address: {
             '@type': 'PostalAddress',
@@ -86,64 +86,64 @@ const ContactUs = () => {
         relatedLinks={[
           {
             url: '/',
-            title: 'Kin India - Home',
+            title: 'ReactCube - Home',
             description:
-              'Discover how we can elevate your brand through unforgettable events',
+              'Discover cutting-edge technology solutions for your business',
           },
           {
             url: '/about',
-            title: 'About Kin India',
+            title: 'About ReactCube',
             description:
-              'Learn about our mission and vision in creating memorable brand experiences',
+              'Learn about our mission to deliver innovative software solutions',
           },
           {
             url: '/works',
             title: 'Our Portfolio',
             description:
-              'Explore our successful event management projects and brand activations',
+              'Explore our successful web, mobile, and enterprise software projects',
           },
         ]}
         industryLinks={[
           {
-            url: 'https://www.eventplannernews.com',
-            title: 'Event Planner News',
+            url: 'https://www.techcrunch.com',
+            title: 'TechCrunch',
             relationship: 'industry',
           },
           {
-            url: 'https://www.meetingsnet.com',
-            title: 'MeetingsNet',
+            url: 'https://www.stackoverflow.com',
+            title: 'Stack Overflow',
             relationship: 'industry',
           },
           {
-            url: 'https://www.corporateeventnews.com',
-            title: 'Corporate Event News',
+            url: 'https://dev.to',
+            title: 'Dev Community',
             relationship: 'industry',
           },
         ]}
         authorityLinks={[
           {
-            url: 'https://www.inc.com/business-events',
-            title: 'Inc.com - Business Events',
-            description: 'Business event strategies and insights',
+            url: 'https://www.inc.com/technology',
+            title: 'Inc.com - Technology',
+            description: 'Business technology strategies and insights',
           },
           {
-            url: 'https://www.cvent.com/en/blog',
-            title: 'Cvent Blog',
-            description: 'Leading event management platform insights',
+            url: 'https://hbr.org/topic/technology',
+            title: 'Harvard Business Review - Technology',
+            description: 'Leading insights on technology and innovation',
           },
         ]}
         socialProfiles={[
           {
             platform: 'LinkedIn',
-            url: 'https://www.linkedin.com/company/kin-productions-india/',
+            url: 'https://www.linkedin.com/company/reactcube-tech/',
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kin_productions_india',
+            url: 'https://www.instagram.com/reactcube_tech',
           },
           {
             platform: 'Twitter',
-            url: 'https://twitter.com/kinindia',
+            url: 'https://twitter.com/reactcube',
           },
         ]}
       />
@@ -166,8 +166,8 @@ const ContactUs = () => {
           data-aos="fade-down"
           data-aos-delay="100"
         >
-          Contact us via email, call, or fill out the form to discover how Kin
-          can help solve your problem
+          Contact us via email, call, or fill out the form to discover how ReactCube
+          can help solve your technology challenges
         </p>
 
         <div

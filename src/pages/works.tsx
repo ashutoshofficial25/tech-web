@@ -9,9 +9,11 @@ import 'aos/dist/aos.css';
 
 // Categories order with 'All' last
 const worksCategories = [
-  'Museums',
-  'Exhibitions',
-  'Events & Conferences',
+  'Web Applications',
+  'Mobile Apps',
+  'Healthcare',
+  'Education',
+  'Real Estate',
   'All',
 ];
 
@@ -31,12 +33,16 @@ const Works = () => {
     switch (selected) {
       case 'All':
         return [...museums, ...exhibitions, ...events, ...conferences];
-      case 'Events & Conferences':
-        return [...events, ...conferences];
-      case 'Museums':
-        return museums;
-      case 'Exhibitions':
+      case 'Web Applications':
         return exhibitions;
+      case 'Mobile Apps':
+        return events;
+      case 'Healthcare':
+        return museums.slice(0, 10);
+      case 'Education':
+        return conferences;
+      case 'Real Estate':
+        return museums.slice(10, 20);
       default:
         return [];
     }
@@ -65,20 +71,20 @@ const Works = () => {
     <div className="w-full px-6 sm:px-10 md:px-16 lg:px-8 xl:container xl:px-4 min-h-screen relative z-10 mx-auto flex pt-32 flex-col items-center">
       {/* SEO, StructuredData, BacklinkSEO remain the same */}
       <SEO
-        title="Our Works - Kin India | Portfolio of Events, Exhibitions & More"
-        description="Explore Kin India's diverse portfolio of successful events, exhibitions, conferences, and museum projects. View our past work and see how we bring visions to life."
-        keywords="Kin India portfolio, event portfolio, exhibition showcase, conference management, museum projects, brand activation examples, event case studies, project gallery"
+        title="Our Portfolio - ReactCube | Web & Mobile App Development Projects"
+        description="Explore ReactCube's portfolio of web applications, mobile apps, healthcare systems, education platforms, and real estate solutions. View our successful software projects."
+        keywords="ReactCube portfolio, web development projects, mobile app showcase, healthcare software, education technology, real estate tech, software case studies, tech portfolio"
         url="/works"
-        author="Kin India"
+        author="ReactCube Technologies"
         language="en"
       />
       <StructuredData
         type="WebPage"
         data={{
-          name: 'Our Works - Kin India',
+          name: 'Our Portfolio - ReactCube Technologies',
           description:
-            "Explore Kin India's diverse portfolio of successful events, exhibitions, conferences, and museum projects. View our past work and see how we bring visions to life.",
-          url: 'https://kinindia.co/works',
+            "Explore ReactCube's portfolio of web applications, mobile apps, healthcare systems, and industry-specific software solutions.",
+          url: 'https://reactcube.tech/works',
           lastReviewed: '2025-04-28',
         }}
       />
@@ -87,59 +93,59 @@ const Works = () => {
         relatedLinks={[
           {
             url: '/',
-            title: 'Kin India - Home',
+            title: 'ReactCube - Home',
             description:
-              'Discover how we can elevate your brand through unforgettable events',
+              'Discover cutting-edge technology solutions for your business',
           },
           {
             url: '/about',
-            title: 'About Kin India',
+            title: 'About ReactCube',
             description:
-              'Learn about our mission and vision in creating memorable brand experiences',
+              'Learn about our mission to deliver innovative software solutions',
           },
           {
             url: '/contact',
             title: 'Contact Us',
-            description: 'Get in touch with our event management experts',
+            description: 'Get in touch with our technology experts',
           },
         ]}
         industryLinks={[
           {
-            url: 'https://www.bizbash.com',
-            title: 'BizBash',
+            url: 'https://www.producthunt.com',
+            title: 'Product Hunt',
             relationship: 'industry',
           },
           {
-            url: 'https://www.eventmanagerblog.com/event-portfolio',
-            title: 'Event Manager Blog - Portfolio Building',
+            url: 'https://www.awwwards.com',
+            title: 'Awwwards - Web Design Excellence',
             relationship: 'industry',
           },
           {
-            url: 'https://www.exhibitionworld.co.uk',
-            title: 'Exhibition World',
+            url: 'https://dribbble.com',
+            title: 'Dribbble',
             relationship: 'industry',
           },
         ]}
         authorityLinks={[
           {
-            url: 'https://www.entrepreneur.com/growing-a-business/event-marketing',
-            title: 'Entrepreneur - Event Marketing',
-            description: 'Expert insights on event marketing strategies',
+            url: 'https://www.entrepreneur.com/technology',
+            title: 'Entrepreneur - Technology',
+            description: 'Expert insights on technology and innovation',
           },
           {
-            url: 'https://hbr.org/topic/marketing',
-            title: 'Harvard Business Review - Marketing',
-            description: 'Leading business insights on marketing strategies',
+            url: 'https://hbr.org/topic/technology',
+            title: 'Harvard Business Review - Technology',
+            description: 'Leading insights on technology strategies',
           },
         ]}
         socialProfiles={[
           {
             platform: 'LinkedIn',
-            url: 'https://www.linkedin.com/company/kin-productions-india/',
+            url: 'https://www.linkedin.com/company/reactcube-tech/',
           },
           {
             platform: 'Instagram',
-            url: 'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
+            url: 'https://www.instagram.com/reactcube_tech',
           },
         ]}
       />

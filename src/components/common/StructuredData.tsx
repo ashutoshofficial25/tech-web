@@ -19,12 +19,12 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
       structuredData = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: data.name || 'Kin India',
-        url: data.url || 'https://kinindia.co',
-        logo: data.logo || 'https://kinindia.co/src/assets/kin-logo.png',
+        name: data.name || 'ReactCube Technology',
+        url: data.url || 'https://reactcube.tech',
+        logo: data.logo || 'https://reactcube.tech/logo.png',
         description:
           data.description ||
-          'Kin Productions India Private Limited specializes in creating memorable events, sports management, and brand experiences.',
+          'ReactCube Technologies delivers innovative web and mobile applications, custom software solutions, and industry-specific platforms for healthcare, education, and real estate sectors.',
         address: data.address || {
           '@type': 'PostalAddress',
           streetAddress: 'D-55, Sector 80',
@@ -39,9 +39,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           contactType: 'customer service',
         },
         sameAs: data.sameAs || [
-          'https://www.facebook.com/kinindia',
-          'https://www.instagram.com/kin_productions_india?igsh=aDJyZ2N1MHpveDFt',
-          'https://www.linkedin.com/company/kinindia',
+          'https://www.facebook.com/reactcube',
+          'https://www.instagram.com/reactcube_tech',
+          'https://www.linkedin.com/company/reactcube-tech/',
         ],
       };
       break;
@@ -62,8 +62,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         description: data.description,
         organizer: {
           '@type': 'Organization',
-          name: 'Kin India',
-          url: 'https://kinindia.co',
+          name: 'ReactCube Technologies',
+          url: 'https://reactcube.tech',
         },
       };
       break;
@@ -72,10 +72,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
       structuredData = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: data.name || 'Kin India',
-        image: data.image || 'https://kinindia.co/src/assets/kin-logo.png',
-        '@id': data.id || 'https://kinindia.co',
-        url: data.url || 'https://kinindia.co',
+        name: data.name || 'ReactCube Technologies',
+        image: data.image || 'https://reactcube.tech/logo.png',
+        '@id': data.id || 'https://reactcube.tech',
+        url: data.url || 'https://reactcube.tech',
         telephone: data.telephone || '+918826204411',
         address: data.address || {
           '@type': 'PostalAddress',
@@ -111,8 +111,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           data.lastReviewed || new Date().toISOString().split('T')[0],
         mainEntity: {
           '@type': 'Organization',
-          name: 'Kin India',
-          url: 'https://kinindia.co',
+          name: 'ReactCube Technologies',
+          url: 'https://reactcube.tech',
         },
       };
       break;

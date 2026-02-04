@@ -45,7 +45,7 @@ const Footer = () => {
           <img
             src={kinLogoUrl}
             className="h-10 w-auto" // Added height/width constraint
-            alt="Kin India Logo Footer"
+            alt="ReactCube Technologies Logo Footer"
           />
           <h1 className="mt-6 md:mt-8 text-sm font-normal text-white">
             Follow us on
@@ -84,36 +84,36 @@ const Footer = () => {
             <h1 className="lg:text-xl md:text-base text-sm font-medium text-white mb-5 md:mb-6">
               Contact Us
             </h1>
-            {/* --- FIX: Added Registered Address --- */}
+            {/* --- Registered Address --- */}
             <div className="mb-4">
               <strong className="block font-medium text-xs md:text-sm mb-1">
                 Registered Address:
               </strong>
               <p className="text-xs md:text-sm lg:text-base leading-relaxed">
-                D - 148, SECTOR - 61, NOIDA 201301(U.P.), INDIA
+                [To Be Updated - Contact Information]
               </p>
             </div>
-            {/* --- FIX: Added Office Address --- */}
+            {/* --- Office Address --- */}
             <div className="mb-5">
               <strong className="block font-medium text-xs md:text-sm mb-1">
                 Office Address:
               </strong>
               <p className="text-xs md:text-sm lg:text-base leading-relaxed">
-                D-55, Sector 80, NOIDA 201305(U.P.), INDIA
+                [To Be Updated - Contact Information]
               </p>
             </div>
             {/* Phone and Email */}
             <a
-              href="tel:+918826204411"
+              href="tel:+91XXXXXXXXXX"
               className="lg:text-base md:text-sm text-xs cursor-pointer hover:opacity-80 transition-opacity block mb-1.5"
             >
-              +91 88262 04411
+              +91-XXXXXXXXXX
             </a>
             <a
-              href="mailto:intro@kinindia.co"
+              href="mailto:contact@reactcube.tech"
               className="lg:text-base md:text-sm text-xs cursor-pointer hover:opacity-80 transition-opacity block"
             >
-              intro@kinindia.co
+              contact@reactcube.tech
             </a>
           </div>
 
@@ -165,8 +165,7 @@ const Footer = () => {
       {/* Copyright Section */}
       <div className="container mx-auto xl:px-16 px-6 sm:px-10 mt-8 md:mt-12 border-t border-white/20 pt-4 md:pt-6 text-center">
         <p className="lg:text-sm text-xs font-light text-white/70">
-          &copy; Copyright {new Date().getFullYear()} Kin Productions India Pvt.
-          Ltd. All rights reserved.
+          &copy; Copyright {new Date().getFullYear()} ReactCube Technologies Pvt. Ltd. All rights reserved.
         </p>
       </div>
     </div>
